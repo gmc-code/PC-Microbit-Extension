@@ -2,44 +2,6 @@
 Rectangle Inheritance 
 ====================================================
 
-| See: https://www.w3schools.com/python/python_classes.asp
-| See: https://www.geeksforgeeks.org/inheritance-and-composition-in-python/
-
-----
-
-Class Inheritance
---------------------
-
-| Inheritance is a way of reusing code by inheriting the structure from the parent class. 
-| The **parent class** is also called the **base class** or **super class**. 
-| The **child class** is also called the **derived class** or **subclass**.
-
-.. image:: images/inheritance.png
-    :scale: 100 %
-    :align: center
-    :alt: Inheritance
-
-
-| Inheritance models an is-a relationship. 
-| e.g. A Square **is a** Rectangle. The Square is a specialized version of an Rectangle. Rectangle is the parent class. Square is the child class.
-
-| Use Inheritance when the child classes have common features (variables/attributes and functions/methods) with the parent class.
-| The child class inherits from the parent class.
-| The child class can change (override) some features or add (extend) features without affecting the parent class.
-
-| To create a child class from a parent class, place the name of the parent class in parentheses after the child class name. e.g ``ChildGame(ParentGame)``.
-
-----
-
-super
------------
-
-| The super() function is used to give access to attributes and methods of a parent class to extend their functionality.
-| The super() function is used to extend their functionality with minimal code changes. 
-| The super() function returns an object that represents the parent class.
-
-----
-
 Square(Rectangle) Inheritance
 -----------------------------------
 

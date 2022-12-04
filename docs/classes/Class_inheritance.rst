@@ -20,9 +20,10 @@ Class Inheritance
     :alt: Inheritance
 
 | Use Inheritance when the child classes have common features (variables/attributes and functions/methods) with the parent class.
-| The child class inherits from the parent class.
+| The child class inherits from the parent class; the child class automatically takes on all the attributes and methods of the parent class. 
 | The child class can change (override) some features or add (extend) features without affecting the parent class.
-
+| The parent class must be part of the current file and must appear before the child class in
+the file.
 | To create a child class from a parent class, place the name of the parent class in parentheses after the child class name. e.g ``ChildGame(ParentGame)``.
 
 ----
@@ -40,6 +41,7 @@ Magic8Pos(Magic8) - modify attribute
 ---------------------------------------
 
 | In the code below, the Magic8Pos class uses the super() function and modifies the self.responses attribute that would be inherited from the Magic8 class.
+| In the code below, ``super().__init__(magic_text=8)``,  calls the _init__() method from Magic8 class, which gives an Magic8Pos instance all the attributes of its parent class, Magic8.
 
 .. code-block:: python
 
