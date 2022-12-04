@@ -113,7 +113,7 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Class examples
+    :caption: Class exercises
     :numbered:
 
     class_examples/dog_class.rst

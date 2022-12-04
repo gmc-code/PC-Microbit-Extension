@@ -36,16 +36,15 @@ Board Asteroid
                 self.y = 0
                 self.x = random.randint(0, 4)
 
+
     class Board:
         def __init__(self):
             self.score = 0
-            self.ship = Ship(2, 4)
             self.asteroid1 = Asteroid(random.randint(0, 4), 0)
             self.asteroid2 = Asteroid(random.randint(0, 4), 1)
 
         def get_board(self):
             self.board = []
-            self.board.append((self.ship.x, self.ship.y))
             self.board.append((self.asteroid1.x, self.asteroid1.y))
             self.board.append((self.asteroid2.x, self.asteroid2.y))
             return self.board
