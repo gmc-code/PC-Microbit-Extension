@@ -4,6 +4,8 @@ import numpy as np
 
 
 class Grid:
+    """grid to illustrate micorbit coordinates for game"""
+
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -76,11 +78,13 @@ plt.scatter(xa, ya, s=10, color=ca)
 plt.title("Tetris grid", fontsize=18)
 for x, y in zip(xa, ya):
     label = f"({x},{y})"
-    plt.annotate(label,  # this is the text
-                 (x, y),  # these are the coordinates to position the label
-                 textcoords="offset points",  # how to position the text
-                 xytext=(0, -10),  # distance from text to points (x,y)
-                 ha='center')  # horizontal alignment can be left, right or center
+    plt.annotate(
+        label,  # this is the text
+        (x, y),  # these are the coordinates to position the label
+        textcoords="offset points",  # how to position the text
+        xytext=(0, -10),  # distance from text to points (x,y)
+        ha="center",
+    )  # horizontal alignment can be left, right or center
 
 # plt.show()
-plt.savefig('tetris_grid2.png', bbox_inches='tight')
+plt.savefig("tetris_grid2.png", bbox_inches="tight")

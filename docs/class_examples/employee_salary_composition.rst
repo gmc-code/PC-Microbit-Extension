@@ -14,39 +14,87 @@ Composition
 | Use composition to create components that can be reused by multiple classes.
 | A composite class can be assigned to an instance variable.
 
-| In the code below, ``emp.cls_salary.monthly_income``, the composite class, Salary, is accessed via the cls_salary attribute of the emp instance of the Employee class.
+| In the code below, ``self.salary = Salary(monthly_income=monthly_income, bonus_rate=bonus_rate)``, the composite class, ``Salary``, is assigned to an instance variable, ``self.salary``.
+| The Salary method, ``get_total_salary()``, can be called from hte instance variable: ``self.salary.get_total_salary()``.
 
 ----
 
 Employee Salary
 -----------------
 
-.. code-block:: python
-        
-    class Salary:
-        def __init__(self, monthly_income, bonus_rate):
-            self.monthly_income = monthly_income
-            self.bonus_rate = bonus_rate
+.. admonition:: Tasks
 
-        def get_annual_salary(self):
-            return (self.monthly_income*12)
+    #. Write a **Salary** class to be assigned to a variable in the **Employee** class using the scaffold below.
 
-        def get_bonus(self):
-            return (self.monthly_income * self.bonus_rate / 100)
+        .. code-block:: python
+                    
+            class Employee:
+                def __init__(self, firstname, lastname, monthly_income, bonus_rate):
+                    self.firstname = firstname
+                    self.lastname = lastname
+                    self.salary = Salary(monthly_income=monthly_income, bonus_rate=bonus_rate)
 
-
-    class Employee:
-        def __init__(self, monthly_income, bonus_rate):
-            self.monthly_income = monthly_income
-            self.bonus_rate = bonus_rate
-            self.cls_salary = Salary(self.monthly_income, bonus_rate)
-
-        def annual_salary(self):
-            return f"Annual Salary is $ {self.cls_salary.get_annual_salary() + self.cls_salary.get_bonus()}"
+                def get_employee(self):
+                    print(f"Name: {self.firstname + self.lastname}.")
+                    print(f"Salary: ${self.salary.get_total_salary()}")
 
 
-    emp = Employee(monthly_income=8000, bonus_rate=5)
-    print(f"monthly_income is ${emp.cls_salary.monthly_income}") 
-    print(f"bonus_rate is {emp.cls_salary.bonus_rate}%") 
-    print(emp.annual_salary())
+            class Salary:
+                def __init__(self, monthly_income, bonus_rate):
+                    self.monthly_income = monthly_income
+                    self.bonus_rate = bonus_rate
 
+                def get_annual_salary(self):
+                    return self.monthly_income * 12
+
+                def get_bonus(self):
+                    return self.monthly_income * self.bonus_rate / 100
+
+                def get_total_salary(self):
+                    return f'{self.get_annual_salary() + self.get_bonus():.2f}'
+
+
+            emp1 = Employee(firstname="Tim", lastname="Lang", monthly_income=8000, bonus_rate=5)
+            emp1.get_employee()
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Write a **Salary** class to be assigned to a variable in the **Employee** class using the scaffold below.
+
+                .. code-block:: python
+                            
+                    class Employee:
+                        def __init__(self, firstname, lastname, monthly_income, bonus_rate):
+                            self.firstname = firstname
+                            self.lastname = lastname
+                            self.salary = Salary(monthly_income=monthly_income, bonus_rate=bonus_rate)
+
+                        def get_employee(self):
+                            print(f"Name: {self.firstname + self.lastname}.")
+                            print(f"Salary: ${self.salary.get_total_salary()}")
+
+
+                    class Salary:
+                        def __init__(self, monthly_income, bonus_rate):
+                            self.monthly_income = monthly_income
+                            self.bonus_rate = bonus_rate
+
+                        def get_annual_salary(self):
+                            return self.monthly_income * 12
+
+                        def get_bonus(self):
+                            return self.monthly_income * self.bonus_rate / 100
+
+                        def get_total_salary(self):
+                            return f'{self.get_annual_salary() + self.get_bonus():.2f}'
+
+
+                    emp1 = Employee(firstname="Tim", lastname="Lang", monthly_income=8000, bonus_rate=5)
+                    emp1.get_employee()

@@ -82,7 +82,7 @@ Car Class Inheritance
 
             .. tab-item:: Q1
 
-                Write a **ElectricCar** class.
+                Write an **ElectricCar** class as a child class of the **Car** class.
 
                 .. code-block:: python
 
