@@ -121,6 +121,7 @@ PC-microbit-extension
     class_examples/restaurant_class.rst
     class_examples/restaurant_inheritance.rst
     class_examples/rectangle_inheritance.rst
+    class_examples/dice_inheritance.rst
     class_examples/user_class.rst
     class_examples/car_class.rst
     class_examples/car_inheritance.rst
