@@ -7,7 +7,10 @@ Dog Class
 | e.g. ``his_dog = Dog('Milo', 2)``
 
 | Write 4 methods to print a descriptive line for each method, using f-strings: 
-| **get_info()**, **roll_over()**, **sit()**, **chase_ball()**
+| **get_info()**, e.g. Milo is 2 years old.
+| **roll_over()**, e.g. Milo rolled over!
+| **sit()**, e.g Milo is sitting.
+| **chase_ball()** e.g. Daisy ran after the ball.
 
 | Write code to ouput:
 | Milo is 2 years old.
@@ -15,6 +18,7 @@ Dog Class
 | Milo is sitting.
 | Daisy is 4 years old.
 | Daisy ran after the ball.
+
 
 .. admonition:: Tasks
 

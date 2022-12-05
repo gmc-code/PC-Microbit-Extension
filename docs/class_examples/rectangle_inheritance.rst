@@ -25,7 +25,7 @@ Square(Rectangle) Inheritance
                     return self.length * self.width
 
 
-            class Square(Rectangle):
+            class Square(           ):
 
                 def __init__(self, length):
                     super().__init__(       ,       )
@@ -72,6 +72,9 @@ ColouredRectangle(Rectangle) Inheritance
 
 | In the code below, the ColouredRectangle class has its own ``__init__`` method that uses the super() function to reuse the ``__init__`` method from the Rectangle class and to allow other attributes to be set separately.
 
+| Write could to output:
+| Area of the red rectangle is 6.
+
 .. admonition:: Tasks
 
     #. Write a **ColouredRectangle(Rectangle)** class using the scaffold below.
@@ -92,7 +95,7 @@ ColouredRectangle(Rectangle) Inheritance
                     self.colour =
 
             col_rect = ColouredRectangle(2, 3, 'red')
-            print(col_rect.length, col_rect.width, col_rect.area(), col_rect.colour)
+            print(f'Area of the {col_rect.colour} rectangle is {col_rect.area()}.')
 
     .. dropdown::
         :icon: codescan
@@ -121,6 +124,6 @@ ColouredRectangle(Rectangle) Inheritance
                             self.colour = colour
 
                     col_rect = ColouredRectangle(2, 3, 'red')
-                    print(col_rect.length, col_rect.width, col_rect.area(), col_rect.colour)
+                    print(f'Area of the {col_rect.colour} rectangle is {col_rect.area()}.')
 
 
