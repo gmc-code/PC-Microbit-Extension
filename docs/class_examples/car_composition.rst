@@ -8,6 +8,11 @@ Car Class Composition
 | Set the car's make, model, year, colour. 
 | The child class, ElectricCar, assigns an instance of the Battery class to the battery attribute.
 
+| Complete the code to output:
+| 2019 Grey Tesla Model S
+| This car has a 90-kWh battery.
+| This car can go about 480 km on a full charge.
+
 .. admonition:: Tasks
 
     #. Write a **Battery** class to be assigned to a variable in the **ElectricCar** class using the scaffold below.
