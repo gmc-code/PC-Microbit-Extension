@@ -28,7 +28,7 @@ Dice Inheritance
                 """dice simulator"""
 
                 def __init__(self, sides=6):
-                    self.sides =self.face_list = self.make_face_list(sides) sides
+                    self.sides = sides
                     self.face_list = self.make_face_list(sides)
 
                 def make_face_list(self, sides):
@@ -36,18 +36,18 @@ Dice Inheritance
                     return face_list
 
                 def get_die(self):
-                    print(f"The die has sides: {self.face_list}")
+                    print(f"The die has sides: {self.             }")
 
                 def roll_die(self):
-                    return choice(self.face_list)
+                    return choice(self.           )
 
 
             class LoadedDie(Die):
-                def __init__(self, sides=6, bias=6, bias_count=4):
+                def __init__(self, sides=6,       =6,           =4):
                     super().__init__(sides=6)
                     self.face_list = self.make_face_list_biased(sides, bias, bias_count)
 
-                def make_face_list_biased(self, sides, bias, bias_count):
+                def make_face_list_biased(self, sides,     ,            ):
                     biased_list = [i for i in range(1, sides + 1)] + [bias] * bias_count
                     return biased_list
 
