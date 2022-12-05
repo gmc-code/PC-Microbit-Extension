@@ -15,7 +15,7 @@ Composition
 | A composite class can be assigned to an instance variable.
 
 | In the code below, ``self.salary = Salary(monthly_income=monthly_income, bonus_rate=bonus_rate)``, the composite class, ``Salary``, is assigned to an instance variable, ``self.salary``.
-| The Salary method, ``get_total_salary()``, can be called from hte instance variable: ``self.salary.get_total_salary()``.
+| The Salary method, ``get_total_salary()``, can be called from the instance variable: ``self.salary.get_total_salary()``.
 
 ----
 

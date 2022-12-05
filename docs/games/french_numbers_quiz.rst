@@ -90,5 +90,5 @@ French numbers quiz
 
 .. admonition:: Tasks
 
-    #. Write the code to scroll the number after guessing hte number of dots.
+    #. Write the code to scroll the number after guessing the number of dots.
 
