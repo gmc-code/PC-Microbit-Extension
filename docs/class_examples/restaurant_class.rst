@@ -5,7 +5,7 @@ Restaurant Class
 | Write a **Restaurant** class.
 | Set the Restaurant's **name**, **food type**, **open hours** on calling the Restaurant class, as well as setting the number of **tables booked** to 0.
 | e.g. ``res_1 = Restaurant("Pierre's", "French", "6-10pm")``
-| Write a method, **get_info()**, to print a descriptive line, using f-strings: 
+| Write a method, **get_info()**, to print a descriptive line, using f-strings. 
 | Write a method to set the number of tables booked and a method to increment them.
 
 | Write code to ouput:

@@ -89,7 +89,7 @@ ColouredRectangle(Rectangle) Inheritance
                 def area(self):
                     return self.length * self.width
 
-            class ColouredRectangle(Rectangle):
+            class ColouredRectangle(          ):
                 def __init__(self, length, width, colour):
                     super().__init__(       ,      )
                     self.colour =
@@ -106,7 +106,7 @@ ColouredRectangle(Rectangle) Inheritance
 
             .. tab-item:: Q1
 
-                Write a **Square(Rectangle)** class.
+                Write a **ColouredRectangle(Rectangle)** class.
 
                 .. code-block:: python
 
