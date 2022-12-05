@@ -8,7 +8,7 @@ Dice Inheritance
 | Set the die's **sides**. 
 | The parent class, Die, has a parameter: ``sides``.
 | The child class, LoadedDie, has the parameters, ``sides``, ``bias``, ``bias_count``. 
-| ``Bias`` is a die value with extra chances of getting, set by ``bias_count``.
+| ``Bias`` is a die value with extra chances of getting it, set by ``bias_count``.
 | Both classes have the instance variables: ``sides`` and ``face_list``.
 | In the Die class, the die values, ``face_list``, start at 1 and go to the number of sides.  
 | The Die class has the methods: ``make_face_list()``, ``get_die()`` and ``roll_die()``.
