@@ -4,7 +4,7 @@ Dice Inheritance
 
 | One die, two dice.
 
-| Write a child class of the **LoadedDie** class, **Die**.     
+| Write a child class,**LoadedDie**, of the parent class, **Die**.     
 | Set the die's **sides**. 
 | The parent class, Die, has a parameter: ``sides``.
 | The child class, LoadedDie, has the parameters, ``sides``, ``bias``, ``bias_count``. 
