@@ -73,7 +73,7 @@ Car Class Composition
             class ElectricCar(Car):
                 """ElectricCar child of Car class."""
                 
-                def __init__(self, make, model, year, colour, battery_size):
+                def __init__(self, make, model, year, colour,          ):
                     super().__init__(make, model, year, colour)
                     self.battery =             
 
@@ -81,7 +81,7 @@ Car Class Composition
                     """Override parent method"""
                     print("No tank in this electric car.")
                     
-            my_tesla = ElectricCar('tesla', 'model S', 2019, "grey", 90)
+            my_tesla = ElectricCar(make='tesla', model='model S', year=2019, c=olour"grey", battery_size=90)
             print(my_tesla.get_info())
             my_tesla.battery.get_battery_info()
             my_tesla.battery.get_range()
@@ -162,7 +162,7 @@ Car Class Composition
                             """Override parent method"""
                             print("No tank in this electric car.")
                             
-                    my_tesla = ElectricCar('tesla', 'model S', 2019, "grey", 90)
+                    my_tesla = ElectricCar(make='tesla', model='model S', year=2019, c=olour"grey", battery_size=90)
                     print(my_tesla.get_info())
                     my_tesla.battery.get_battery_info()
                     my_tesla.battery.get_range()
