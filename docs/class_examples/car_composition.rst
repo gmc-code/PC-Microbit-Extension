@@ -70,7 +70,7 @@ Car Class Composition
                 
                 def __init__(self, make, model, year, colour, battery_size):
                     super().__init__(make, model, year, colour)
-                    self.battery = Battery()
+                    self.battery =             
 
                 def fill_tank(self):
                     """Override parent method"""
@@ -151,7 +151,7 @@ Car Class Composition
                         
                         def __init__(self, make, model, year, colour, battery_size):
                             super().__init__(make, model, year, colour)
-                            self.battery = Battery()
+                            self.battery = Battery(battery_size)
 
                         def fill_tank(self):
                             """Override parent method"""
