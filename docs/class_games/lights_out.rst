@@ -60,13 +60,12 @@ Grid referencing
 
 ----
 
-
 Lights Out Outline
 -------------------
 
 .. admonition:: Tasks
 
-    #. Here is the outline to the Lights Out code. The game loop has been provided. See if you can write code for each method in the classes to get the game working.
+    #. Here is the outline to the Lights Out code. The game loop has been provided. See if you can write code for each method in the classes to get the game working. SOme of the key code has been kept. Comments guide you to the rest of what is needed.
 
 
 .. code-block:: python
@@ -77,19 +76,8 @@ Lights Out Outline
 
     class LightsOut:
         def __init__(self, tilt_sensitivity=300, tilt_delay=400, x=2, y=2)
-            self.tilt_sensitivity = tilt_sensitivity
-            self.tilt_delay = tilt_delay
-            self.x = 2
-            self.y = 2
-            self.brightness = 0
-            """grid[x][y]; the grid array has the first column in grid[0]"""
-            self.grid = [
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0],
-            ]
+            # initialize the parameters
+            # set the brightness and the grid
 
         def ToggleX(self, tx=None, ty=None):
             """toggle all in same row"""
@@ -97,8 +85,7 @@ Lights Out Outline
                 tx = self.x
             if ty is None:
                 ty = self.y
-            for x in range(5):
-                self.grid[x][ty] ^= 1
+            # toggle the pixles in the row
 
         def ToggleY(self, tx=None, ty=None):
             """toggle all in same column"""
@@ -106,8 +93,7 @@ Lights Out Outline
                 tx = self.x
             if ty is None:
                 ty = self.y
-            for y in range(5):
-                self.grid[tx][y] ^= 1
+            # toggle the pixels in the column
 
         def ToggleXY(self, tx=None, ty=None):
             """toggle all in same row and all in same column"""
@@ -115,47 +101,28 @@ Lights Out Outline
                 tx = self.x
             if ty is None:
                 ty = self.y
-            for x in range(5):
-                self.grid[x][ty] ^= 1
-            for y in range(5):
-                self.grid[tx][y] ^= 1
+            # toggle the pixles in the row
+            # toggle the pixels in the column
 
         def RandomGrid(self):
-            """toggle using ToggleXY a random number of times from 4 to 30"""
-            for r in range(0, random.randint(4, 30)):
-                cx = random.randint(0, 4)
-                cy = random.randint(0, 4)
-                self.ToggleXY(cx, cy)
+            #staring with random x and random y pixels use ToggleXY a random number of times from 4 to 30
+
 
         def DrawGame(self):
-            """Add pixels from grid one at a time at brightness, gb,  of 4
+            """Add pixels from grid one at a time at brightness, gb, of 3
             b is 0 or 9, player pixel will be 0 or 9 if pixel not in grid, or 7 or 9 is in self.grid.
             """
             gb = 3
             img = Image("00000:" * 5)
-            for cy in range(0, 5):
-                for cx in range(0, 5):
-                    img.set_pixel(cx, cy, self.grid[cx][cy] * gb)
-            # add player pixel
-            if img.get_pixel(self.x, self.y) == gb:
-                if self.brightness == 0:
-                    img.set_pixel(self.x, self.y, 7)
-                else:
-                    img.set_pixel(self.x, self.y, self.brightness)
-            else:
-                img.set_pixel(self.x, self.y, self.brightness)
-            # return img
-            display.show(img)
-            sleep(self.tilt_delay)
+            # set pixels brightenss in img from grid
+            # add player pixel depending on whetehr b is 0 or 9, player pixel will be 0 or 9 if pixel not in grid, or 7 or 9 is in self.grid
+            # display image and sleep for tilt_delay
 
         def CheckWin(self):
             """Return True if all points in grid are 0"""
             tot = 0
             # add grid values
-            if tot == 0:
-                return True
-            else:
-                return False
+            # Return True if all points in grid are 0; or False if not
 
         def MovePlayer(self):
             '''alternate between 0 and 9 for brightness'''
@@ -270,7 +237,7 @@ Working code
             # use ToggleXY at random pixels 4 to 30 times
 
         def DrawGame(self):
-            """Add pixels from grid one at a time at brightness, gb,  of 4
+            """Add pixels from grid one at a time at brightness, gb, of 3.
             b is 0 or 9, player pixel will be 0 or 9 if pixel not in grid, or 7 or 9 is in self.grid.
             """
             gb = 3
