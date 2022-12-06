@@ -140,6 +140,7 @@ PC-microbit-extension
     class_games/tilt_pixels.rst
     class_games/press_it.rst
     class_games/asteroids.rst
+    class_games/lights_out.rst
 
 .. toctree::
     :maxdepth: 2
@@ -166,7 +167,6 @@ PC-microbit-extension
     games/shut_the_matrix.rst
     games/reflexes.rst
     games/clock_reflexes.rst
-    games/lights_out.rst
     games/maze.rst
     games/french_numbers.rst
     games/french_numbers_quiz.rst

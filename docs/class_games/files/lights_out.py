@@ -18,8 +18,8 @@ class LightsOut:
             [0, 0, 0, 0, 0],
         ]
 
-    def Toggle(self, tx=None, ty=None):
-        """toggle all 4 points, if they exist, above, below and to the sides of a point"""
+    def Toggle5(self, tx=None, ty=None):
+        """For original game only; toggle all 5 points, if they exist, above, below and to the sides of a point"""
         if tx is None:
             tx = self.x
         if ty is None:
@@ -34,12 +34,41 @@ class LightsOut:
         if ty < 4:
             self.grid[tx][ty + 1] ^= 1
 
+    def ToggleX(self, tx=None, ty=None):
+        """toggle all in same row"""
+        if tx is None:
+            tx = self.x
+        if ty is None:
+            ty = self.y
+        for x in range(5):
+            self.grid[x][ty] ^= 1
+
+    def ToggleY(self, tx=None, ty=None):
+        """toggle all in same column"""
+        if tx is None:
+            tx = self.x
+        if ty is None:
+            ty = self.y
+        for y in range(5):
+            self.grid[tx][y] ^= 1
+
+    def ToggleXY(self, tx=None, ty=None):
+        """toggle all in same row and all in same column"""
+        if tx is None:
+            tx = self.x
+        if ty is None:
+            ty = self.y
+        for x in range(5):
+            self.grid[x][ty] ^= 1
+        for y in range(5):
+            self.grid[tx][y] ^= 1
+
     def RandomGrid(self):
         """toggle 50 random points"""
-        for r in range(0, 50):
+        for r in range(0, random.randint(4, 30)):
             cx = random.randint(0, 4)
             cy = random.randint(0, 4)
-            self.Toggle(cx, cy)
+            self.ToggleXY(cx, cy)
 
     def DrawGame(self):
         """Add pixels from grid one at a time at brightness, gb,  of 4
@@ -102,17 +131,22 @@ while playing:
     # update screen
     game.DrawGame()
     # check for button press
-    if button_a.was_pressed() or button_b.was_pressed():
-        game.Toggle()
+    if button_a.was_pressed():
+        game.ToggleX()
+        sleep(200)
+        # update screen
+        game.DrawGame()
+    elif button_b.was_pressed():
+        game.ToggleY()
         sleep(200)
         # update screen
         game.DrawGame()
     # check for win
     if game.CheckWin():
         playing = False
-        sleep(1000)
-        for w in range(0, 6):
+        sleep(500)
+        for w in range(0, 3):
             display.show(Image.HAPPY)
-            sleep(500)
+            sleep(300)
             display.clear()
-            sleep(500)
+            sleep(300)
