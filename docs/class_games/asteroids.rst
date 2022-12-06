@@ -15,7 +15,7 @@ The Asteroids outline
 
 .. admonition:: Tasks
 
-    #. Here is the outline to the Asteroids code. The game loop has been provided. See if you can write code for each method in hte classes to get the game working.
+    #. Here is the outline to the Asteroids code. The game loop has been provided. See if you can write code for each method in the classes to get the game working.
 
 
 .. code-block:: python

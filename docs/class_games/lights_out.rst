@@ -61,8 +61,13 @@ Grid referencing
 ----
 
 
-Grid referencing
+Lights Out Outline
 -------------------
+
+.. admonition:: Tasks
+
+    #. Here is the outline to the Lights Out code. The game loop has been provided. See if you can write code for each method in the classes to get the game working.
+
 
 .. code-block:: python
 
@@ -116,7 +121,7 @@ Grid referencing
                 self.grid[tx][y] ^= 1
 
         def RandomGrid(self):
-            """toggle 50 random points"""
+            """toggle using ToggleXY a random number of times from 4 to 30"""
             for r in range(0, random.randint(4, 30)):
                 cx = random.randint(0, 4)
                 cy = random.randint(0, 4)
@@ -144,7 +149,151 @@ Grid referencing
             sleep(self.tilt_delay)
 
         def CheckWin(self):
-            """Return True if all all points in grid are 0"""
+            """Return True if all points in grid are 0"""
+            tot = 0
+            # add grid values
+            if tot == 0:
+                return True
+            else:
+                return False
+
+        def MovePlayer(self):
+            '''alternate between 0 and 9 for brightness'''
+            self.brightness = 9 - self.brightness
+            dx = accelerometer.get_x()
+            dy = accelerometer.get_y()
+            # move based on dx and dy
+            # keep on grid
+
+
+
+    game = LightsOut(tilt_sensitivity=300, tilt_delay=400, x=2, y=2)
+    game.RandomGrid()
+
+    playing = True
+    while playing:
+        game.MovePlayer()
+        game.DrawGame()
+        if button_a.was_pressed():
+            game.ToggleX()
+            game.DrawGame()
+        elif button_b.was_pressed():
+            game.ToggleY()
+            game.DrawGame()
+        if game.CheckWin():
+            playing = False
+            sleep(500)
+            for w in range(0, 3):
+                display.show(Image.HAPPY)
+                sleep(300)
+                display.clear()
+                sleep(300)
+
+
+----
+
+
+Working code
+-------------------------------
+
+| The working code is below.
+
+.. code-block:: python
+
+    from microbit import *
+    import random
+
+
+    class LightsOut:
+        def __init__(self):
+            self.tilt_sensitivity = 300
+            self.tilt_delay = 400
+            self.x = 2
+            self.y = 2
+            self.brightness = 0
+            """grid[tx][ty]; the grid array has the first column in grid[0]"""
+            self.grid = [
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+            ]
+
+        def Toggle5(self, tx=None, ty=None):
+            """For original game only; toggle all 5 points, if they exist, above, below and to the sides of a point"""
+            if tx is None:
+                tx = self.x
+            if ty is None:
+                ty = self.y
+            self.grid[tx][ty] ^= 1
+            if tx > 0:
+                self.grid[tx - 1][ty] ^= 1
+            if tx < 4:
+                self.grid[tx + 1][ty] ^= 1
+            if ty > 0:
+                self.grid[tx][ty - 1] ^= 1
+            if ty < 4:
+                self.grid[tx][ty + 1] ^= 1
+
+        def ToggleX(self, tx=None, ty=None):
+            """toggle all in same row"""
+            if tx is None:
+                tx = self.x
+            if ty is None:
+                ty = self.y
+            for x in range(5):
+                self.grid[x][ty] ^= 1
+
+        def ToggleY(self, tx=None, ty=None):
+            """toggle all in same column"""
+            if tx is None:
+                tx = self.x
+            if ty is None:
+                ty = self.y
+            for y in range(5):
+                self.grid[tx][y] ^= 1
+
+        def ToggleXY(self, tx=None, ty=None):
+            """toggle all in same row and all in same column"""
+            if tx is None:
+                tx = self.x
+            if ty is None:
+                ty = self.y
+            for x in range(5):
+                self.grid[x][ty] ^= 1
+            for y in range(5):
+                self.grid[tx][y] ^= 1
+
+        def RandomGrid(self):
+            """use ToggleXY a random number of times from 4 to 30"""
+            # use ToggleXY at random pixels 4 to 30 times
+
+        def DrawGame(self):
+            """Add pixels from grid one at a time at brightness, gb,  of 4
+            b is 0 or 9, player pixel will be 0 or 9 if pixel not in grid, or 7 or 9 is in self.grid.
+            """
+            gb = 3
+            img = Image("00000:" * 5)
+            for cy in range(0, 5):
+                for cx in range(0, 5):
+                    img.set_pixel(cx, cy, self.grid[cx][cy] * gb)
+            # add player pixel
+            if img.get_pixel(self.x, self.y) == gb:
+                if self.brightness == 0:
+                    img.set_pixel(self.x, self.y, 7)
+                else:
+                    img.set_pixel(self.x, self.y, self.brightness)
+            else:
+                img.set_pixel(self.x, self.y, self.brightness)
+            # return img
+            display.show(img)
+            sleep(self.tilt_delay)
+
+        def CheckWin(self):
+            """Return True if all all points in grid are 0.
+            Also can do: print(sum([sum(i) for i in grid]))
+            """
             tot = 0
             for cy in range(0, 5):
                 for cx in range(0, 5):
@@ -155,9 +304,8 @@ Grid referencing
                 return False
 
         def MovePlayer(self):
-            # alternate between 0 and 9 for brightness
+            '''alternate between 0 and 9 for brightness'''
             self.brightness = 9 - self.brightness
-            # check for movement
             dx = accelerometer.get_x()
             dy = accelerometer.get_y()
             if dx > self.tilt_sensitivity:
@@ -173,27 +321,19 @@ Grid referencing
             self.y = max(0, min(self.y, 4))
 
 
-    game = LightsOut(tilt_sensitivity=300, tilt_delay=400, x=2, y=2)
-    # set the board up for a game
+    game = LightsOut()
     game.RandomGrid()
 
     playing = True
     while playing:
         game.MovePlayer()
-        # update screen
         game.DrawGame()
-        # check for button press
         if button_a.was_pressed():
             game.ToggleX()
-            sleep(200)
-            # update screen
             game.DrawGame()
         elif button_b.was_pressed():
             game.ToggleY()
-            sleep(200)
-            # update screen
             game.DrawGame()
-        # check for win
         if game.CheckWin():
             playing = False
             sleep(500)
@@ -241,9 +381,9 @@ How To Beat The Original Game
 
 | Stage 2 - Set Up For The Win
 | Look at the first 3 LEDs on the bottom row.
-| If LED(0,4) is on, press LED(3,0) and LED(4,0). These are the 4th and 5th lights of the top row.
-| If LED(1,4) is on, press LED(1,0) and LED(4,0). These are the 2nd and 5th lights of the top row.
-| If LED(2,4) is on, press LED(3,0). This is the 4th light on the top row.
+| If LED(0, 4) is on, press LED(3, 0) and LED(4, 0). These are the 4th and 5th lights of the top row.
+| If LED(1, 4) is on, press LED(1, 0) and LED(4, 0). These are the 2nd and 5th lights of the top row.
+| If LED(2, 4) is on, press LED(3, 0). This is the 4th light on the top row.
 
 | Stage 3 - Chase The Lights Again
 | Repeat the chase the lights process again with the lights that are now on. By the time you get to the bottom row, the lights should all be out and you win.
