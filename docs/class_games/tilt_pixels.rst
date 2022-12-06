@@ -391,6 +391,7 @@ Answer and score
         def show_score(self):
             scores = "score = " + str(self.score)
             display.scroll(scores, delay=80)
+
 ----
 
 Run game
@@ -409,18 +410,18 @@ Run game
     class TiltPixels:
         ...
 
-    def run_game(self):
-        start_time = running_time()
-        game_over = False
-        while game_over is False:
-            self.tilt()
-            sleep(self.game_speed)
-            if self.are_all_found():
-                now = running_time()
-                game_over = True
-                self.answer()
-                self.set_score(now - start_time)
-                self.show_score()
+        def run_game(self):
+            start_time = running_time()
+            game_over = False
+            while game_over is False:
+                self.tilt()
+                sleep(self.game_speed)
+                if self.are_all_found():
+                    now = running_time()
+                    game_over = True
+                    self.answer()
+                    self.set_score(now - start_time)
+                    self.show_score()
     
 ----
 

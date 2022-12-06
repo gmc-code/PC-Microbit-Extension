@@ -92,7 +92,7 @@ Converting to using a class
 ---------------------------------
 
 | The class version of the game code is below.
-| ``game = Magic8()`` instantiates the class by creating a copy of the class, called an instance, which inherits all the class attributes and methods.
+| ``game = Magic8()`` instantiates the class by creating an object from the class, called an instance, which inherits all the class attributes and methods.
 | The ``__init__`` method has the **responses** list as well as an attribute for the text, **magic_text**, to display between responses.
 | The ``run_game`` method has the game code that was previously within the body of the while loop.
 | ``game.run_game()`` calls the ``run_game`` method on the game object to run the game.
@@ -204,9 +204,9 @@ Modify the __init__ method in a child class
     #. Modify the code to only respond with positive responses.
 
 | The Magic8 class can be used as the parent class.
-| A child class, ``Magic8pos``, can inherit from the ``Magic8`` class by passing ``Magic8`` as an argument when declaring ``Magic8pos``, as in: ``class Magic8pos(Magic8):``
+| A child class, ``Magic8Pos``, can inherit from the ``Magic8`` class by passing ``Magic8`` as an argument when declaring ``Magic8Pos``, as in: ``class Magic8Pos(Magic8):``
 | Use ``super().__init__(magic_text=8)`` to inherit attributes from the ``__init__`` method in the ``Magic8`` class.
-| Modify the ``self.responses`` attribute in the child class, ``Magic8pos``, to just use positive responses.
+| Modify the ``self.responses`` attribute in the child class, ``Magic8Pos``, to just use positive responses.
 | There is no need to include a **run_game** method in the child class since it is inherited.
 
 .. code-block:: python
@@ -229,13 +229,13 @@ Modify the __init__ method in a child class
                 display.scroll(random.choice(self.responses), delay=120)
 
 
-    class Magic8pos(Magic8):
+    class Magic8Pos(Magic8):
         """modifies responses to just positive ones"""
         def __init__(self, magic_text=8):
             super().__init__(magic_text=8)
             self.responses = ["It is certain", "Yes"]
 
-    game = Magic8pos(Magic8)
+    game = Magic8Pos(Magic8)
     while True:
         game.run_game()
 
@@ -249,9 +249,9 @@ Use tilting in the run_game method in a child class
     #. Modify the code to require a tilt to the left or right instead of a shake.
 
 | The Magic8 class can be used as the parent class.
-| A child class, ``Magic8tilt``, can inherit from the ``Magic8`` class by passing it as an argument when declaring it, as in: ``class Magic8tilt(Magic8):``
+| A child class, ``Magic8Tilt``, can inherit from the ``Magic8`` class by passing it as an argument when declaring it, as in: ``class Magic8Tilt(Magic8):``
 | Use ``super().__init__(magic_text=8)`` to inherit attributes from the ``__init__`` method in the ``Magic8`` class.
-| Modify the ``run_game`` method in the child class, ``Magic8tilt``, to use tilting.
+| Modify the ``run_game`` method in the child class, ``Magic8Tilt``, to use tilting.
 
 .. code-block:: python
 
@@ -273,7 +273,7 @@ Use tilting in the run_game method in a child class
                 display.scroll(random.choice(self.responses), delay=120)
 
 
-    class Magic8tilt(Magic8):
+    class Magic8Tilt(Magic8):
         """modifies run_game to use tilts"""
         def __init__(self, magic_text=8):
             super().__init__(magic_text=8)
@@ -287,7 +287,7 @@ Use tilting in the run_game method in a child class
                 display.scroll(random.choice(self.responses), delay=120)
 
                     
-    game = Magic8tilt()
+    game = Magic8Tilt()
     while True:
         game.run_game()
 
@@ -301,9 +301,9 @@ Use button pressing in the run_game method in a child class
     #. Modify the code to require a button press instead of a shake.
 
 | The Magic8 class can be used as the parent class.
-| A child class, ``Magic8button``, can inherit from the ``Magic8`` class by passing it as an argument when declaring it, as in: ``class Magic8button(Magic8):``
+| A child class, ``Magic8Button``, can inherit from the ``Magic8`` class by passing it as an argument when declaring it, as in: ``class Magic8Button(Magic8):``
 | Use ``super().__init__(magic_text=8)`` to inherit attributes from the ``__init__`` method in the ``Magic8`` class.
-| Modify the ``run_game`` method in the child class, ``Magic8button``, to use button pressing.
+| Modify the ``run_game`` method in the child class, ``Magic8Button``, to use button pressing.
 
 
 .. code-block:: python
@@ -326,7 +326,7 @@ Use button pressing in the run_game method in a child class
                 display.scroll(random.choice(self.responses), delay=120)
 
 
-    class Magic8button(Magic8):
+    class Magic8Button(Magic8):
         """modifies run_game to use button pressing"""
         def __init__(self, magic_text=8):
             super().__init__(magic_text=8)
@@ -339,7 +339,7 @@ Use button pressing in the run_game method in a child class
                 sleep(100)
                 display.scroll(random.choice(self.responses), delay=120)
 
-    game = Magic8button()
+    game = Magic8Button()
     while True:
         game.run_game()
 
