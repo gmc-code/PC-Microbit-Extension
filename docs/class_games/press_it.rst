@@ -86,12 +86,12 @@ The PressIt class methods
 
 ----
 
-The PressIt constructor
+The PressIt __init__ method
 ---------------------------------
 
 .. py:method:: __init__()
 
-    | The __init__() method is the constructor called when the game object is created.
+    | The __init__() method is called when the game object is created and initializes the instance varaibles.
     | ``score`` is set to 0.
     | ``level`` is set to 1.
 

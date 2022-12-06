@@ -58,7 +58,7 @@ The TiltPixels class
     | Set up the game object to control the game, including the hidden and visited pixels.
     | Initial x, y values for the initial pixel could be passed here as an argument.
     | ``game = TiltPixels(2,2)`` would place the initial pixel in the center of the 5 by 5 grid.
-    | There is no need to do so since the game has a constructor method to start at a random pixel.
+    | There is no need to do so since the game has an __init__ method to start at a random pixel.
 
 | The code below imports the random module and creates the game object by creating an instance of the TiltPixels class.
 
@@ -139,12 +139,12 @@ The TiltPixels outline
 
 ----
 
-The TiltPixels constructor
+The TiltPixels instance variables
 ---------------------------------
 
 .. py:method:: __init__(x_pos=random.randint(0, 4), y_pos=random.randint(0, 4))
 
-    | The __init__() method is the constructor called when the game object is created.
+    | The __init__() method is called when the game object is created.
     | It calls ``self.set_game(x_pos, y_pos)``.
     | The starting pixel is at the coordinates: ``(x_pos, y_pos)``.
     | ``x_pos`` is the starting x value which by default will be a random integer from 0 to 4.
