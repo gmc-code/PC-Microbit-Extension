@@ -2,7 +2,7 @@
 Clock Reflexes
 ====================================================
 
-| Reflexes based on http://www.multiwingspan.co.uk/micro.php?page=concentrate2
+| Reflexes is based on http://www.multiwingspan.co.uk/micro.php?page=concentrate2
 | Press A when the hand is about to reach 12 o'clock.
 
 .. code-block:: python
