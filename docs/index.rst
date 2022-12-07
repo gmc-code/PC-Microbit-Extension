@@ -15,6 +15,14 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
+    :caption: Classes for the microbit
+    :numbered:
+
+    class_games/classes_for_the_microbit.rst
+
+
+.. toctree::
+    :maxdepth: 2
     :caption: Bots/MiniBit
     :numbered:
 
@@ -134,13 +142,13 @@ PC-microbit-extension
     :caption: Class Games
     :numbered:
 
-    class_games/classes_for_the_microbit.rst
-    class_games/introduction.rst
+    class_games/games_introduction.rst
     class_games/magic_8.rst
     class_games/tilt_pixels.rst
     class_games/press_it.rst
     class_games/asteroids.rst
     class_games/lights_out.rst
+    class_games/snake.rst
 
 .. toctree::
     :maxdepth: 2
@@ -160,7 +168,6 @@ PC-microbit-extension
 
     games/introduction.rst
     games/slalom.rst
-    games/snake.rst
     games/space_invaders.rst
     games/vertical_scroller.rst
     games/falling_blocks.rst
