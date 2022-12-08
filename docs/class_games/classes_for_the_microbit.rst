@@ -6,6 +6,7 @@ Classes for the microbit
 
 | Practical examples of using classes in coding on the microbit are included below.
 
+
 ----
 
 Pixel Classes
