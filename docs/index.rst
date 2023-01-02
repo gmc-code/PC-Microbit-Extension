@@ -137,6 +137,7 @@ PC-microbit-extension
     class_examples/car_composition.rst
     class_examples/employee_salary_composition.rst
 
+
 .. toctree::
     :maxdepth: 2
     :caption: Class Games
@@ -149,6 +150,7 @@ PC-microbit-extension
     class_games/asteroids.rst
     class_games/lights_out.rst
     class_games/snake.rst
+
 
 .. toctree::
     :maxdepth: 2
