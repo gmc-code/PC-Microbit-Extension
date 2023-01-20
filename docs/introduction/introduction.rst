@@ -44,12 +44,15 @@ Key microbit references:
 Microbit software using micropython:
 ------------------------------------------
 
+| The standard online **micropython** editor: https://python.microbit.org/v/3.
+| THis is the most up to date editor.
+
 | Comparison of microbit programming options:
 | The **Mu** editor for laptops, https://codewith.mu/en/tutorials/1.1/microbit, is the first choice for coding on the microbit.
-| The standard online **micropython** editor: https://python.microbit.org/v/2 is an online editor consistent with Mu editor.
-| The beta version is at: https://python.microbit.org/v/beta
+
 | **Thonny** for laptops, can be downloaded from https://thonny.org/.
 See: https://core-electronics.com.au/tutorials/how-to-program-a-microbit-using-thonny.html for setting up the microbit to use Thonny.
+
 | **Edublocks**, https://app.edublocks.org/#MicroBit, is an online editor with both blocky code and micropython consistent with Mu editor, and can display the block code and micropython code side by side.
 
 ----
@@ -109,8 +112,8 @@ Python references:
 
 For an introduction to python see:
 
-* https://docs.python.org/3.9/tutorial/introduction.html
-* https://docs.python.org/3.10/tutorial/index.html
+* https://docs.python.org/3.11/tutorial/introduction.html
+* https://docs.python.org/3.11/tutorial/index.html
 * https://www.w3schools.com/python/default.asp
 * https://www.programiz.com/python-programming
 * https://www.geeksforgeeks.org/python-programming-language/?ref=shm
