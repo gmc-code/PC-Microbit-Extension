@@ -57,7 +57,8 @@ See: https://core-electronics.com.au/tutorials/how-to-program-a-microbit-using-t
 Micropython simulator:
 ----------------------------------------
 
-Create with code UK, https://create.withcode.uk/, works with standard python or micropython. Starting the code with "from microbit import /*" will pop up the simulator when the code is run.
+| Create with code UK, https://create.withcode.uk/, works with standard python or micropython. 
+| Starting the code with "from microbit import \*" will pop up the simulator when the code is run.
 
 ----
 

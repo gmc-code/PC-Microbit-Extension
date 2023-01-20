@@ -8,7 +8,6 @@ References for data logging
 #. https://microbit.org/get-started/user-guide/data-logging/
 #. https://microbit.org/projects/make-it-code-it/python-wireless-data-logger/
 #. https://www.hackster.io/HackingSTEM/visualize-data-in-excel-with-micro-bit-and-makecode-be21fb
-#. https://www.microsoft.com/en-us/education/hackingstem/datastreamer
 
 ----
 
