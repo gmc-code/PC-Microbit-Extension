@@ -15,14 +15,6 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Classes for the microbit
-    :numbered:
-
-    class_games/classes_for_the_microbit.rst
-
-
-.. toctree::
-    :maxdepth: 2
     :caption: Bots/MiniBit
     :numbered:
 
@@ -138,6 +130,28 @@ PC-microbit-extension
     class_examples/employee_salary_composition.rst
 
 
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Classes for the microbit
+    :numbered:
+
+    class_games/classes_for_the_microbit.rst
+
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Game progressions
+    :numbered:
+
+    game_progressions/RPS_introduction.rst
+    game_progressions/RPS_selection.rst
+    game_progressions/RPS_dictionary.rst
+    game_progressions/RPS_classes.rst
+
+
+
 .. toctree::
     :maxdepth: 2
     :caption: Class Games
@@ -151,16 +165,6 @@ PC-microbit-extension
     class_games/lights_out.rst
     class_games/snake.rst
 
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Game progressions
-    :numbered:
-
-    game_progressions/RPS_introduction.rst
-    game_progressions/RPS_selection.rst
-    game_progressions/RPS_dictionary.rst
-    game_progressions/RPS_classes.rst
 
 
 .. toctree::
