@@ -1,5 +1,5 @@
 ====================================================
-Excel Data Logging
+Data Logging Excel
 ====================================================
 
 References for data logging
