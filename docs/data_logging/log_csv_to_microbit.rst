@@ -4,8 +4,7 @@ Log csv file to microbit
 
 | For the microbit utime module see: https://microbit-micropython.readthedocs.io/en/v2-docs/utime.html
 | For opening a file on the microbit see: https://microbit-micropython.readthedocs.io/en/v2-docs/filesystem.html
-| FOr reading the light level via dispaly see: https://microbit-micropython.readthedocs.io/en/v2-docs/display.html
-
+| For reading the light level via display see: https://microbit-micropython.readthedocs.io/en/v2-docs/display.html
 
 ----
 
@@ -69,6 +68,21 @@ Write to microbit
         else:
             sleep(1000)
 
+----
+
+File ftansfer from microbit to computer
+----------------------------------------
+
+| To tansfer the "light_readings.csv" file to the computer click on the Files button in Mu editor.
+| Ckick and drag the file, "light_readings.csv", across to teh right to the mu_code folder on the computer.
+| The folder will be located at: C:\Users\username\mu_code, depending on the username.
+
+.. image:: images/light_readings_file_transfer.png
+    :scale: 50 %
+    :align: center
+    :alt: light_readings_file_transfer
+
+| The file can then be used to display a chart in excel of in python using plotly or mathplotlib.
 
 ----
 
@@ -79,7 +93,8 @@ Display elapsed seconds
 | ``count_seconds`` is used to display the elapsed seconds on the microbit as the readings occur.
 | **count_seconds** takes 2 parameters: **time_from_start**, **time_displayed**.
 | ``sec_from_start = int(time_from_start)`` rounds down the **time_from_start**. 
-| ``if sec_from_start > time_displayed`` will be true once **time_from_start** has increased by atleast 1 second above **time_displayed**. **time_displayed** is hten updated and used for display.
+| ``if sec_from_start > time_displayed`` will be true once **time_from_start** has increased by at least 1 second above **time_displayed**. 
+| **time_displayed** is then updated and used for display.
 
 
 .. admonition:: Tasks
