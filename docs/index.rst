@@ -19,10 +19,10 @@ PC-microbit-extension
     :caption: Data Logging
     :numbered:
 
-    data_logging/log_csv_to_microbit.rst
-    data_logging/data_logging.rst
-    data_logging/Excel_data_logging.rst
-    data_logging/vscode_data_logging.rst
+    data_logging/data_logging_csv.rst
+    data_logging/data_logging_MY_DATA.rst
+    data_logging/data_logging_Excel.rst
+    data_logging/data_logging_vscode.rst
 
 
 
