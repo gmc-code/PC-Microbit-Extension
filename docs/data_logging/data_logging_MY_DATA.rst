@@ -1,5 +1,5 @@
 ====================================================
-Data Logging 
+Data Logging MY_DATA
 ====================================================
 
 References for data logging to the microbit: V2 MICROBIT

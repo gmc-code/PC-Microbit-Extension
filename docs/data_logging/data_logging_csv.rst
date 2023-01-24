@@ -1,5 +1,5 @@
 ====================================================
-Log csv file to microbit
+Data logging csv
 ====================================================
 
 | For the microbit utime module 
