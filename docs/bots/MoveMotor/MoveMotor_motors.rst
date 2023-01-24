@@ -364,7 +364,7 @@ left
 
     #. Write code to drive the buggy to the left at speed 2 in small circles of 10 cm radius.
     #. Write code to drive the buggy to the left at speed 5 in medium circles of 50 cm radius.
-    #. Write code to drive the buggy to the left at speed 8 in circles of 20, 40 and 60 cm radius for 5 seconds each. Use a for loop and a list of the radii.
+    #. Write code to drive the buggy to the left at speed 8 in circles of 20, 40 and 60 cm radius for 5 seconds each. Use a for-loop and a list of the radii.
 
 ----
 

@@ -182,7 +182,7 @@ Colour lists
 -------------------
 
 | A list of colours can be used to create a colourful display.
-| 2 for loops are used, one nested inside the other.
+| 2 for-loops are used, one nested inside the other.
 | ``for c in colour_list:`` loops through the colours.
 | ``for i in range(4):`` loops through each LED to set the colour for it.
 

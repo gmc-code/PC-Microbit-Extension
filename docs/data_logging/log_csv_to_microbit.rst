@@ -77,15 +77,15 @@ File tansfer from microbit to computer
 ----------------------------------------
 
 | To transfer the "light_readings.csv" file to the computer click on the Files button in Mu editor.
-| Click and drag the file, "light_readings.csv", across to teh right to the mu_code folder on the computer.
-| The folder will be located at: C:\\Users\\username\\mu_code, depending on the username.
+| Click and drag the file on the left, "light_readings.csv", across to the right to "files on your computer" which is the mu_code folder on the computer.
+| The mu_code folder will be located at: C:\\Users\\username\\mu_code, depending on the username.
 
 .. image:: images/light_readings_file_transfer.png
     :scale: 50 %
     :align: center
     :alt: light_readings_file_transfer
 
-| The file can then be used to display a chart in excel of in python using plotly or mathplotlib.
+| The file can then be used to display a chart in excel of in python using plotly or matplotlib.
 
 ----
 
@@ -131,8 +131,8 @@ Display elapsed seconds
                             time_displayed = sec_from_start
                         return time_displayed
 
-| In the complete code:
-| ``time_displayed`` is set to 0 before the for loop.
+| In the completed code:
+| ``time_displayed`` is set to 0 before the for-loop.
 | ``time_displayed = count_seconds(time_from_start, time_displayed)`` updates the **time_displayed** value.
 | ``display.show(time_displayed, wait=False)`` shows the time in seconds from the start of taking readings.
 

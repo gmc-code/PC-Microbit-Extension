@@ -379,7 +379,7 @@ left
 
     #. Write code to drive the buggy to the left at speed 2 in small circles.
     #. Write code to drive the buggy to the left at speed 5 in medium circles.
-    #. Write code to drive the buggy to the left at speed 8 in inreasing circles for 5 seconds each. Use a for loop and a list of tightness values.
+    #. Write code to drive the buggy to the left at speed 8 in inreasing circles for 5 seconds each. Use a for-loop and a list of tightness values.
 
 ----
 

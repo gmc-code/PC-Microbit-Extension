@@ -254,7 +254,7 @@ Zig Zag test
 ----------------------------------------
 
 | Zigzag left then right by setting different left and right motor speeds.
-| Zigzag forwards then backwards using two separate for loops.
+| Zigzag forwards then backwards using two separate for-loops.
 
 .. code-block:: python
 

@@ -24,7 +24,7 @@ To turn on the buzzer for a specific time, put in a sleep between turning it on 
 .. admonition:: Tasks
 
     #. Write code to turn on the buzzer for half a second.
-    #. Write code, using a for loop, to make 3 half second buzzer sounds with 1 second between each of them.
+    #. Write code, using a for-loop, to make 3 half second buzzer sounds with 1 second between each of them.
 
 ----   
 
@@ -104,7 +104,7 @@ Using the buzz method
 .. admonition:: Tasks
 
     #. Write code using a while True loop to make a 500ms buzz every 2 seconds.
-    #. Write code using a for loop to make buzz sounds of 100, 200, 300 and 400ms separated by a 500ms sleep.
+    #. Write code using a for-loop to make buzz sounds of 100, 200, 300 and 400ms separated by a 500ms sleep.
 
 
 '''

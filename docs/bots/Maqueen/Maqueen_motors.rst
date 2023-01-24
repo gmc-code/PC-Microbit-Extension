@@ -344,7 +344,7 @@ left
 
     #. Write code to drive the buggy to the left at tightness 3 for 5 seconds.
     #. Write code to drive the buggy to the left at tightness 1 for 5 seconds.
-    #. Write code to drive the buggy to the left at increasing tightness. Use a for loop to change the tightness from 1 to 5, with each turn lasting for 2 seconds.
+    #. Write code to drive the buggy to the left at increasing tightness. Use a for-loop to change the tightness from 1 to 5, with each turn lasting for 2 seconds.
 
 ----
 
@@ -380,7 +380,7 @@ right
 
     #. Write code to drive the buggy to the right at tightness 4 for 2 seconds.
     #. Write code to drive the buggy to the right at tightness 1 for 2 seconds.
-    #. Write code to drive the buggy to the right at decreasing tightness. Use a for loop to change the tightness from 5 to 1, with each turn lasting for 2 seconds.
+    #. Write code to drive the buggy to the right at decreasing tightness. Use a for-loop to change the tightness from 5 to 1, with each turn lasting for 2 seconds.
 
 ----
 

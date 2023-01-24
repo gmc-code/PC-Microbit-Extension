@@ -110,7 +110,7 @@ Python Game design: nested if
     #. Add checking of the user input in the python code so that only R, P or S is accepted, and print a message to type one of them if a user inputs something different.
     #. Add counters so that the total wins, losses and draws is printed after each game in python.
     #. Add if-else in the python game to ask to continue playing and break out of the while True loop if the response is ``N`` for No.
-    #. Modify the code to ask for the number of games to play and replace the while True loop with a for loop for the entered number of games.
+    #. Modify the code to ask for the number of games to play and replace the while True loop with a for-loop for the entered number of games.
     
 ----
 
