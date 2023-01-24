@@ -2,9 +2,12 @@
 Log csv file to microbit
 ====================================================
 
-| For the microbit utime module see: https://microbit-micropython.readthedocs.io/en/v2-docs/utime.html
-| For opening a file on the microbit see: https://microbit-micropython.readthedocs.io/en/v2-docs/filesystem.html
-| For reading the light level via display see: https://microbit-micropython.readthedocs.io/en/v2-docs/display.html
+| For the microbit utime module 
+| see: https://microbit-micropython.readthedocs.io/en/v2-docs/utime.html
+| For opening a file on the microbit  
+| see: https://microbit-micropython.readthedocs.io/en/v2-docs/filesystem.html
+| For reading the light level via display  
+| see: https://microbit-micropython.readthedocs.io/en/v2-docs/display.html
 
 ----
 
@@ -12,7 +15,7 @@ Write to microbit
 ----------------------------------------
 
 | Below is code to record light readings to the microbit as a csv file.
-| The light reading isobtained by ``display.read_light_level()``.
+| The light readings are obtained by ``display.read_light_level()``.
 | The time between readings is set to 100 milliseconds by **read_interval**.
 | The the number of readings is set to 80 by **number_of_readings**.
 | The file on the microbit to hold the readings is set by ``fileName = "light_readings.csv"``.
@@ -70,12 +73,12 @@ Write to microbit
 
 ----
 
-File ftansfer from microbit to computer
+File tansfer from microbit to computer
 ----------------------------------------
 
-| To tansfer the "light_readings.csv" file to the computer click on the Files button in Mu editor.
-| Ckick and drag the file, "light_readings.csv", across to teh right to the mu_code folder on the computer.
-| The folder will be located at: C:\Users\username\mu_code, depending on the username.
+| To transfer the "light_readings.csv" file to the computer click on the Files button in Mu editor.
+| Click and drag the file, "light_readings.csv", across to teh right to the mu_code folder on the computer.
+| The folder will be located at: C:\\Users\\username\\mu_code, depending on the username.
 
 .. image:: images/light_readings_file_transfer.png
     :scale: 50 %
