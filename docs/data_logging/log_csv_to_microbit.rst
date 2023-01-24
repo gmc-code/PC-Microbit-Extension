@@ -77,71 +77,113 @@ Display elapsed seconds
 
 | It can be useful to give user feedback by displaying the elapsed seconds on the microbit.
 | ``count_seconds`` is used to display the elapsed seconds on the microbit as the readings occur.
-| **count_seconds** takes 2 parameters: time_from_start, time_displayed.
+| **count_seconds** takes 2 parameters: **time_from_start**, **time_displayed**.
 | ``sec_from_start = int(time_from_start)`` rounds down the **time_from_start**. 
 | ``if sec_from_start > time_displayed`` will be true once **time_from_start** has increased by atleast 1 second above **time_displayed**. **time_displayed** is hten updated and used for display.
 
-.. code-block:: python
 
-    def count_seconds(time_from_start, time_displayed):
-        sec_from_start = int(time_from_start)
-        if sec_from_start > time_displayed:
-            time_displayed = sec_from_start
-        return time_displayed
+.. admonition:: Tasks
 
+    #. Complete the count_seconds function, by replacing the XXX stings.
 
+        .. code-block:: python
+                    
+            def count_seconds(XXX, XXX):
+                sec_from_start = int(time_from_start)
+                if XXX > time_displayed:
+                    XXX = sec_from_start
+                return time_displayed     
+
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
+
+        .. tab-set::
+
+            .. tab-item:: Q1
+
+                Complete the count_seconds function.
+                 
+                .. code-block:: python
+
+                    def count_seconds(time_from_start, time_displayed):
+                        sec_from_start = int(time_from_start)
+                        if sec_from_start > time_displayed:
+                            time_displayed = sec_from_start
+                        return time_displayed
+
+| In the complete code:
 | ``time_displayed`` is set to 0 before the for loop.
 | ``time_displayed = count_seconds(time_from_start, time_displayed)`` updates the **time_displayed** value.
 | ``display.show(time_displayed, wait=False)`` shows the time in seconds from the start of taking readings.
 
-.. code-block:: python
 
-    # measure light readings for about (read_interval * number_of_readings /1000) seconds.
-    # alter read_interval, number_of_readings to suit usage.
-    from microbit import *
-    import utime
+.. admonition:: Tasks
 
-    read_interval = 100
-    number_of_readings = 80
-    fileName = "light_readings.csv"
+    #.  Complete the code to display the elapsed seconds on the microbit.
+       
+    .. dropdown::
+        :icon: codescan
+        :color: primary
+        :class-container: sd-dropdown-container
 
+        .. tab-set::
 
-    def writeFile(fileName, data):
-        with open(fileName, "w") as f:
-            data = str(data)
-            f.write(data)
+            .. tab-item:: Q1
 
+                Complete the code to display the elapsed seconds on the microbit.
 
-    def saveData(fileName):
-        log_data = "Time,Light_reading\r"
-        start_time = utime.ticks_ms()
-        time_displayed = 0
-        for x in range(number_of_readings):
-            if button_b.is_pressed():
-                display.show(Image.ARROW_W)
-                break
-            reading = str(display.read_light_level())
-            curr_time = utime.ticks_ms()
-            time_from_start = round(utime.ticks_diff(curr_time, start_time)/1000, 2)
-            new_data = str(time_from_start) + "," + reading + "\r"
-            log_data += new_data
-            time_displayed = count_seconds(time_from_start, time_displayed)
-            display.show(time_displayed, wait=False)
-            sleep(read_interval)
-        writeFile(fileName, log_data)
+                .. code-block:: python
+
+                    # measure light readings for about (read_interval * number_of_readings /1000) seconds.
+                    # alter read_interval, number_of_readings to suit usage.
+                    from microbit import *
+                    import utime
+
+                    read_interval = 100
+                    number_of_readings = 80
+                    fileName = "light_readings.csv"
 
 
-    def count_seconds(time_from_start, time_displayed):
-        sec_from_start = int(time_from_start)
-        if sec_from_start > time_displayed:
-            time_displayed = sec_from_start
-        return time_displayed
+                    def writeFile(fileName, data):
+                        with open(fileName, "w") as f:
+                            data = str(data)
+                            f.write(data)
 
 
-    display.show(Image.ARROW_W)
-    while True:
-        if button_a.was_pressed():
-            saveData(fileName)
-            display.show(Image.ARROW_W)
-        else:
-            sleep(1000)
+                    def saveData(fileName):
+                        log_data = "Time,Light_reading\r"
+                        start_time = utime.ticks_ms()
+                        time_displayed = 0
+                        for x in range(number_of_readings):
+                            if button_b.is_pressed():
+                                display.show(Image.ARROW_W)
+                                break
+                            reading = str(display.read_light_level())
+                            curr_time = utime.ticks_ms()
+                            time_from_start = round(utime.ticks_diff(curr_time, start_time)/1000, 2)
+                            new_data = str(time_from_start) + "," + reading + "\r"
+                            log_data += new_data
+                            time_displayed = count_seconds(time_from_start, time_displayed)
+                            display.show(time_displayed, wait=False)
+                            sleep(read_interval)
+                        writeFile(fileName, log_data)
+
+
+                    def count_seconds(time_from_start, time_displayed):
+                        sec_from_start = int(time_from_start)
+                        if sec_from_start > time_displayed:
+                            time_displayed = sec_from_start
+                        return time_displayed
+
+
+                    display.show(Image.ARROW_W)
+                    while True:
+                        if button_a.was_pressed():
+                            saveData(fileName)
+                            display.show(Image.ARROW_W)
+                        else:
+                            sleep(1000)
+
+
