@@ -13,6 +13,19 @@ PC-microbit-extension
     introduction/Mu_editor.rst
 
 
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Data Logging
+    :numbered:
+
+    data_logging/log_csv_to_microbit.rst
+    data_logging/data_logging.rst
+    data_logging/Excel_data_logging.rst
+    data_logging/vscode_data_logging.rst
+
+
+
 .. toctree::
     :maxdepth: 2
     :caption: Bots/MiniBit
@@ -183,19 +196,6 @@ PC-microbit-extension
     games/maze.rst
     games/french_numbers.rst
     games/french_numbers_quiz.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Data Logging
-    :numbered:
-
-    data_logging/Excel_data_logging.rst
-
-
-
-
-
 
 
 
