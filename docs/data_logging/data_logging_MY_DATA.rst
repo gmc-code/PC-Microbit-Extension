@@ -7,7 +7,6 @@ References for data logging to the microbit: V2 MICROBIT
 
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/log.html
 | See: https://python.microbit.org/v/3/api/log
-
 | For raising exemptions see: https://docs.python.org/3/tutorial/errors.html#raising-exceptions
 
 ----
@@ -140,3 +139,6 @@ Data log
 | Pressing the B button raises an exemption. This is the only way to stop the run_every process from continuing.
 | A try - except block is used to take account of the error that occurs when the log is full. The normal practice would be to use ``display.scroll("Log full")`` in the except block. Doing so would result in repeated scrolling of this message. Instead ``raise Exception("log full")`` has been used to cause the run_every process to be stopped. A blank screen is then interpreted as logging has finished.
 | To restart logging, including deleting the log, hold down the A button while pressing the black reset button on the top back of the microbit.
+
+| A long sleep has been set to cover the anticipated reading period. Adjust to the activity length.
+

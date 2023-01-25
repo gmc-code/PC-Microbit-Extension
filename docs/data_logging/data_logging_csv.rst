@@ -15,17 +15,6 @@ Write to microbit
 ----------------------------------------
 
 | Below is code to record light readings to the microbit as a csv file.
-| The light readings are obtained by ``display.read_light_level()``.
-| The time between readings is set to 100 milliseconds by **read_interval**.
-| The the number of readings is set to 80 by **number_of_readings**.
-| The file on the microbit to hold the readings is set by ``fileName = "light_readings.csv"``.
-| ``save_data`` saves the ``log_data`` to the microbit.
-| ``log_data = "Time,Light_reading\r"`` makes the headings for the readings.
-| ``new_data = str(time_from_start) + "," + reading + "\r"`` is used to collect the line string to be added to the log_data.
-
-| The start time, **start_time**, for the data collection is set by ``start_time = utime.ticks_ms()``
-| After a sleep set by **read_interval**, the current time is set by ``curr_time = utime.ticks_ms()``.
-| ``time_from_start = round(utime.ticks_diff(curr_time, start_time)/1000, 2)`` rounds the time since **start_time** to 2 dp.
 
 
 .. code-block:: python
@@ -71,9 +60,22 @@ Write to microbit
         else:
             sleep(1000)
 
+| The light readings are obtained by ``display.read_light_level()``.
+| The time between readings is set to 100 milliseconds by **read_interval**.
+| The the number of readings is set to 80 by **number_of_readings**.
+| The file on the microbit to hold the readings is set by ``fileName = "light_readings.csv"``.
+| ``save_data`` saves the ``log_data`` to the microbit.
+| ``log_data = "Time,Light_reading\r"`` makes the headings for the readings.
+| ``new_data = str(time_from_start) + "," + reading + "\r"`` is used to collect the line string to be added to the log_data.
+
+| The start time, **start_time**, for the data collection is set by ``start_time = utime.ticks_ms()``
+| After a sleep set by **read_interval**, the current time is set by ``curr_time = utime.ticks_ms()``.
+| ``time_from_start = round(utime.ticks_diff(curr_time, start_time)/1000, 2)`` rounds the time since **start_time** to 2 dp.
+
+
 ----
 
-File tansfer from microbit to computer
+File transfer from microbit to computer
 ----------------------------------------
 
 | To transfer the "light_readings.csv" file to the computer click on the Files button in Mu editor.
@@ -85,7 +87,7 @@ File tansfer from microbit to computer
     :align: center
     :alt: light_readings_file_transfer
 
-| The file can then be used to display a chart in excel of in python using plotly or matplotlib.
+| The file can then be used to display a chart in excel or in python using plotly or matplotlib.
 
 ----
 
