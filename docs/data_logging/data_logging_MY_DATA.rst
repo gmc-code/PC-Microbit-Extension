@@ -10,11 +10,20 @@ References for data logging to the microbit: V2 MICROBIT
 
 | For raising exemptions see: https://docs.python.org/3/tutorial/errors.html#raising-exceptions
 
-.. admonition:: Note
+----
 
-    | The log module is not available with Mu editor 1.2.0
-    | Use the online editor at https://python.microbit.org/v/3
-    | See online info for data logging: https://python.microbit.org/v/3/reference/data-logging
+Microbit log module
+----------------------------------------
+
+.. code-block:: python
+
+    from microbit import *
+    import log
+
+| This module lets you log data to a MY_DATA file saved on a microbit V2 MICROBIT USB drive.
+| As of Jan 2023 Mu editor doesn't have the log module.
+| Use the online editor at https://python.microbit.org/v/3.
+| See online info for data logging: https://python.microbit.org/v/3/reference/data-logging
 
 ----
 
@@ -66,18 +75,6 @@ To log data to the microbit for later viewing:
 
 #. Use the **Copy** button to copy the data so you can paste it straight into a spreadsheet. 
 #. Use the **Download** button to download the data as a CSV (comma separated values) file which you can also import into a spreadsheet.
-
-
-----
-
-Microbit code
-----------------------------------------
-
-.. py:module:: log
-
-| This module lets you log data to a MY_DATA file saved on a microbit V2 MICROBIT USB drive.
-| As of Jan 2023 Mu editor doesn't have the log module.
-| Use the online editor at https://python.microbit.org/v/3.
 
 ----
 
