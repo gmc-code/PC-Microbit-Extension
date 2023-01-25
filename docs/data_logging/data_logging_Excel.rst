@@ -87,13 +87,13 @@ Excel's Data Streamer Add-in gathers data from external devices via the USB seri
     :alt: connect_microbit
 | 
 
-1. 4 new sheets will be created: Data In, Data Out, Settings, Manifest
-2. Click **start data** in the Data Streamer tab. 
-3. Click **stop data** in the Data Streamer tab.
-4. Choose the Settings Sheet. Adjust the settings: 
-5. Set Data rows to 10 
-6. Set Data channels to 1
-7.  Set Data orientation to Newest first using the drop down.
-8.  navigate to the **Data In** sheet to see microbit data.
+3. 4 new sheets will be created: Data In, Data Out, Settings, Manifest
+4. Click **start data** in the Data Streamer tab. 
+5. Click **stop data** in the Data Streamer tab.
+6. Choose the Settings Sheet. Adjust the settings: 
+7. Set Data rows to 10 
+8. Set Data channels to 1
+9.  Set Data orientation to Newest first using the drop down.
+10. navigate to the **Data In** sheet to see microbit data.
 
 
