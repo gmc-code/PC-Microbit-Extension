@@ -79,7 +79,7 @@ Excel's Data Streamer Add-in gathers data from external devices via the USB seri
 
 | 
 
-2. Click **connect your device** to select the micro:bit USB device.
+2. Click **connect your device** to select the microbit USB device.
    
 .. image:: images/connect_microbit.png
     :scale: 50 %
@@ -94,6 +94,6 @@ Excel's Data Streamer Add-in gathers data from external devices via the USB seri
 5. Set Data rows to 10 
 6. Set Data channels to 1
 7.  Set Data orientation to Newest first using the drop down.
-8.  navigate to the **Data In** sheet to see micro:bit data.
+8.  navigate to the **Data In** sheet to see microbit data.
 
 
