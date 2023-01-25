@@ -39,38 +39,38 @@ To log data to the microbit for later viewing:
 
     .. image:: images/online_serial.png
         :scale: 50 %
-        :align: center
+        :align: left
         :alt: online_serial
 
 #. When finished the activity that is being recorded, read your data. Connect the microbit to a computer. The microbit will appear like a USB drive called MICROBIT. Double-click on MY_DATA file to open it in a web browser. Your data will be diaplayed in a table. Only do this once finished since no more data can be written to the file MY_DATA unless the microbit is unplugged and reconnected or reset.
 
     .. image:: images/microbit_drive.png
-        :scale: 50 %
-        :align: center
+        :scale: 100 %
+        :align: left
         :alt: microbit_drive
 
     .. image:: images/data_table.png
-        :scale: 50 %
-        :align: center
+        :scale: 75 %
+        :align: left
         :alt: data_table
 
 #. Click **Visual Preview** to preview the data a graph directly in the MY_DATA file on your microbit.
 
     .. image:: images/my_data_buttons.png
-        :scale: 50 %
-        :align: center
+        :scale: 75 %
+        :align: left
         :alt: microbit_drive
 
     .. image:: images/data_graph.png
-        :scale: 20 %
-        :align: center
+        :scale: 35 %
+        :align: left
         :alt: data_graph
 
 #. Click **the legend keys** to isolate individual lines of data in the graph. 
 
     .. image:: images/data_graph_brightness.png
-        :scale: 20 %
-        :align: center
+        :scale: 35 %
+        :align: left
         :alt: data_graph_brightness
 
 #. Use the **Copy** button to copy the data so you can paste it straight into a spreadsheet. 
