@@ -120,7 +120,7 @@ Data log
     run_every(log_data, ms=100)
     while True:
         display.show(Image.HAPPY)
-        sleep(100000) #100 seconds
+        sleep(10000) #10 seconds
 
 
 | ``log.set_labels('brightness', 'x', 'y', 'z', timestamp=log.SECONDS)`` sets the column headings for the data, which automatically includes a time stamp in the first column.  
@@ -137,8 +137,9 @@ Data log
 
 | Pressing the A button deletes the log in full. It may take a few seconds. A no image is shown at the start of the deletion and a happy image is shown when done, and recording data starts again.
 | Pressing the B button raises an exemption. This is the only way to stop the run_every process from continuing.
-| A try - except block is used to take account of the error that occurs when the log is full. The normal practice would be to use ``display.scroll("Log full")`` in the except block. Doing so would result in repeated scrolling of this message. Instead ``raise Exception("log full")`` has been used to cause the run_every process to be stopped. A blank screen is then interpreted as logging has finished.
+| A try-except block is used to take account of the error that occurs when the log is full. The normal practice would be to use ``display.scroll("Log full")`` in the except block. Doing so would result in repeated scrolling of this message. THat may be desirable in some cases. Instead ``raise Exception("log full")`` has been used to cause the run_every process to be stopped. A blank screen is then interpreted as if logging has finished.
 | To restart logging, including deleting the log, hold down the A button while pressing the black reset button on the top back of the microbit.
+| To restart logging, without deleting the log, press the black reset button on the top back of the microbit and new logging data will be appended to the log.
 
-| A long sleep has been set to cover the anticipated reading period. Adjust to the activity length.
+| A long sleep, ``sleep(10000)``, 10 seconds, has been set to cover the anticipated reading period. Adjust to suit the activity.
 
