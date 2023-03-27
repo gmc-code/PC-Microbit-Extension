@@ -3,7 +3,7 @@ BitBotXL module
 ====================================================
 
 
-| The BitBotXL module is required to control the MOVEmotor buggy.
+| The BitBotXL module is required to control the BitBotXL buggy.
 | Download the python file :download:`BitBotXL.py module <files/BitBotXL.py>`.
 | Place it in the mu_code folder: C:\\Users\\username\\mu_code
 | The file needs to be copied onto the microbit.
