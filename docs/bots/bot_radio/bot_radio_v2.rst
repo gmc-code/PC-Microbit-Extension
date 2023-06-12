@@ -2,7 +2,7 @@
 Bot radio v2
 ====================================================
 
-| This uses more settings for the motor control by titlting to different degrees.
+| This uses more settings for the motor control by tilting to different degrees.
 | Three speed settings are used below.
 
 ----
