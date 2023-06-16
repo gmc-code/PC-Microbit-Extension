@@ -198,21 +198,22 @@ Radio for microbit on BitBotXL
 Radio for microbit on MOVEMotor
 --------------------------------
 
-| The code below moves the MOVEMotor at medium speed, since its top speed is relatively fast.
+| The code below moves the MOVEMotor at varying speed.
 | The radius of 5 gives a tight turn.
-| Low urning speed settings are used below for best control based on testing.
+
 
 .. code-block:: python
 
     from microbit import *
     import radio
-    import BitBotXL
+    import MOVEMotor
 
 
     radio.config(group=8)  # 0-255
     radio.on()
 
-    buggy = BitBotXL.BitBotXLMotors()
+    buggy = MOVEMotor.MOVEMotorMotors()
+
 
 
     while True:
