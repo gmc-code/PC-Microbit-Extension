@@ -222,31 +222,31 @@ Radio for microbit on MOVEMotor
         if msg is not None:
             display.show(msg)
             if msg == "B":
-                buggy.backwards(speed=5)
+                buggy.backwards(speed=1)
             elif msg == "C":
-                buggy.backwards(speed=8)
+                buggy.backwards(speed=3)
             elif msg == "D":
-                buggy.backwards(speed=10)
+                buggy.backwards(speed=5)
             elif msg == "F":
-                buggy.forwards(speed=5)
+                buggy.forwards(speed=1)
             elif msg == "G":
-                buggy.forwards(speed=8)
+                buggy.forwards(speed=3)
             elif msg == "H":
-                buggy.forwards(speed=10)
+                buggy.forwards(speed=5)
             elif msg == "X":
                 buggy.stop()
             elif msg == "L":
-                buggy.left(speed=2, radius=25)
+                buggy.left(tightness=1)
             elif msg == "M":
-                buggy.left(speed=3, radius=15)
+                buggy.left(tightness=3)
             elif msg == "N":
-                buggy.left(speed=4, radius=5)
+                buggy.left(tightness=5)
             elif msg == "R":
-                buggy.right(speed=2, radius=25)
+                buggy.right(tightness=1)
             elif msg == "S":
-                buggy.right(speed=3, radius=15)
+                buggy.right(tightness=3)
             elif msg == "T":
-                buggy.right(speed=4, radius=5)
+                buggy.right(tightness=5)
             
 ----
 
