@@ -170,6 +170,40 @@ Radio for microbit on MOVEMotor
 
 ----
 
+Radio for microbit on Maqueen
+--------------------------------------
+
+| The code below moves the Maqueen at maximum speed, since its top speed is relatively slow.
+
+.. code-block:: python
+
+    import maqueen
+
+
+    radio.config(group=8)  # 0-255
+    radio.on()
+
+    buggy = maqeen.MaqueenuMotors()
+
+    while True:
+        sleep(50)
+        msg = radio.receive()
+        if msg is not None:
+            display.show(msg)
+            if msg == "X":
+                buggy.stop()
+            elif msg == "B":
+                buggy.backwards(speed=5)
+            elif msg == "F":
+                buggy.forwards(speed=5)
+            elif msg == "R":
+                buggy.right(tightness=5)
+            elif msg == "L":
+                buggy.left(tightness=5)
+
+
+----
+
 Radio Racing
 ----------------------------
 
