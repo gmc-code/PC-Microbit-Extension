@@ -177,13 +177,15 @@ Radio for microbit on Maqueen
 
 .. code-block:: python
 
+    from microbit import *
+    import radio
     import maqueen
 
 
     radio.config(group=8)  # 0-255
     radio.on()
 
-    buggy = maqeen.MaqueenuMotors()
+    buggy = maqueen.MaqueenMotors()
 
     while True:
         sleep(50)
