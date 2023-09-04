@@ -34,11 +34,14 @@ Radio for controller
 | For increasing speed backward, send: B, C, D
 | Tilt backwards more and more.
 
-| For increasing speed left, send: L, M, N
+| For increasing tightness of turn left, send: L, M, N
 | Tilt left more and more.
 
-| For increasing speed right, send: R, S, T
+| For increasing tightness of turn right, send: R, S, T
 | Tilt right more and more.
+
+| To force a stop, hold down the A button.
+| To force a short spin to left, hold down the B button.
 
 
 .. code-block:: python
@@ -52,40 +55,48 @@ Radio for controller
 
     while True:
         sleep(50)
-        y_reading = accelerometer.get_y()
-        x_reading = accelerometer.get_x()
-        # level sideways only
-        if -200 <= y_reading <= 200 and -200 <= x_reading <= 200:
+        if button_a.is_pressed():
+            # stop
             msg = "X"
-        # level sideways only
-        elif -200 <= x_reading <= 200:
-            if y_reading > 700:
-                msg = "D"
-            elif y_reading > 500:
-                msg = "C"
-            elif y_reading > 200:
-                msg = "B"
-            elif y_reading < -700:
-                msg = "H"
-            elif y_reading < -500:
-                msg = "G"
-            elif y_reading < -200:
-                msg = "F"
+        elif button_b.is_pressed():
+            # spin left
+            msg = "W"
         else:
-            if x_reading > 700:
-                msg = "T"
-            elif x_reading > 500:
-                msg = "S"
-            elif x_reading > 200:
-                msg = "R"
-            elif x_reading < -700:
-                msg = "N"
-            elif x_reading < -500:
-                msg = "M"
-            elif x_reading < -200:
-                msg = "L"
+            y_reading = accelerometer.get_y()
+            x_reading = accelerometer.get_x()
+            # level sideways only
+            if -200 <= y_reading <= 200 and -200 <= x_reading <= 200:
+                msg = "X"
+            # level sideways only
+            elif -200 <= x_reading <= 200:
+                if y_reading > 700:
+                    msg = "D"
+                elif y_reading > 500:
+                    msg = "C"
+                elif y_reading > 200:
+                    msg = "B"
+                elif y_reading < -700:
+                    msg = "H"
+                elif y_reading < -500:
+                    msg = "G"
+                elif y_reading < -200:
+                    msg = "F"
+            else:
+                if x_reading > 700:
+                    msg = "T"
+                elif x_reading > 500:
+                    msg = "S"
+                elif x_reading > 200:
+                    msg = "R"
+                elif x_reading < -700:
+                    msg = "N"
+                elif x_reading < -500:
+                    msg = "M"
+                elif x_reading < -200:
+                    msg = "L"
         radio.send(msg)
         display.show(msg)
+
 ----
 
 Radio for microbit on MiniBit
@@ -137,7 +148,8 @@ Radio for microbit on MiniBit
                 buggy.right(speed=10, tightness=3)
             elif msg == "T":
                 buggy.right(speed=10, tightness=5)
-
+            elif msg == "W":
+                buggy.spin_left(speed=1) 
 
 ----
 
@@ -192,6 +204,8 @@ Radio for microbit on BitBotXL
                 buggy.right(speed=10, tightness=3)
             elif msg == "T":
                 buggy.right(speed=10, tightness=5)
+            elif msg == "W":
+                buggy.spin_left(speed=1) 
 
 ----
 
@@ -208,13 +222,10 @@ Radio for microbit on MOVEMotor
     import radio
     import MOVEMotor
 
-
     radio.config(group=8)  # 0-255
     radio.on()
 
     buggy = MOVEMotor.MOVEMotorMotors()
-
-
 
     while True:
         sleep(50)
@@ -236,17 +247,19 @@ Radio for microbit on MOVEMotor
             elif msg == "X":
                 buggy.stop()
             elif msg == "L":
-                buggy.left(speed=10, tightness=2)
+                buggy.left(speed=5, radius=100)
             elif msg == "M":
-                buggy.left(speed=10, tightness=3)
+                buggy.left(speed=3, radius=50)
             elif msg == "N":
-                buggy.left(speed=10, tightness=5)
+                buggy.left(speed=1, radius=5)
             elif msg == "R":
-                buggy.right(speed=10, tightness=2)
+                buggy.right(speed=5, radius=100)
             elif msg == "S":
-                buggy.right(speed=10, tightness=3)
+                buggy.right(speed=3, radius=50)
             elif msg == "T":
-                buggy.right(speed=10, tightness=5)
+                buggy.right(speed=1, radius=5)
+            elif msg == "W":
+                buggy.spin_left(speed=1) 
 
 ----
 
@@ -299,7 +312,8 @@ Radio for microbit on Maqueen
                 buggy.right(tightness=3)
             elif msg == "T":
                 buggy.right(tightness=5)
-            
+            elif msg == "W":
+                buggy.spin_left(speed=1)             
 
 ----
 
@@ -310,7 +324,7 @@ Radio Racing
 
     #. Create an obstacle course and race another bot using radio controls.
     #. Modify the speed settings to suit the obstacle course.
-    #. Add B button pressing to allow backwards movement while turning.
+    #. Nodify the B button pressing to allow backwards movement while turning.
     #. Add a variable to keep track of the last msg sent and only send a new msg if it is different to the last msg.
 
 

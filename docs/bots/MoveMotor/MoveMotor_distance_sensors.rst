@@ -79,7 +79,7 @@ Distance to an object
     while True:
         buggy.forwards()
         if distance_sensor.distance() < 10:
-            buggy.spin(speed=1, direction='left', duration=1000)
+            buggy.spin_left(speed=3, duration=1000)
         sleep(200)
 
 ----

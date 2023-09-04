@@ -34,6 +34,7 @@ Radio for controller
     radio.on()
 
     while True:
+        sleep(50)
         y_reading = accelerometer.get_y()
         x_reading = accelerometer.get_x()
         # flat
@@ -116,6 +117,7 @@ Radio for microbit on BitBotXL
     
 
     while True:
+        sleep(50)
         msg = radio.receive()
         if msg is not None:
             display.show(msg)
@@ -135,7 +137,7 @@ Radio for microbit on BitBotXL
 Radio for microbit on MOVEMotor
 --------------------------------
 
-| The code below moves the MOVEMotor at medium speed, since its top speed is relatively fast.
+| The code below moves the MOVEMotor at medium speed, since its top speed is relatively fast and hard to control.
 | The radius of 5 gives a tight turn.
 
 
@@ -153,7 +155,7 @@ Radio for microbit on MOVEMotor
 
 
     while True:
-        sleep(100)
+        sleep(50)
         msg = radio.receive()
         if msg is not None:
             display.show(msg)
@@ -164,9 +166,9 @@ Radio for microbit on MOVEMotor
             elif msg == "F":
                 buggy.forwards(speed=5)
             elif msg == "R":
-                buggy.right(speed=2, radius=5)
+                buggy.right(speed=1, radius=5)
             elif msg == "L":
-                buggy.left(speed=2, radius=5)
+                buggy.left(speed=1, radius=5)
 
 ----
 
