@@ -2,7 +2,7 @@
 
 from microbit import *
 import neopixel
-import BitBotXL
+import other.BitBotXL as BitBotXL
 
 
 __I2CADDR1 = 0x1c  # address of PCA9557
