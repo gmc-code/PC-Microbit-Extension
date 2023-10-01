@@ -63,10 +63,12 @@ Troubleshooting large file issues
 | The bot modules, along with a long micropython file can take up most of the space on the microbit or be too large to transfer to the microbit.
 | The standard online **micropython** editor will give warning that there is not enough space for a large file on the microbit.
 | Mu editor can minify the .py files by removing comments and compacting space before producing the hex files to go on the microbit.
+
 | Sometimes large files and libraries may cause issues for Mu editor such that the microbit can't be used by either of these programs as well as not being fixed using maintenance mode (hold down reset button while connecting via USB).
 | Thonny can help fix such microbits by re-installing the micropython on the microbit. Afte his Mu editor or the online micropython editor can be used again.
+
 | A python minifer can be used to reduce the size of the files for the microbit. See: https://python-minifier.com/. Deselect all options so only the most basic minifer actions are carried out. 
-| VSCode also has extensions to Remove Blank Lines and to Remove Comments. These could be used toe reduce the size of some modules or micropyhton files. It is best to keep a backup of the fiels before doing so, since comments and spacing make the original files more readable and useful for further development. 
+| VSCode also has extensions to Remove Blank Lines and to Remove Comments. These could be used to reduce the size of some modules or micropyhton files. It is best to keep a backup of the files before doing so, since comments and spacing make the original files more readable and useful for further development. 
 
 ----
 
