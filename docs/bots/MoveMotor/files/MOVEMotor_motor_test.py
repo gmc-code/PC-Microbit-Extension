@@ -1,15 +1,16 @@
 # Motor tests for MOVEMotor module
 
 from microbit import *
-import MOVEMotor
+import docs.bots.MoveMotor.files.MOVEMotor_v31 as MOVEMotor_v31
 
 
 # setup buggy
-buggy = MOVEMotor.MOVEMotorMotors()
+buggy = MOVEMotor_v31.MOVEMotorMotors()
 buggy.stop()
 sleep(500)
 # gap between tests
 SLEEPGAP = 1000
+
 
 def forward_backward_test():
     # forwards(speed=1, duration=None, decrease_left=0, decrease_right=0)
@@ -21,6 +22,7 @@ def forward_backward_test():
         buggy.backwards(i, 250)
     buggy.stop()
     sleep(SLEEPGAP)
+
 
 def straight_line_test():
     # forwards(speed=1, duration=None, decrease_left=0, decrease_right=0)
@@ -40,6 +42,7 @@ def straight_line_test():
     buggy.stop()
     sleep(SLEEPGAP)
 
+
 def individual_motors_test():
     # left_motor(speed=1, duration=None)
     # right_motor(speed=1, duration=None)
@@ -51,6 +54,7 @@ def individual_motors_test():
     buggy.stop()
     sleep(SLEEPGAP)
 
+
 def spin_test():
     # spin(speed=1, duration=None)
     for i in range(2, 11, 2):
@@ -60,6 +64,7 @@ def spin_test():
         buggy.spin_right(i, 500)
     buggy.stop()
     sleep(SLEEPGAP)
+
 
 def turn_test():
     # left(speed=1, radius=25, duration=None)
@@ -71,6 +76,7 @@ def turn_test():
         buggy.right(i, 25, 400)
     buggy.stop()
     sleep(SLEEPGAP)
+
 
 def zigzag_test(slow_speed=2, fast_speed=4, zigzag_count=5, zigzag_time=1000):
     for i in range(zigzag_count):
@@ -87,8 +93,9 @@ def zigzag_test(slow_speed=2, fast_speed=4, zigzag_count=5, zigzag_time=1000):
         buggy.left_motor(-fast_speed)
         buggy.right_motor(-slow_speed)
         sleep(zigzag_time)
-        buggy.stop()
-        sleep(SLEEPGAP)
+    buggy.stop()
+    sleep(SLEEPGAP)
+
 
 def polygon_test(spin_duration=240, sides=20):
     for i in range(sides):
@@ -97,11 +104,13 @@ def polygon_test(spin_duration=240, sides=20):
     buggy.stop()
     sleep(SLEEPGAP)
 
+
 def spiral_test():
     for i in [10, 20, 40, 60, 80, 100]:
         buggy.left(3, i, duration=1000)
     buggy.stop()
     sleep(SLEEPGAP)
+
 
 def oval_test():
     radii = [20, 40, 60, 80, 60, 40]
@@ -111,6 +120,7 @@ def oval_test():
             buggy.left(3, r, d)
     buggy.stop()
     sleep(SLEEPGAP)
+
 
 def loops_test():
     radii = [10, 30, 80, 30]
@@ -141,11 +151,10 @@ def buggy_test():
     # spiral_test()
     # oval_test()
     # loops_test()
-    # sleep(5000)
-    
+
+
 while True:
     if button_a.is_pressed():
         buggy_test()
     else:
         buggy_stop_test()
-

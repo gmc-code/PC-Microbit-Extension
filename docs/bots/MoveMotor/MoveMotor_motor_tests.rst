@@ -429,7 +429,7 @@ Loops test
         buggy.stop()
         sleep(2000)
 
-    oval_test()
+    loops_test()
 
 ----
 

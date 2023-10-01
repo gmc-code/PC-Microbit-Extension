@@ -46,11 +46,43 @@ MOVEmotor buggy versions 1 and 2
 
 
 | To use the MOVEMotor_v2 module, import it via: ``import MOVEMotor_v2 as MOVEMotor``.
-| This will allow the sample code in these docs to be used wihtout a need to chenge all other references to ``MOVEMotor``.
+| This will allow the sample code in these docs to be used without a need to change all other references to ``MOVEMotor``.
 
 .. code-block:: python
 
     from microbit import *
     import MOVEMotor_v2 as MOVEMotor
 
+
+----
+
+MOVEMotor code v31
+----------------------------------------
+
+| The full version of the MOVEMotor module is shown below.
+
+
+.. literalinclude:: files/MOVEMotor_v31.py
+   :linenos:
+
+----
+
+MOVEMotor code
+----------------------------------------
+
+| The simplified version of the MOVEMotor module is shown below.
+| It has comments removed to reduce the file size.
+
+.. literalinclude:: files/MOVEMotor.py
+   :linenos:
+
+----
+
+MOVEMotor code v2
+----------------------------------------
+
+| The MOVEMotor module that supports v2 of the MOVEMotor, using i2c to control the motors, is shown below.
+
+.. literalinclude:: files/MOVEMotor_v2.py
+   :linenos:
 

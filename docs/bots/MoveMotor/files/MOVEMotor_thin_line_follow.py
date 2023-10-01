@@ -1,11 +1,11 @@
 # thin_line_follow
 from microbit import *
-import MOVEMotor
+import docs.bots.MoveMotor.files.MOVEMotor_v31 as MOVEMotor_v31
 
 
-buggy = MOVEMotor.MOVEMotorMotors()
+buggy = MOVEMotor_v31.MOVEMotorMotors()
 buggy.stop()
-line_sensor = MOVEMotor.MOVEMotorLineSensors()
+line_sensor = MOVEMotor_v31.MOVEMotorLineSensors()
 line_sensor.line_sensor_calibrate()
 left_sensor_start = line_sensor.line_sensor_read('left')
 right_sensor_start = line_sensor.line_sensor_read('right')
