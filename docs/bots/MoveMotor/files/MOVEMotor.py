@@ -1,10 +1,11 @@
-# A microbit, v2, micropython module for the Kitronik :MOVE Motor buggy v3.1
+# micropython module for the Kitronik :MOVE Motor buggy v3.1
+# for microbit, v2 
 # MOVEMotor module for motors, line following and distance sensing
 # GMC-code; 2023
 # The MIT License (MIT)
-# Depending on board version, motors are driven in different ways: 
-#V1.0 & V1.3 - PCA9632, motor uses i2c on v2:MOVE Motor 
-#V3.1 - WS2811
+# Depending on board version, motors are driven in different ways:
+# V1 and 2 - PCA9632, motor uses i2c
+# V3.1 - WS2811
 # The jerk message gives the motor a 'shove' at full power to aid starting on lower pwm ratios
 
 # motor uses pin12 on v3.1:MOVE Motor; WS2811 ICs, each with RGB (RG = Motor, B = Brake light)
@@ -16,7 +17,7 @@
 # direct calls using integers seem to work as in: self.ws2811[1] = (0, 0, brightness)
 
 # see https://github.com/KitronikLtd/micropython-microbit-kitronik-MOVE-motor
-# see Kitronic MakeCode module: https://github.com/KitronikLtd/pxt-kitronik-motor-driver
+# see Kitronic MakeCode module: https://github.com/KitronikLtd/pxt-kitronik-move-motor/blob/master/main.ts
 # for quick lookups of hex values
 # see https://www.prepressure.com/library/technology/ascii-binary-hex
 # See datasheet: https://www.nxp.com/docs/en/data-sheet/PCA9632.pdf
