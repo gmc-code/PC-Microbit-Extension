@@ -1,6 +1,6 @@
 # bitBotXL module for motors, line following and distance sensing
 # requires microbit v2
-# GMC-code; 2022
+# GMC-code; 2022-4
 # The MIT License (MIT)
 
 # A microbit v2 micropython module

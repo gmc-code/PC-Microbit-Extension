@@ -34,3 +34,13 @@ Use BitBotXL library
     from microbit import *
     import BitBotXL
 
+----
+
+BitBotXL code
+----------------------------------------
+
+| The BitBotXL module is shown below.
+
+
+.. literalinclude:: files/BitBotXL.py
+   :linenos:

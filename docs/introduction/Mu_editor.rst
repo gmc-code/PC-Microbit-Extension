@@ -112,3 +112,26 @@ Downloads
 --------------------------
 
 The latest version is at: https://codewith.mu/en/download
+
+----
+
+Uploading modules to the microbit
+---------------------------------------
+
+| Place the module file in the mu_code folder: C:\\Users\\username\\mu_code
+| The module file needs to be copied onto the microbit.
+| In Mu editor, with the microbit attached by USB, click the Files icon.
+| Files on the microbit are shown on the left.
+| Files in the mu_code folder are listed on the right.
+| Click and drag the module file from the right window to the left window to copy it to the microbit.
+| In the example shown, the module files is MOVEMotor.py.
+
+Before copying:
+
+.. image:: images/Mu_files.png
+    :scale: 50 %
+
+After copying:
+
+.. image:: images/Mu_files_copied.png
+    :scale: 50 %
