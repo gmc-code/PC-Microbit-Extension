@@ -40,3 +40,13 @@ Pins for the motors are below.
     buggy = MiniBit.MiniBitMotors()
     distance_sensor = MiniBit.MiniBitDistanceSensor()
 
+----
+
+Module code
+----------------------------------------
+
+| The module is shown below.
+
+.. literalinclude:: files/MiniBit.py
+   :linenos:
+

@@ -1,6 +1,6 @@
 # maqueen module for motors, line following and distance sensing
 # requires microbit v2
-# GMC-code; 2022
+# GMC-code; 2022-4
 # The MIT License (MIT)
 # motor uses i2c
 # motor speeds from 0,1,2,3,4,5
@@ -16,8 +16,8 @@ from neopixel import NeoPixel as leds
 CHIP_ADDR = 0x10
 LEFT_MOTOR = 0x00
 RIGHT_MOTOR = 0x02
-forwards = 0x00
-backwards= 0x01
+FORWARD = 0x00
+BACKWARD = 0x01
 SERVO_ONE = 0x14
 SERVO_TWO = 0x15
 

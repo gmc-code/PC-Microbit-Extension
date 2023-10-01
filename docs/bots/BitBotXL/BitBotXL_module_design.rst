@@ -26,6 +26,7 @@ This is a tutorial in which a module for the BitBotXL will be written.
     import BitBotXL
 
 | Each class will be named systematically, using **BitBotXL** in their names.
+| ``leds = BitBotXL.BitBotXLNeoPixels()`` is not used below.
 | Objects for each class will be created when setting up the BitBotXL.
 
 .. code-block:: python
@@ -37,7 +38,6 @@ This is a tutorial in which a module for the BitBotXL will be written.
     buggy = BitBotXL.BitBotXLMotors()
     distance_sensor = BitBotXL.BitBotXLDistanceSensor()
     line_sensor = BitBotXL.BitBotXLLineSensor()
-    leds = BitBotXL.BitBotXLNeoPixels()
     buzzer = BitBotXL.BitBotXLBuzzer()
     light_sensors = BitBotXL.BitBotXLLightSensors()
 

@@ -19,6 +19,8 @@ Set up buggy and sensors
     buggy.stop()
     line_sensor = maqueen.MaqueenLineSensors()
 
+----
+
 Set constants
 ----------------------------------------
 
@@ -32,6 +34,7 @@ Set constants
     MOTORTIME = 20
     SPINTIME = 530
 
+----
 
 Thick line following
 ----------------------------------------

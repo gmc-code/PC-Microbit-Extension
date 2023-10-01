@@ -25,7 +25,6 @@ PC-microbit-extension
     data_logging/data_logging_vscode.rst
 
 
-
 .. toctree::
     :maxdepth: 2
     :caption: Bots/MiniBit
@@ -36,6 +35,7 @@ PC-microbit-extension
     bots/MiniBit/MiniBit_distance_sensor.rst
     bots/MiniBit/MiniBit_module.rst
     bots/MiniBit/MiniBit_radio.rst
+    bots/MiniBit/MiniBit_summary.rst
 
 
 .. toctree::
@@ -95,7 +95,7 @@ PC-microbit-extension
     bots/Maqueen/Maqueen_LEDs.rst
     bots/Maqueen/Maqueen_distance_sensors.rst
     bots/Maqueen/Maqueen_line_sensors.rst
-    bots/Maqueen/
+    bots/Maqueen/Maqueen_summary.rst
     
 
 .. toctree::

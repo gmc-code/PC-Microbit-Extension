@@ -23,3 +23,12 @@ Use Maqueen library
     from microbit import *
     import maqueen
 
+----
+
+Maqueen code
+----------------------------------------
+
+| The Maqueen module is shown below.
+
+.. literalinclude:: files/maqueen.py
+   :linenos:

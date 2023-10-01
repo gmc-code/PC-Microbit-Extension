@@ -19,7 +19,16 @@ MOVEMotor info
 | Width 90mm.
 | Power 4xAA batteries
 
-Pins
+----
+
+Pins in V3
+-----------
+
+| V3 of the MOVEMotor has the same pins as V2 below except for the motor control.
+| pin12 is used to control the motor via Neopixel.
+
+
+Pins in V2
 ---------
 
 The pin numbers used to control different parts of the Kitronic :MOVEMotor are below.
@@ -35,6 +44,7 @@ The pin numbers used to control different parts of the Kitronic :MOVEMotor are b
  pin14   Ultrasonic Echo
  pin15   Servo Connection
  pin16   Servo Connection
+ 
  pin19   motor (via I2C)
  pin20   motor (via I2C)
 =======  ===========================

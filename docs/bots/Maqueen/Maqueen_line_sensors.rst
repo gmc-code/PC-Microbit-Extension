@@ -30,7 +30,7 @@ Read values from the line sensors
 
     | Return the line sensor value.
     | The value over white is 1, while over black is 0, since it uses a digital read (not analog).
-    | ``sensor`` is 'left' or 'right'
+    | ``sensor`` is 'left' or 'right'.
 
 .. code-block:: python
 

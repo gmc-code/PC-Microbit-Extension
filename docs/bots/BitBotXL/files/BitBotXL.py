@@ -22,12 +22,12 @@ RIGHT_FWD_PIN = pin14
 RIGHT_BWD_PIN = pin12
 LEDS_PIN = pin13
 BUZZER_PIN = pin0
-__I2CADDR = 0x1c  # address of PCA9557
+__I2CADDR = 0x1C  # address of PCA9557
 
 leds = neopixel.NeoPixel(LEDS_PIN, 12)
 
-class BitBotXLMotors:
 
+class BitBotXLMotors:
     def __init__(self):
         # left and right motor adjustments
         self.dec_left = 1
@@ -45,12 +45,12 @@ class BitBotXLMotors:
         self.stop_left()
         self.stop_right()
 
-    def set_bias_correction(self, direction='left', percent=0):
+    def set_bias_correction(self, direction="left", percent=0):
         """Set left/right bias to match motors."""
         factor = (percent + 100) / 100
-        if direction == 'left':
+        if direction == "left":
             self.dec_left = factor
-        elif direction == 'right':
+        elif direction == "right":
             self.dec_right = factor
 
     @staticmethod
@@ -58,7 +58,7 @@ class BitBotXLMotors:
         # input speed = -10 to 0 to 10
         # output = 0 to 1023
         if speed < 0 and speed >= -10:
-            return - int((speed * 100) - 23)
+            return -int((speed * 100) - 23)
         elif speed > 0 and speed <= 10:
             return int((speed * 100) + 23)
         else:
@@ -68,7 +68,7 @@ class BitBotXLMotors:
         an_speed = self._analog_speed(speed / self.dec_left)
         # an_speed = self._analog_speed(speed)
         # display.scroll(an_speed, delay=60)
-        if (speed > 0):
+        if speed > 0:
             LEFT_FWD_PIN.write_analog(an_speed)
             LEFT_BWD_PIN.write_digital(0)
         else:
@@ -82,7 +82,7 @@ class BitBotXLMotors:
         an_speed = self._analog_speed(speed / self.dec_right)
         # an_speed = self._analog_speed(speed)
         # display.scroll(an_speed, delay=60)
-        if (speed > 0):
+        if speed > 0:
             RIGHT_FWD_PIN.write_analog(an_speed)
             RIGHT_BWD_PIN.write_digital(0)
         else:
@@ -146,8 +146,7 @@ class BitBotXLMotors:
             self.stop()
 
 
-class BitBotXLDistanceSensor():
-
+class BitBotXLDistanceSensor:
     def distance(self):
         DISTANCE_SENSOR_PIN.write_digital(1)
         utime.sleep_us(10)
@@ -163,8 +162,7 @@ class BitBotXLDistanceSensor():
         return distance
 
 
-class BitBotXLBuzzer():
-
+class BitBotXLBuzzer:
     def buzz(self, duration):
         """Sound a buzz for duration milliseconds."""
         BUZZER_PIN.write_digital(1)
@@ -172,15 +170,14 @@ class BitBotXLBuzzer():
         BUZZER_PIN.write_digital(0)
 
 
-class BitBotXLLineSensor():
-
+class BitBotXLLineSensor:
     def linesensor(self, direction):
         """Read line sensor."""
 
         dir = direction
-        if dir == 'LEFT':
+        if dir == "LEFT":
             return self._getLine(0)
-        elif dir == 'RIGHT':
+        elif dir == "RIGHT":
             return self._getLine(1)
 
     def _getLine(self, bit):

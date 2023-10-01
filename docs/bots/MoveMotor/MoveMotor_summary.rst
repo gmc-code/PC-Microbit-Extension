@@ -2,7 +2,6 @@
 MOVEMotor summary
 ====================================================
 
-
 | A summary of the MoveMotor methods:
 
 .. code-block:: python
