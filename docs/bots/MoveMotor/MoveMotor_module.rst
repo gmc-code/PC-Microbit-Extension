@@ -3,7 +3,7 @@ MOVEMotor module
 ====================================================
 
 
-| The MOVEMotor module is required to control the MOVEmotor buggy.
+| The MOVEMotor module is required to control the **MOVEmotor buggy v3.1**.
 | Download the python file :download:`MOVEMotor.py module <files/MOVEMotor.py>`.
 | Place it in the mu_code folder: C:\\Users\\username\\mu_code
 | The file needs to be copied onto the microbit.
@@ -23,6 +23,8 @@ After copying:
     :scale: 50 %
 
 
+----
+
 Use MOVEMotor library
 ----------------------------------------
 
@@ -32,4 +34,23 @@ Use MOVEMotor library
 
     from microbit import *
     import MOVEMotor
+
+----
+
+MOVEmotor buggy versions 1 and 2
+----------------------------------------
+
+
+| The MOVEMotor_v2 module is required to control the MOVEmotor buggy versions 1 and 2.
+| Download the python file :download:`MOVEMotor_v2.py module <files/MOVEMotor_v2.py>`.
+
+
+| To use the MOVEMotor_v2 module, import it via: ``import MOVEMotor_v2 as MOVEMotor``.
+| This will allow the sample code in these docs to be used wihtout a need to chenge all other references to ``MOVEMotor``.
+
+.. code-block:: python
+
+    from microbit import *
+    import MOVEMotor_v2 as MOVEMotor
+
 

@@ -160,7 +160,7 @@ LED values
 To read the colour of a specific RGB LED use its index position.
 
 
-.. py:method:: np[n]
+.. py:data:: np[n]
 
     Return the red, green and blue value for the RGB LED at position n.
 
