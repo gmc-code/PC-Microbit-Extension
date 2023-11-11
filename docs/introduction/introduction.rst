@@ -48,7 +48,7 @@ Microbit software using micropython:
 | This is the most up-to-date editor.
 
 | Comparison of microbit programming options:
-| The **Mu** editor for laptops, https://codewith.mu/en/tutorials/1.1/microbit, is the first choice for coding on the microbit.
+| The **Mu** editor is for laptops: https://codewith.mu/en/tutorials/1.2/microbit.
 
 | **Thonny** for laptops, can be downloaded from https://thonny.org/.
 See: https://core-electronics.com.au/tutorials/how-to-program-a-microbit-using-thonny.html for setting up the microbit to use Thonny.

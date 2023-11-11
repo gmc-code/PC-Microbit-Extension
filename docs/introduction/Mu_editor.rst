@@ -28,7 +28,7 @@ First use
 Keyboard shortcuts
 --------------------------
 
-Useful keyboard shortcuts are at: https://codewith.mu/en/tutorials/1.1/shortcuts
+Useful keyboard shortcuts are at: https://codewith.mu/en/tutorials/1.2/shortcuts
 
 | **Microbit**
 =============  ======================================================================
