@@ -98,3 +98,4 @@ Employee Salary
 
                     emp1 = Employee(firstname="Tim", lastname="Lang", monthly_income=8000, bonus_rate=5)
                     emp1.get_employee()
+
