@@ -101,6 +101,7 @@ PC-microbit-extension
     :numbered:
 
     bots/LEDs/LEDs.rst
+    bots/LEDs/led_progressions.rst
 
 
 .. toctree::
