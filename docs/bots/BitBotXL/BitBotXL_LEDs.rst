@@ -188,8 +188,8 @@ To read the colour of a specific RGB LED use its index position.
 Colour lists
 -------------------
 
-.. image:: images/rgb_colors1.png
-    :scale: 50 %
+.. image:: images/rgb_colors.png
+    :scale: 25 %
     :align: left
 
 | A list of colours can be used to create a colourful display.
