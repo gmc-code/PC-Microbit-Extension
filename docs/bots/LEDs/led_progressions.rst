@@ -1,5 +1,5 @@
 ====================================================
-led colours
+led progressions
 ====================================================
 
 Colour lists
@@ -196,4 +196,3 @@ Button control
             same_random_pixels()
         sleep(400)
 
-        
