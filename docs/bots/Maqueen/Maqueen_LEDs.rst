@@ -12,7 +12,7 @@ Set up  LEDs
 .. py:class:: MaqueenNeoPixels() 
 
     | Set up the buggy's LEDs for use.
-    | Use ``leds = maqueen.MaqueenNeoPixels()`` to use the buggy's LEDs.
+    | Use ``buggy_lights = maqueen.MaqueenNeoPixels()`` to use the buggy's LEDs.
 
 | The code below imports the maqueen module and sets up the LEDs.
 
@@ -22,7 +22,7 @@ Set up  LEDs
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
 ----
 
@@ -47,8 +47,8 @@ MaqueenNeoPixels
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels(front=(0, 20, 0), indicator=(35, 25, 0), rear=(50, 0, 0))
-    leds.front_lights()
+    buggy_lights = maqueen.MaqueenNeoPixels(front=(0, 20, 0), indicator=(35, 25, 0), rear=(50, 0, 0))
+    buggy_lights.front_lights()
 
 ----
 
@@ -84,9 +84,9 @@ Buggy lights and indicators
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
-    leds.front_lights()
+    buggy_lights.front_lights()
 
 ----
 
@@ -148,10 +148,10 @@ set_front
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
-    leds.set_front(rgb=(255, 255, 255))
-    leds.front_lights()
+    buggy_lights.set_front(rgb=(255, 255, 255))
+    buggy_lights.front_lights()
 
 ----
 
@@ -179,10 +179,10 @@ set_indicator
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
-    leds.set_front(rgb=(255, 255, 0))
-    leds.front_lights()
+    buggy_lights.set_front(rgb=(255, 255, 0))
+    buggy_lights.front_lights()
 
 ----
 
@@ -210,10 +210,10 @@ set_rear
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
-    leds.set_rear(rgb=(255, 0, 0))
-    leds.front_lights()
+    buggy_lights.set_rear(rgb=(255, 0, 0))
+    buggy_lights.front_lights()
 
 ----
 
@@ -246,9 +246,9 @@ set_led
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
-    leds.set_led(3, rgb=(0, 0, 255))
+    buggy_lights.set_led(3, rgb=(0, 0, 255))
 
 ----
 
@@ -275,9 +275,9 @@ set_leds
     import maqueen
 
 
-    leds = maqueen.MaqueenNeoPixels()
+    buggy_lights = maqueen.MaqueenNeoPixels()
 
-    leds.set_leds(rgb=(0, 255, 255))
+    buggy_lights.set_leds(rgb=(0, 255, 255))
 
 
 ----

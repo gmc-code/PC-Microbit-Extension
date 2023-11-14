@@ -16,13 +16,12 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Data Logging
+    :caption: Bots/Radio
     :numbered:
 
-    data_logging/data_logging_csv.rst
-    data_logging/data_logging_MY_DATA.rst
-    data_logging/data_logging_Excel.rst
-    data_logging/data_logging_vscode.rst
+    bots/bot_radio/bot_radio_v1.rst
+    bots/bot_radio/bot_radio_v2.rst
+    bots/bot_radio/bot_radio_v3_game_controller.rst
 
 
 .. toctree::
@@ -75,16 +74,6 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Bots/Radio
-    :numbered:
-
-    bots/bot_radio/bot_radio_v1.rst
-    bots/bot_radio/bot_radio_v2.rst
-    bots/bot_radio/bot_radio_v3_game_controller.rst
-
-
-.. toctree::
-    :maxdepth: 2
     :caption: Bots/Maqueen
     :numbered:
 
@@ -104,6 +93,17 @@ PC-microbit-extension
     :numbered:
 
     bots/Track_templates/track_templates.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Data Logging
+    :numbered:
+
+    data_logging/data_logging_csv.rst
+    data_logging/data_logging_MY_DATA.rst
+    data_logging/data_logging_Excel.rst
+    data_logging/data_logging_vscode.rst
 
 
 .. toctree::

@@ -31,8 +31,8 @@ Set up LEDs
     | ``pin`` is the pin that they are connected by.
     | ``n`` is the number of LEDs.
 
-| The code below sets up the 4 LEDs connected to pin8 via: ``np = neopixel.NeoPixel(pin8, 4)``.
-| The variable, np, is the neopixel object that is used to control the LEDs.
+| The code below sets up the 4 LEDs connected to pin8 via: ``buggy_lights = neopixel.NeoPixel(pin8, 4)``.
+| The variable, buggy_lights, is the neopixel object that is used to control the LEDs.
 
 .. code-block:: python
 
@@ -40,19 +40,19 @@ Set up LEDs
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
+    buggy_lights = neopixel.NeoPixel(pin8, 4)
 
 ----
 
 Set LED colour and brightness
 ------------------------------
 
-.. py:method:: np[n] = (red, green, blue)
+.. py:method:: buggy_lights[n] = (red, green, blue)
 
     Set the red, green and blue brightness from 0 to 255 for a RGB LED at position n.
 
 | Each LED is set by indexing it (like with a Python list, starting from 0). 
-| e.g. the LED in position 0 is ``np[0]``. 
+| e.g. the LED in position 0 is ``buggy_lights[0]``. 
 | Neopixels are given RGB (red, green, blue) values between 0-255 as a tuple.
 | A value of 0 is off, while 255 is full brightness. 
 | When red, green and blue are all full brightness, i.e. ``(255, 255, 255)``, the colour is white.
@@ -66,11 +66,11 @@ Set LED colour and brightness
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
-    np[0] = (255, 255, 255)
-    np.show()
+    buggy_lights = neopixel.NeoPixel(pin8, 4)
+    buggy_lights[0] = (255, 255, 255)
+    buggy_lights.show()
 
-| The code below sets different colours for the 4 LEDs: np[0] is white (255, 255, 255), np[1] is red (255, 0, 0), np[2] is green (0, 255, 0) and np[3] is blue (0, 0, 255), with all at full brightness.
+| The code below sets different colours for the 4 LEDs: buggy_lights[0] is white (255, 255, 255), buggy_lights[1] is red (255, 0, 0), buggy_lights[2] is green (0, 255, 0) and buggy_lights[3] is blue (0, 0, 255), with all at full brightness.
 
 .. code-block:: python
 
@@ -78,12 +78,12 @@ Set LED colour and brightness
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
-    np[0] = (255, 255, 255)
-    np[1] = (255, 0, 0)
-    np[2] = (0, 255, 0)    
-    np[3] = (0, 0, 255)
-    np.show()
+    buggy_lights = neopixel.NeoPixel(pin8, 4)
+    buggy_lights[0] = (255, 255, 255)
+    buggy_lights[1] = (255, 0, 0)
+    buggy_lights[2] = (0, 255, 0)    
+    buggy_lights[3] = (0, 0, 255)
+    buggy_lights.show()
 
 ----
 
@@ -98,13 +98,13 @@ Set LED colour and brightness
 Show LEDs 
 ----------
 
-| Setting the colours for LEDs doesn't change the displayed colour of the LEDs until ``show()`` is used on the neopixel object that was set up. e.g. ``np.show()``
+| Setting the colours for LEDs doesn't change the displayed colour of the LEDs until ``show()`` is used on the neopixel object that was set up. e.g. ``buggy_lights.show()``
 
 .. py:method:: show()
 
         Show the LEDs using their colour settings. This must be called for any updates to the LEDs to become visible.
 
-| The code below displays the set colours for the neopixel LEDS using ``np.show()``
+| The code below displays the set colours for the neopixel LEDS using ``buggy_lights.show()``
 
 .. code-block:: python
 
@@ -112,9 +112,9 @@ Show LEDs
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
-    np[0] = (255, 255, 255)
-    np.show()
+    buggy_lights = neopixel.NeoPixel(pin8, 4)
+    buggy_lights[0] = (255, 255, 255)
+    buggy_lights.show()
 
 
 Clear LEDs
@@ -160,7 +160,7 @@ LED values
 To read the colour of a specific RGB LED use its index position.
 
 
-.. py:data:: np[n]
+.. py:data:: buggy_lights[n]
 
     Return the red, green and blue value for the RGB LED at position n.
 
