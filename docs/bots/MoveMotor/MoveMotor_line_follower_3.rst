@@ -26,7 +26,7 @@ Adding lights and sound: set up lights
 
 | Set up the Neopixels on pin8 with a length of 4 pixels using the neopixel syntax.
 | The constants, LED_PIN and NUM_PIXELS, are used to help remember the neopixel syntax. 
-| It would be just as easy to use ``buggy_lights = leds(pin8, 4)``.
+| It would be just as easy to use ``lights = leds(pin8, 4)``.
 | Add constants for the LED colours to use. These have the RGB values for the colours. The ones chosen are subtle. They avoid using the full brightness values that can go as high 255.
 
 .. code-block:: python
@@ -34,7 +34,7 @@ Adding lights and sound: set up lights
 
     LED_PIN = pin8
     NUM_PIXELS = 4
-    buggy_lights = leds(LED_PIN, NUM_PIXELS)
+    lights = leds(LED_PIN, NUM_PIXELS)
     DULL_WHITE = (20, 20, 20)
     DULL_YELLOW = (35, 25, 0)
     DULL_RED = (20, 0, 0)
@@ -52,14 +52,14 @@ Adding lights and sound: lights functions
 .. code-block:: python
 
     def rear_lights():
-        buggy_lights[2] = DULL_RED
-        buggy_lights[3] = DULL_RED
+        lights[2] = DULL_RED
+        lights[3] = DULL_RED
 
     def front_lights(left, right):
-        buggy_lights[0] = left
-        buggy_lights[1] = right
+        lights[0] = left
+        lights[1] = right
         rear_lights()
-        buggy_lights.show()
+        lights.show()
 
     def head_lights():
         front_lights(DULL_WHITE, DULL_WHITE)
@@ -199,20 +199,20 @@ Version 3 Code for thin line following with lights and sound
     # Setup the Neopixels on pin8 with a length of 4 pixels
     LED_PIN = pin8
     NUM_PIXELS = 4
-    buggy_lights = leds(LED_PIN, NUM_PIXELS)
+    lights = leds(LED_PIN, NUM_PIXELS)
     DULL_WHITE = (20, 20, 20)
     DULL_YELLOW = (35, 25, 0)
     DULL_RED = (20, 0, 0)
 
     def rear_lights():
-        buggy_lights[2] = DULL_RED
-        buggy_lights[3] = DULL_RED
+        lights[2] = DULL_RED
+        lights[3] = DULL_RED
 
     def front_lights(left, right):
-        buggy_lights[0] = left
-        buggy_lights[1] = right
+        lights[0] = left
+        lights[1] = right
         rear_lights()
-        buggy_lights.show()
+        lights.show()
 
     def head_lights():
         front_lights(DULL_WHITE, DULL_WHITE)

@@ -26,15 +26,21 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Bots/MiniBit
+    :caption: Bots/MoveMotor
     :numbered:
 
-    bots/MiniBit/MiniBit_info.rst
-    bots/MiniBit/MiniBit_motors.rst
-    bots/MiniBit/MiniBit_distance_sensor.rst
-    bots/MiniBit/MiniBit_module.rst
-    bots/MiniBit/MiniBit_radio.rst
-    bots/MiniBit/MiniBit_summary.rst
+    bots/MoveMotor/MoveMotor_info.rst
+    bots/MoveMotor/MoveMotor_module.rst
+    bots/MoveMotor/MoveMotor_motors.rst
+    bots/MoveMotor/MoveMotor_motor_tests.rst
+    bots/MoveMotor/MoveMotor_LEDs.rst
+    bots/MoveMotor/MoveMotor_distance_sensors.rst
+    bots/MoveMotor/MoveMotor_line_sensors.rst
+    bots/MoveMotor/MoveMotor_line_follower_1.rst
+    bots/MoveMotor/MoveMotor_line_follower_2.rst
+    bots/MoveMotor/MoveMotor_line_follower_3.rst
+    bots/MoveMotor/MoveMotor_line_follower_4.rst
+    bots/MoveMotor/MoveMotor_summary.rst
 
 
 .. toctree::
@@ -55,21 +61,15 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Bots/MoveMotor
+    :caption: Bots/MiniBit
     :numbered:
 
-    bots/MoveMotor/MoveMotor_info.rst
-    bots/MoveMotor/MoveMotor_module.rst
-    bots/MoveMotor/MoveMotor_motors.rst
-    bots/MoveMotor/MoveMotor_motor_tests.rst
-    bots/MoveMotor/MoveMotor_LEDs.rst
-    bots/MoveMotor/MoveMotor_distance_sensors.rst
-    bots/MoveMotor/MoveMotor_line_sensors.rst
-    bots/MoveMotor/MoveMotor_line_follower_1.rst
-    bots/MoveMotor/MoveMotor_line_follower_2.rst
-    bots/MoveMotor/MoveMotor_line_follower_3.rst
-    bots/MoveMotor/MoveMotor_line_follower_4.rst
-    bots/MoveMotor/MoveMotor_summary.rst
+    bots/MiniBit/MiniBit_info.rst
+    bots/MiniBit/MiniBit_motors.rst
+    bots/MiniBit/MiniBit_distance_sensor.rst
+    bots/MiniBit/MiniBit_module.rst
+    bots/MiniBit/MiniBit_radio.rst
+    bots/MiniBit/MiniBit_summary.rst
 
 
 .. toctree::
@@ -93,6 +93,14 @@ PC-microbit-extension
     :numbered:
 
     bots/Track_templates/track_templates.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: LEDs
+    :numbered:
+
+    bots/LEDs/LEDs.rst
 
 
 .. toctree::
@@ -143,14 +151,12 @@ PC-microbit-extension
     class_examples/employee_salary_composition.rst
 
 
-
 .. toctree::
     :maxdepth: 2
     :caption: Classes for the microbit
     :numbered:
 
     class_games/classes_for_the_microbit.rst
-
 
 
 .. toctree::

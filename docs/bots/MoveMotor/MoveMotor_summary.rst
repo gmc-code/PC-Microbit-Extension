@@ -2,7 +2,10 @@
 MOVEMotor summary
 ====================================================
 
-| A summary of the MoveMotor methods:
+| A summary of the MoveMotor methods is below.
+| General speed values are integers or floats (decimals) from -10 to 10.
+| Spin speed values are integers or floats (decimals) from 0 to 10.
+| Turn radius values are from 4 to 800 (in cm)
 
 .. code-block:: python
 
@@ -32,11 +35,11 @@ MOVEMotor summary
     left_reading = line_sensor.line_sensor_read('left')
     right_reading = line_sensor.line_sensor_read('right')
 
-    buggyLights = neopixel.NeoPixel(pin8, 4)
-    buggyLights[0] = (0, 255, 255)
-    buggyLights.show()
+    lights = neopixel.NeoPixel(pin8, 4)
+    lights[0] = (0, 255, 255)
+    lights.show()
     sleep(2000)
-    buggyLights.clear()
+    lights.clear()
 
 
 

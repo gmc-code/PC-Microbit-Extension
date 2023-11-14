@@ -43,11 +43,11 @@ BitBotXL summary
     buzzer = BitBotXL.BitBotXLBuzzer()
     buzzer.buzz(duration=500)
 
-    buggyLights = neopixel.NeoPixel(pin13, 12)
-    buggyLights[0] = (0, 255, 255)
-    buggyLights.show()
+    lights = neopixel.NeoPixel(pin13, 12)
+    lights[0] = (0, 255, 255)
+    lights.show()
     sleep(2000)
-    buggyLights.clear()
+    lights.clear()
 
 
 

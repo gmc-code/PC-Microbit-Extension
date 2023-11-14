@@ -121,7 +121,7 @@ Clear LEDs
 
         Clear all the LEDs so that they have no colours set and turns off the LEDs.
 
-| The code below uses the variable ``buggy_lights`` for the neopixel settings.
+| The code below uses the variable ``lights`` for the neopixel settings.
 | The front lights are at position 0 and 1. They are set to dull blue.
 | The rear lights are at position 2 and 3. They are set to dull red.
 | The lights are turned on for 2 seconds then turned off using ``clear()``.
@@ -132,16 +132,16 @@ Clear LEDs
     import neopixel
 
 
-    buggyLights = NeoPixel(pin8, 4)
+    lights = NeoPixel(pin8, 4)
     dull_blue = [20, 20, 25]
     dull_red = [25, 0, 0]
-    buggyLights[0] = dull_blue
-    buggyLights[1] = dull_blue
-    buggyLights[2] = dull_red
-    buggyLights[3] = dull_red
-    buggyLights.show()
+    lights[0] = dull_blue
+    lights[1] = dull_blue
+    lights[2] = dull_red
+    lights[3] = dull_red
+    lights.show()
     sleep(2000)
-    buggyLights.clear()
+    lights.clear()
 
 ----
 
@@ -171,9 +171,9 @@ To read the colour of a specific pixel just reference it.
     import neopixel
 
 
-    buggy_lights = neopixel.NeoPixel(pin8, 4)
-    buggy_lights[0] = (255, 0, 0)
-    for i in buggy_lights[0]:
+    lights = neopixel.NeoPixel(pin8, 4)
+    lights[0] = (255, 0, 0)
+    for i in lights[0]:
         display.scroll(i)
 
 ----
@@ -202,11 +202,11 @@ Colour lists
 
     colour_list = [white, red, yellow, green, cyan, blue, magenta, ]
 
-    buggy_lights = neopixel.NeoPixel(pin8, 4)
+    lights = neopixel.NeoPixel(pin8, 4)
     for c in colour_list:
         for i in range(4):
-            buggy_lights[i]=c
-        buggy_lights.show()
+            lights[i]=c
+        lights.show()
         sleep(200)
 
 
