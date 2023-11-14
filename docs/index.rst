@@ -24,6 +24,16 @@ PC-microbit-extension
     bots/bot_radio/bot_radio_v3_game_controller.rst
 
 
+
+.. toctree::
+    :maxdepth: 2
+    :caption: LEDs
+    :numbered:
+
+    bots/LEDs/LEDs.rst
+    bots/LEDs/led_progressions.rst
+
+
 .. toctree::
     :maxdepth: 2
     :caption: Bots/MoveMotor
@@ -93,15 +103,6 @@ PC-microbit-extension
     :numbered:
 
     bots/Track_templates/track_templates.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: LEDs
-    :numbered:
-
-    bots/LEDs/LEDs.rst
-    bots/LEDs/led_progressions.rst
 
 
 .. toctree::
