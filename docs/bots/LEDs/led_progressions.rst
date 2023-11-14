@@ -1,5 +1,5 @@
 ====================================================
-led progressions
+LED progressions
 ====================================================
 
 Colour lists
@@ -100,7 +100,7 @@ Random colours
         red = random.randint(0, 255)
         green = random.randint(0, 255)
         blue = random.randint(0, 255)
-        for pixel_id in range(NUM_PIXELS):
+        for pixel_id in range(4):
             # Assign the current LED a random red, green and blue value between 0 and 60
             lights[pixel_id] = (red, green, blue)
         # Display the current pixel data on the Neopixel strip
@@ -116,7 +116,7 @@ Random colours
 Front and rear lights
 ------------------------------
 
-| Display front and rear lights.
+| Display front lights as green and rear lights as red.
 
 .. code-block:: python
 
@@ -151,7 +151,7 @@ Front and rear lights
 Button control
 ------------------------------
 
-| Use def blocks wiht button pressing.
+| Use def blocks with button pressing to display random light colours.
 
 .. code-block:: python
 
@@ -168,7 +168,18 @@ Button control
         red = random.randint(0, 255)
         green = random.randint(0, 255)
         blue = random.randint(0, 255)
-        for pixel_id in range(NUM_PIXELS):
+        for pixel_id in range(4):
+            # Assign the current LED a random red, green and blue value between 0 and 60
+            lights[pixel_id] = (red, green, blue)
+        # Display the current pixel data on the Neopixel strip
+        lights.show()
+
+    def diff_random_pixels():
+        # Iterate over each LED in the strip
+        for pixel_id in range(4):
+            red = random.randint(0, 255)
+            green = random.randint(0, 255)
+            blue = random.randint(0, 255)
             # Assign the current LED a random red, green and blue value between 0 and 60
             lights[pixel_id] = (red, green, blue)
         # Display the current pixel data on the Neopixel strip
@@ -190,9 +201,11 @@ Button control
 
     while True:
         if button_a.is_presssed():
-            front_lights()
-            rear_lights()
+            diff_random_pixels()
         elif button_b.is_presssed():
             same_random_pixels()
+        else:
+            front_lights()
+            rear_lights()
         sleep(400)
 
