@@ -2,7 +2,7 @@
 LEDs
 ====================================================
 
-| THe examples below assume a device, such as a buggy, has 4 RGB LEDs (WS2812) on pin8.
+| The examples below assume a device, such as a buggy, has 4 RGB LEDs (WS2812) on pin8.
 | The neopixel module is used to drive these RGB LEDs.
 | In RGB, R stands for red, G stands for green, and B stands for blue.
 | Each RGB LED can produce a full spectrum of colours independent to all of the other RGB LEDs. 
@@ -30,8 +30,8 @@ Set up LEDs
     | ``pin`` is the pin that they are connected by.
     | ``n`` is the number of LEDs
 
-| The code below sets up 4 LEDs connected to pin8 via: ``np = neopixel.NeoPixel(pin8, 4)``.
-| The variable, np, is the neopixel object that is used to control the LEDs.
+| The code below sets up 4 LEDs connected to pin8 via: ``lights = neopixel.NeoPixel(pin8, 4)``.
+| The variable, lights, is the neopixel object that is used to control the LEDs.
 
 .. code-block:: python
 
@@ -39,19 +39,19 @@ Set up LEDs
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
+    lights = neopixel.NeoPixel(pin8, 4)
 
 ----
 
 Set LED colour and brightness
 ------------------------------
 
-.. py:method:: np[n] = (red, green, blue)
+.. py:method:: lights[n] = (red, green, blue)
 
     Set the red, green and blue brightness from 0 to 255 for a RGB LED at position n.
 
 | Each LED is set by indexing it (like with a Python list, starting from 0). 
-| e.g the LED in position 0 is ``np[0]``. 
+| e.g the LED in position 0 is ``lights[0]``. 
 | Neopixels are given RGB (red, green, blue) values between 0-255 as a tuple.
 | A value of 0 is off, while 255 is full brightness. 
 | When red, green and blue are all full brightness, ``(255, 255, 255)``, the colour is white.
@@ -65,10 +65,10 @@ Set LED colour and brightness
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
-    np[0] = (255, 255, 255)
+    lights = neopixel.NeoPixel(pin8, 4)
+    lights[0] = (255, 255, 255)
 
-| The code below sets the colours of the 4 LEDs: np[0] is white, np[1] is red, np[2] is green and np[3] is blue, with all at full brightness.
+| The code below sets the colours of the 4 LEDs: lights[0] is white, lights[1] is red, lights[2] is green and lights[3] is blue, with all at full brightness.
 
 .. code-block:: python
 
@@ -76,11 +76,11 @@ Set LED colour and brightness
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
-    np[0] = (255, 255, 255)
-    np[1] = (255, 0, 0)
-    np[2] = (0, 255, 0)    
-    np[3] = (0, 0, 255)
+    lights = neopixel.NeoPixel(pin8, 4)
+    lights[0] = (255, 255, 255)
+    lights[1] = (255, 0, 0)
+    lights[2] = (0, 255, 0)    
+    lights[3] = (0, 0, 255)
 
 ----
 
@@ -95,13 +95,13 @@ Set LED colour and brightness
 Show LEDs 
 ----------
 
-| Setting the colours for LEDs doesn't change the displayed colour of the LEDs until ``show()`` is used on the neopixel object that was set up. e.g. ``np.show()``
+| Setting the colours for LEDs doesn't change the displayed colour of the LEDs until ``show()`` is used on the neopixel object that was set up. e.g. ``lights.show()``
 
 .. py:method:: show()
 
-        Show the LEDs using their colour settings. This must be called for any updates to the LEDs to become visible.
+    Show the LEDs using their colour settings. This must be called for any updates to the LEDs to become visible.
 
-| The code below displays the set colours for the neopixel LEDS using ``np.show()``
+| The code below displays the set colours for the neopixel LEDS using ``lights.show()``
 
 .. code-block:: python
 
@@ -109,9 +109,9 @@ Show LEDs
     import neopixel
 
 
-    np = neopixel.NeoPixel(pin8, 4)
-    np[0] = (255, 255, 255)
-    np.show()
+    lights = neopixel.NeoPixel(pin8, 4)
+    lights[0] = (255, 255, 255)
+    lights.show()
 
 
 Clear LEDs
@@ -119,7 +119,7 @@ Clear LEDs
 
 .. py:method:: clear()
 
-        Clear all the LEDs so that they have no colours set and turns off the LEDs.
+    Clear all the LEDs so that they have no colours set and turns off the LEDs.
 
 | The code below uses the variable ``lights`` for the neopixel settings.
 | The front lights are at position 0 and 1. They are set to dull blue.
@@ -159,11 +159,12 @@ LED values
 To read the colour of a specific pixel just reference it.
 
 
-.. py:method:: np[n]
+.. py:method:: lights[n]
 
     Return the red, green and blue value for the RGB LED at position n.
 
-| The code below sets the LED to a sandy brown colour. The ``for`` loop displays each value in the tuple ``(255, 0, 0)``.
+| The code below sets the LED to a sandy brown colour. 
+| The ``for`` loop displays each value in the tuple ``(255, 0, 0)``.
 
 .. code-block:: python
 
@@ -236,21 +237,21 @@ Random brightness
     from random import randint
 
     # Setup the Neopixel strip on pin8 with a length of 4 pixels
-    np = neopixel.NeoPixel(pin8, 48)
+    lights = neopixel.NeoPixel(pin8, 48)
 
     while True:
         #Iterate over each LED in the strip
 
-        for pixel_id in range(0, len(np)):
+        for pixel_id in range(0, len(lights)):
             red = randint(0, 60)
             green = randint(0, 60)
             blue = randint(0, 60)
 
             # Assign the current LED a random red, green and blue value between 0 and 60
-            np[pixel_id] = (red, green, blue)
+            lights[pixel_id] = (red, green, blue)
 
             # Display the current pixel data on the Neopixel strip
-            np.show()
+            lights.show()
             sleep(100)
 
 ----
@@ -267,21 +268,21 @@ Random brightness
     # Setup the Neopixel strip on pin8 with a length of 4 pixels
     NUM_PIXELS = 4
     LED_PIN = pin8
-    np = neopixel.NeoPixel(LED_PIN, NUM_PIXELS)
+    lights = neopixel.NeoPixel(LED_PIN, NUM_PIXELS)
 
     def front_lights():
         # LED 0 and 1; red, green and blue value between 0 and 255
-        np[0] = (0, 255, 0)
-        np[1] = (0, 255, 0)
+        lights[0] = (0, 255, 0)
+        lights[1] = (0, 255, 0)
         # Display the current pixel data on the Neopixel strip
-        np.show()
+        lights.show()
 
     def rear_lights():
         # LED 2 and 3; red, green and blue value between 0 and 255
-        np[2] = (255, 0, 0)
-        np[3] = (255, 0, 0)
+        lights[2] = (255, 0, 0)
+        lights[3] = (255, 0, 0)
         # Display the current pixel data on the Neopixel strip
-        np.show()
+        lights.show()
 
     def same_random_pixels():
         # Iterate over each LED in the strip
@@ -290,9 +291,9 @@ Random brightness
         blue = random.randint(0, 255)
         for pixel_id in range(NUM_PIXELS):
             # Assign the current LED a random red, green and blue value between 0 and 60
-            np[pixel_id] = (red, green, blue)
+            lights[pixel_id] = (red, green, blue)
         # Display the current pixel data on the Neopixel strip
-        np.show()
+        lights.show()
 
 
     front_lights()
