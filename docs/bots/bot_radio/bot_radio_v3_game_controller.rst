@@ -2,6 +2,13 @@
 Bot radio v3 - KitronikGameController
 ====================================================
 
+.. image:: images/Kitronic-game-controller.png
+    :scale: 50 %
+    :align: center
+    :alt: KitronikGameController
+
+----
+
 Unique groups
 ----------------------
 
