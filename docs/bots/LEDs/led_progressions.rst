@@ -84,6 +84,7 @@ Random colours
 -----------------
 
 | Repeatedly display random colours on the 4 LEDs connected to pin8.
+| This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
 
@@ -117,6 +118,7 @@ Front and rear lights
 ------------------------------
 
 | Display front lights as green and rear lights as red.
+| This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
 
@@ -152,6 +154,7 @@ Button control
 ------------------------------
 
 | Use def blocks with button pressing to display random light colours.
+| This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
 
@@ -208,4 +211,196 @@ Button control
             front_lights()
             rear_lights()
         sleep(400)
+
+----
+
+Colour wheel
+----------------
+
+| This code is used to create a rainbow color effect on a Neopixel strip. 
+| The wheel function generates a color based on an input position, transitioning from red to green to blue and back to red. The rainbow function applies this color effect to each pixel in the Neopixel strip. 
+| The color of each pixel is determined by its position in the strip, creating a rainbow effect. 
+| The Neopixel strip is then updated to display the new colors.
+| This example requires a strip of 12 Neopixels connected to pin13.
+
+.. code-block:: python
+
+    from microbit import *
+    import neopixel
+
+    # Setup the Neopixel strip on pin13 with a length of 12 pixels
+    np = neopixel.NeoPixel(pin13, 12)
+
+    def wheel(pos):
+        """
+        Generate color based on the input position, transitioning from red to green to blue and back to red. The rainbow function applies this color effect to each pixel in the Neopixel strip. 
+
+        Parameters:
+        pos (int): Position value ranging from 0 to 255.
+
+        Returns:
+        tuple: Returns a color value as a tuple (R, G, B).
+        """
+        # Input a value 0 to 255 to get a color value.
+        # The colours are a transition r - g - b - back to r.
+        if pos < 0 or pos > 255:
+            return (255,255,255)
+        if pos < 85:
+            return (255 - pos * 3, pos * 3, 0)
+        if pos < 170:
+            pos -= 85
+            return (0, 255 - pos * 3, pos * 3)
+        pos -= 170
+        return (pos * 3, 0, 255 - pos * 3)
+
+    def rainbow(np):
+        """
+        Generate a rainbow color effect on the Neopixel strip.
+
+        Parameters:
+        np (NeoPixel): The Neopixel strip object.
+
+        Returns:
+        None
+        """
+        # Loop through each pixel in the strip.
+        for i in range(len(np)):
+            # Calculate the color index for the current pixel.
+            rc_index = (i * 256 // len(np)) % 256
+            # Set the color of the current pixel.
+            np[i] = wheel(rc_index)
+        # Update the Neopixel strip to display the colors.
+        np.show()
+
+    # Call the rainbow function to display the effect on the Neopixel strip.
+    rainbow(np)
+
+----
+
+Colour wheel with brightness control
+---------------------------------------
+
+| This code is used to create a rainbow color effect on a Neopixel strip. 
+| The wheel function uses a brightness_factor from 0 to 1 to dim the LEDs.
+| This example requires a strip of 12 Neopixels connected to pin13.
+
+.. code-block:: python
+
+
+    from microbit import *
+    import neopixel
+
+    # Setup the Neopixel strip on pin13 with a length of 12 pixels
+    np = neopixel.NeoPixel(pin13, 12)
+
+    def wheel(pos, brightness_factor=1):
+        """
+        Generate color based on the input position and brightness factor.
+
+        Parameters:
+        pos (int): Position value ranging from 0 to 255.
+        brightness_factor (float): Brightness scaling factor ranging from 0.1 to 1.0.
+
+        Returns:
+        tuple: Returns a color value as a tuple (r, g, b).
+        """
+        # Input a value 0 to 255 to get a color value.
+        # The colours are a transition r - g - b - back to r.
+        if pos < 0 or pos > 255:
+            return (0, 0, 0)
+        if pos < 85:
+            return (int((255 - pos * 3) * brightness_factor), int((pos * 3) * brightness_factor), 0)  # scale down the brightness
+        if pos < 170:
+            pos -= 85
+            return (0, int((255 - pos * 3) * brightness_factor), int((pos * 3) * brightness_factor))  # scale down the brightness
+        pos -= 170
+        return (int((pos * 3) * brightness_factor), 0, int((255 - pos * 3) * brightness_factor))  # scale down the brightness
+
+    def rainbow(np, brightness_factor):
+        """
+        Generate a rainbow color effect on the Neopixel strip.
+
+        Parameters:
+        np (NeoPixel): The Neopixel strip object.
+
+        Returns:
+        None
+        """
+        # Loop through each pixel in the strip.
+        for i in range(len(np)):
+            # Calculate the color index for the current pixel.
+            rc_index = (i * 256 // len(np)) % 256
+            # Set the color of the current pixel.
+            np[i] = wheel(rc_index, brightness_factor)
+        # Update the Neopixel strip to display the colors.
+        np.show()
+
+    # Call the rainbow function to display the effect on the Neopixel strip.
+    rainbow(np, 0.01)
+
+----
+
+Rainbow cycle
+----------------
+
+| This code is used to create a rainbow color effect on a Neopixel strip. 
+| The wheel function generates a color based on the input position, and the rainbow_cycle function applies this color to each pixel in the Neopixel strip, creating a beautiful rainbow effect. 
+| The effect continuously loops due to the while True loop at the end of the script.
+| This example requires a strip of 12 Neopixels connected to pin13.
+
+.. code-block:: python
+
+    from microbit import *
+    import neopixel
+
+    # Setup the Neopixel strip on pin13 with a length of 12 pixels
+    np = neopixel.NeoPixel(pin13, 12)
+
+    def wheel(pos, brightness_factor=1):
+        """
+        Generate color based on the input position and brightness factor.
+
+        Parameters:
+        pos (int): Position value ranging from 0 to 255.
+        brightness_factor (float): Brightness scaling factor ranging from 0.1 to 1.0.
+
+        Returns:
+        tuple: Returns a color value as a tuple (r, g, b).
+        """
+        # Input a value 0 to 255 to get a color value.
+        # The colours are a transition r - g - b - back to r.
+        if pos < 0 or pos > 255:
+            return (0, 0, 0)
+        if pos < 85:
+            return (int((255 - pos * 3) * brightness_factor), int((pos * 3) * brightness_factor), 0)  # scale down the brightness
+        if pos < 170:
+            pos -= 85
+            return (0, int((255 - pos * 3) * brightness_factor), int((pos * 3) * brightness_factor))  # scale down the brightness
+        pos -= 170
+        return (int((pos * 3) * brightness_factor), 0, int((255 - pos * 3) * brightness_factor))  # scale down the brightness
+
+    def rainbow_cycle(np, wait, brightness_factor):
+        """
+        Create a rainbow cycle effect on the Neopixel strip.
+
+        Parameters:
+        np (neopixel.NeoPixel): The Neopixel strip.
+        wait (int): The delay time in milliseconds.
+        brightness_factor (float): Brightness scaling factor ranging from 0.1 to 1.0.
+        """
+        for j in range(0, 256, 12):
+            for i in range(len(np)):
+                rc_index = (i * 256 // len(np) + j) % 255
+                np[i] = wheel(rc_index, brightness_factor)
+            np.show()
+            sleep(wait)
+
+    brightness_factor = 0.5  # Set your desired brightness factor here
+
+    while True:
+        # Continuously display the rainbow cycle effect
+        rainbow_cycle(np, 100, 0.02)
+
+
+
 
