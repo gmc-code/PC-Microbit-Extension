@@ -15,17 +15,23 @@ PC-Microbit-extension documentation
 Home pages:
 ---------------------
 
-| **year 7**
+| **year 7-8**
 | microbit: https://pc-microbit-micropython.readthedocs.io/en/latest/index.html
-| bots: https://pc-microbit-extension.readthedocs.io/en/latest/index.html
+| bots, games, classes: https://pc-microbit-extension.readthedocs.io/en/latest/index.html
+
+| **year 8**
+| python: https://pc-python.readthedocs.io/en/latest/index.html
 
 | **year 9-10**
 | algorithms: https://pc-algorithms.readthedocs.io/en/latest/index.html
 | app development: https://pc-app-development.readthedocs.io/en/latest/index.html
 
-| **python**
-| python: https://pc-python.readthedocs.io/en/latest/index.html
-| pillow: https://pc-pillow.readthedocs.io/en/latest/index.html
+----
+
+Online microbit coding:
+----------------------------------------
+
+| Online microbit coding: https://python.microbit.org/v/3.
 
 ----
 
@@ -33,7 +39,6 @@ Key microbit references:
 --------------------------
 
 | **microbit**:
-| latest:  https://microbit-micropython.readthedocs.io/en/latest/index.html
 | v2 from 2022: https://microbit-micropython.readthedocs.io/en/v2-docs/index.html
 | v1 in 2021: https://microbit-micropython.readthedocs.io/en/v1.0.1/index.html
 | Features: https://microbit.org/get-started/user-guide/features-in-depth/
@@ -72,21 +77,6 @@ Troubleshooting large file issues
 
 ----
 
-Micropython simulator:
-----------------------------------------
-
-| Create with code UK, https://create.withcode.uk/, works with standard python or micropython. 
-| Starting the code with "from microbit import \*" will pop up the simulator when the code is run.
-
-----
-
-Blocky code simulator:
-----------------------------------------
-
-The Makecode website https://makecode.microbit.org/ allows blocky code use, but it has its own unique version of micropython based on its own translation of the typescript code that it uses, and so it will not work with Mu editor or the standard online micropython editor. It has an excellent simulator and vast extensions library for exploring other devices that can be connected to the microbit.
-
-----
-
 Out of Box hex file v2
 --------------------------
 
@@ -113,29 +103,6 @@ Useful sites:
 
 * http://multiwingspan.co.uk/micro.php (no access from school)
 * https://microbit.pinout.xyz/pin-3v-power.html
-
-----
-
-For beginners, using blocky code, these sites may be useful:
-
-* https://microbit.org/projects/make-it-code-it/?filters=python
-
-----
-
-Python references:
-------------------
-
-For an introduction to python see:
-
-* https://docs.python.org/3.11/tutorial/introduction.html
-* https://docs.python.org/3.11/tutorial/index.html
-* https://www.w3schools.com/python/default.asp
-* https://www.programiz.com/python-programming
-* https://www.geeksforgeeks.org/python-programming-language/?ref=shm
-* https://www.pythontutorial.net/
-* https://www.tutorialsteacher.com/python
-* https://realpython.com/tutorials/python/
-
 
 ----
 
