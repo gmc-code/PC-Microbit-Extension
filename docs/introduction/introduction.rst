@@ -5,7 +5,7 @@ Introduction
 PC-Microbit-extension documentation
 ----------------------------------------
 
-| These docs will help you code your microbit using micropython.
+| These docs will help you code your microbit using micropython for bots, games and classes.
 
 .. image:: images/microbit_happy.png
     :scale: 30 %
