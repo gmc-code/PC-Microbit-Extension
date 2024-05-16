@@ -366,7 +366,7 @@ left
 
     #. Write code to drive the buggy to the left at speed 2 in small circles.
     #. Write code to drive the buggy to the left at speed 5 in medium circles.
-    #. Write code to drive the buggy to the left at speed 8 in inreasing circles for 5 seconds each. Use a for-loop and a list of tightness values.
+    #. Write code to drive the buggy to the left at speed 8 in increasing circles for 5 seconds each. Use a for-loop and a list of tightness values.
 
 ----
 
@@ -419,8 +419,8 @@ Spinning
 | Spin the buggy to the left or right at the chosen speed using:
 | ``spin_left(speed=1, duration=None)``
 | ``spin_right(speed=1, duration=None)``
-| When spining left, the left wheel goes backwards while the right wheel goes forward.
-| When spining right, the right wheel goes backwards while the left wheel goes forward.
+| When spinning left, the left wheel goes backwards while the right wheel goes forward.
+| When spinning right, the right wheel goes backwards while the left wheel goes forward.
 
 
 .. py:method:: spin_left(speed=1, duration=None)

@@ -38,7 +38,7 @@ The Asteroids outline
         def __init__(self):
             # initialize the score to 0; 
             # use class composition to position ship in middle of bottom row
-            # use class composition to initialize an asteroid in the top row and anotehr in the next row.
+            # use class composition to initialize an asteroid in the top row and another in the next row.
 
         def draw_board(self):
             # use an empty image to position the ship and asteroids and display it
@@ -52,7 +52,7 @@ The Asteroids outline
         def check_not_hit(self):
             # return True if the ship has hit an asteroid
             
-        def update_score(self, scoreup=1):
+        def update_score(self, score_up=1):
             # increment the score
 
         def get_score(self):
@@ -151,8 +151,8 @@ Working code
                 return False
             return True
             
-        def update_score(self, scoreup=1):
-            self.score += scoreup
+        def update_score(self, score_up=1):
+            self.score += score_up
 
         def get_score(self):
             return self.score

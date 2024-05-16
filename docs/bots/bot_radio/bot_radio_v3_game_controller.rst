@@ -113,7 +113,7 @@ Radio for microbit on MOVEMotor
 ---------------------------------
 
 | There are 3 speed settings.
-| When turning, the slowest speed has a tighter turn; the fastest speed has a less tight turnning circle.
+| When turning, the slowest speed has a tighter turn; the fastest speed has a less tight turning circle.
 
 
 .. code-block:: python

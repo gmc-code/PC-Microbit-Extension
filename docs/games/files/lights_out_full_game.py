@@ -18,7 +18,7 @@ class LightsOut:
             [0, 0, 0, 0, 0],
         ]
 
-    def Toggle5(self, tx=None, ty=None):
+    def toggle_5(self, tx=None, ty=None):
         """For original game only; toggle all 5 points, if they exist, above, below and to the sides of a point"""
         if tx is None:
             tx = self.x
@@ -34,7 +34,7 @@ class LightsOut:
         if ty < 4:
             self.grid[tx][ty + 1] ^= 1
 
-    def ToggleX(self, tx=None, ty=None):
+    def toggle_x(self, tx=None, ty=None):
         """toggle all in same row"""
         if tx is None:
             tx = self.x
@@ -43,7 +43,7 @@ class LightsOut:
         for x in range(5):
             self.grid[x][ty] ^= 1
 
-    def ToggleY(self, tx=None, ty=None):
+    def toggle_y(self, tx=None, ty=None):
         """toggle all in same column"""
         if tx is None:
             tx = self.x
@@ -52,7 +52,7 @@ class LightsOut:
         for y in range(5):
             self.grid[tx][y] ^= 1
 
-    def ToggleXY(self, tx=None, ty=None):
+    def toggle_xY(self, tx=None, ty=None):
         """toggle all in same row and all in same column"""
         if tx is None:
             tx = self.x
@@ -68,7 +68,7 @@ class LightsOut:
         for r in range(0, random.randint(4, 30)):
             cx = random.randint(0, 4)
             cy = random.randint(0, 4)
-            self.ToggleXY(cx, cy)
+            self.toggle_xY(cx, cy)
 
     def DrawGame(self):
         """Add pixels from grid one at a time at brightness, gb,  of 4
@@ -132,12 +132,12 @@ while playing:
     game.DrawGame()
     # check for button press
     if button_a.was_pressed():
-        game.ToggleX()
+        game.toggle_x()
         sleep(200)
         # update screen
         game.DrawGame()
     elif button_b.was_pressed():
-        game.ToggleY()
+        game.toggle_y()
         sleep(200)
         # update screen
         game.DrawGame()

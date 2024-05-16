@@ -55,7 +55,7 @@ Space Invaders
             self.x = 2  # Player x coordinate start (middle).
             self.xf = 2.0  # x coordinate float, allows us to use tilt for move speed.
 
-            self.missiles = []  # Active missles on screen.
+            self.missiles = []  # Active missiles on screen.
             self.aliens = []  # Active aliens on screen.
             self.alien_velocity_x = 1  # Horizontal speed of aliens.
 
@@ -162,7 +162,7 @@ Space Invaders
             for pos in self.aliens:
                 display.set_pixel(pos[0], pos[1], 9)
 
-            # Draw all the current player missles.
+            # Draw all the current player missiles.
             for pos in self.missiles:
                 display.set_pixel(pos[0], pos[1], 5)
 

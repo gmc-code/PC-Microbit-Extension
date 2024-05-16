@@ -1,4 +1,4 @@
-/* inline literals; change colour from built in red to blue */
+/* inline literals; change color from built in red to blue */
 
 .rst-content tt.literal, .rst-content tt.literal, .rst-content code.literal {
     color: #3333ff;
@@ -182,7 +182,7 @@ a.copybtn > img {
     position: absolute;
 }
 
-/* Make Copy button visible and coloured, not just on hover */
+/* Make Copy button visible and colored, not just on hover */
 button.copybtn {
     color: blue;
     opacity: 1;

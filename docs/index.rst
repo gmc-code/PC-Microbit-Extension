@@ -10,8 +10,8 @@ PC-microbit-extension
     :numbered:
 
     introduction/introduction.rst
+    introduction/Micropython_editor.rst
     introduction/Mu_editor.rst
-
 
 
 .. toctree::
@@ -23,7 +23,6 @@ PC-microbit-extension
     data_logging/data_logging_MY_DATA.rst
     data_logging/data_logging_Excel.rst
     data_logging/data_logging_vscode.rst
-
 
 
 .. toctree::

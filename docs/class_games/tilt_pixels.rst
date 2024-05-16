@@ -232,10 +232,10 @@ Accelerometer
 
         def acc_x_change(self):
             sensitivity = self.tilt_sensitivity
-            accx = accelerometer.get_x()
-            if accx < -sensitivity:
+            acc_x = accelerometer.get_x()
+            if acc_x < -sensitivity:
                 xd = -1
-            elif accx > sensitivity:
+            elif acc_x > sensitivity:
                 xd = 1
             else:
                 xd = 0
@@ -256,10 +256,10 @@ Accelerometer
 
         def acc_y_change(self):
             sensitivity = self.tilt_sensitivity
-            accy = accelerometer.get_y()
-            if accy < -sensitivity:
+            acc_y = accelerometer.get_y()
+            if acc_y < -sensitivity:
                 yd = -1
-            elif accy > sensitivity:
+            elif acc_y > sensitivity:
                 yd = 1
             else:
                 yd = 0
@@ -490,10 +490,10 @@ Game code
 
         def acc_x_change(self):
             sensitivity = self.tilt_sensitivity
-            accx = accelerometer.get_x()
-            if accx < -sensitivity:
+            acc_x = accelerometer.get_x()
+            if acc_x < -sensitivity:
                 xd = -1
-            elif accx > sensitivity:
+            elif acc_x > sensitivity:
                 xd = 1
             else:
                 xd = 0
@@ -501,10 +501,10 @@ Game code
 
         def acc_y_change(self):
             sensitivity = self.tilt_sensitivity
-            accy = accelerometer.get_y()
-            if accy < -sensitivity:
+            acc_y = accelerometer.get_y()
+            if acc_y < -sensitivity:
                 yd = -1
-            elif accy > sensitivity:
+            elif acc_y > sensitivity:
                 yd = 1
             else:
                 yd = 0

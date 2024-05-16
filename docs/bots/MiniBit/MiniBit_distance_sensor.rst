@@ -99,7 +99,7 @@ The second step is to record the last high timestamp for Echo (pulse_end). e.g. 
 
 The duration of the pulse is then calculated using ``pulse_duration = pulse_end - pulse_start``.
 
-Since the distance to the object is half of the distance travelled by the pulse to and back from the object, the distance can be calculated using **distance = speed x time / 2**. The speed is 0.0343 cm/µs. 0.01715 is used instead since **0.0343 / 2 = 0.01715**.
+Since the distance to the object is half of the distance traveled by the pulse to and back from the object, the distance can be calculated using **distance = speed x time / 2**. The speed is 0.0343 cm/µs. 0.01715 is used instead since **0.0343 / 2 = 0.01715**.
 
 
 .. code-block:: python
@@ -119,7 +119,7 @@ Distance to an object
     Returns the distance, in cm, to an object.
 
 | The function, ``distance``, returns the distance to an object, in cm.
-| Code to scroll the distanceis below.
+| Code to scroll the distance is below.
 
 .. code-block:: python
 

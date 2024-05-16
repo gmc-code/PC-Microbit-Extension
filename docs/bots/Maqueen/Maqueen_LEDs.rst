@@ -30,7 +30,7 @@ MaqueenNeoPixels
 ----------------------------------------
 
 | The module makes it easy to use the front LEDs, the rear LEDS, and the front LEDs as indicators such as when turning.
-| When setting up the LEDs, the front, indicator and rear colour settings are set to the default values below.
+| When setting up the LEDs, the front, indicator and rear color settings are set to the default values below.
 
 .. py:class:: MaqueenNeoPixels(front=(20, 20, 20), indicator=(35, 25, 0), rear=(20, 0, 0))
 
@@ -39,7 +39,7 @@ MaqueenNeoPixels
     | ``rear=(20, 0, 0)`` sets a low level red light
 
 
-| When setting up the LEDS, the default LED colours can be set to different values.
+| When setting up the LEDS, the default LED colors can be set to different values.
 
 .. code-block:: python
 
@@ -56,7 +56,7 @@ Buggy lights and indicators
 ----------------------------------------
 
 | There are four convenient methods that use the default LED settings.
-| They all use the default red colour for the rear lights.
+| They all use the default red color for the rear lights.
 | They are named based on their effect on the front LEDs.
 
 .. py:method:: front_lights()
@@ -99,18 +99,18 @@ Buggy lights and indicators
 
 ----
 
-Primary and secondary colours 
+Primary and secondary colors 
 ------------------------------
 
-.. image:: images/primary_colours.png
+.. image:: images/primary_colors.png
     :scale: 40 %
     :align: right
 
-| Primary and secondary colours are shown below.
+| Primary and secondary colors are shown below.
 | The Red Green Blue (RGB) values for them are listed.
 | They are tuples of 3 integers from 0 to 255, where 0 is off and 255 if the brightest.
 
-.. image:: images/secondary_colours.png
+.. image:: images/secondary_colors.png
     :scale: 40 %
     :align: right
 
@@ -136,7 +136,7 @@ set_front
 
 .. py:method:: set_front(rgb=(20, 20, 20))
 
-    | Set the front light LED colour to be used when ``front_lights()``, ``left_indicator()`` or ``right_indicator()`` are used.
+    | Set the front light LED color to be used when ``front_lights()``, ``left_indicator()`` or ``right_indicator()`` are used.
     | ``rgb`` is a tuple of 3 integers from 0 to 255, where 255 is full brightness.
     | If no value for rgb is passed the default value of (20, 20, 20) will be set.
 
@@ -167,7 +167,7 @@ set_indicator
 
 .. py:method:: set_indicator(rgb=(35, 25, 0))
 
-    | Set the front light LED colour to be used when ``left_indicator()``, ``right_indicator()`` or ``both_indicators()`` are used.
+    | Set the front light LED color to be used when ``left_indicator()``, ``right_indicator()`` or ``both_indicators()`` are used.
     | ``rgb`` is a tuple of 3 integers from 0 to 255, where 255 is full brightness.
     | If no value for rgb is passed the default value of (35, 25, 0) will be set.
 
@@ -188,8 +188,8 @@ set_indicator
 
 .. admonition:: Tasks
 
-    #. Write code to set the indicator colour to magenta. 
-    #. Write code to set the indicator colour to green. 
+    #. Write code to set the indicator color to magenta. 
+    #. Write code to set the indicator color to green. 
 
 ---- 
 
@@ -198,7 +198,7 @@ set_rear
 
 .. py:method:: set_rear(rgb=(20, 0, 0))
 
-    | Set the rear light LED colour to be used when when ``front_lights()``, ``left_indicator()``, ``right_indicator()`` or ``both_indicators()`` are used.
+    | Set the rear light LED color to be used when when ``front_lights()``, ``left_indicator()``, ``right_indicator()`` or ``both_indicators()`` are used.
     | ``rgb`` is a tuple of 3 integers from 0 to 255, where 255 is full brightness.
     | If no value for rgb is passed the default value of (20, 0, 0) will be set.
 
@@ -234,7 +234,7 @@ set_led
 
 .. py:method:: set_led(led_number, rgb=(20, 20, 20))
 
-    | Set and show the LED colour.
+    | Set and show the LED color.
     | ``led_number`` is 0 for front left, 1 for rear left, 2 for rear right and 3 for front right.
     | ``rgb`` is a tuple of 3 integers from 0 to 255, where 255 is full brightness.
 
@@ -264,7 +264,7 @@ set_leds
 
 .. py:method:: set_leds(rgb=(20, 20, 20))
 
-    | Set and show the same colour for all the LEDs.
+    | Set and show the same color for all the LEDs.
     | ``rgb`` is a tuple of 3 integers from 0 to 255, where 255 is full brightness.
 
 | The code below sets all the LEDs to cyan.

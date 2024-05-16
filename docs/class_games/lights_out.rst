@@ -14,7 +14,7 @@ Bitwise operations to reverse 0 and 1
 | The on/off lights are stored as a 2D list of 1s and 0s. 
 | In order to make the moves, the XOR operator, ^, is used. 
 | The bitwise xor operator returns 1 if the bits are different; 0 if the same.
-| Note, bitwise operations on integers convert the integers to binary, carry out the bitwise operation, convert the binary number back to an integer and retrun the integer.
+| Note, bitwise operations on integers convert the integers to binary, carry out the bitwise operation, convert the binary number back to an integer and return the integer.
 
 | The code below shows the different possible results from using the bitwise XOR, ^, and the assignment operator, ^=, for 0s and 1s.
 
@@ -85,7 +85,7 @@ Lights Out Outline
                 tx = self.x
             if ty is None:
                 ty = self.y
-            # toggle the pixles in the row
+            # toggle the pixels in the row
 
         def ToggleY(self, tx=None, ty=None):
             """toggle all in same column"""
@@ -101,7 +101,7 @@ Lights Out Outline
                 tx = self.x
             if ty is None:
                 ty = self.y
-            # toggle the pixles in the row
+            # toggle the pixels in the row
             # toggle the pixels in the column
 
         def RandomGrid(self):
@@ -114,8 +114,8 @@ Lights Out Outline
             """
             gb = 3
             img = Image("00000:" * 5)
-            # set pixels brightenss in img from grid
-            # add player pixel depending on whetehr b is 0 or 9, player pixel will be 0 or 9 if pixel not in grid, or 7 or 9 is in self.grid
+            # set pixels brightness in img from grid
+            # add player pixel depending on whether b is 0 or 9, player pixel will be 0 or 9 if pixel not in grid, or 7 or 9 is in self.grid
             # display image and sleep for tilt_delay
 
         def CheckWin(self):

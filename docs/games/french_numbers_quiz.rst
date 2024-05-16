@@ -13,7 +13,7 @@ French numbers quiz
     import random
 
 
-    def nleds(value):
+    def n_leds(value):
         img = Image("00000:" * 5)
         sp = img.set_pixel
         counter = 0
@@ -57,15 +57,15 @@ French numbers quiz
     ]
 
 
-    def SelectNumber():
+    def select_number():
         counter = 1
-        display.show(nleds(counter))
+        display.show(n_leds(counter))
         while button_b.was_pressed() == False:
             if button_a.is_pressed():
                 counter += 1
                 if counter == 26:
                     counter = 1
-                display.show(nleds(counter))
+                display.show(n_leds(counter))
                 sleep(100)
             sleep(100)
         return counter
@@ -74,7 +74,7 @@ French numbers quiz
     while True:
         question = random.randint(1, 25)
         display.scroll(french[question])
-        answer = SelectNumber()
+        answer = select_number()
         if answer == question:
             display.show(Image.YES)
         else:

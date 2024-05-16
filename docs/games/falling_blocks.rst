@@ -27,11 +27,11 @@ Falling blocks
             # x -1 to width -1; y -2 to width -2;
             grid = {(x, y): 0 for y in range(-2, height - 2) for x in range(-1, width - 1)}
             # put 1 in sides
-            gridedge = {(x, y): 1 for y in range(-2, height - 2) for x in (-1, width - 2)}
-            grid.update(gridedge)
+            grid_edge = {(x, y): 1 for y in range(-2, height - 2) for x in (-1, width - 2)}
+            grid.update(grid_edge)
             # put 1 in bottom
-            gridedge = {(x, height - 3): 1 for x in range(-1, width - 1)}
-            grid.update(gridedge)
+            grid_edge = {(x, height - 3): 1 for x in range(-1, width - 1)}
+            grid.update(grid_edge)
             return grid
 
 
@@ -75,7 +75,7 @@ Falling blocks
             self.block_left_y = -2
             tetris_block = TetrisBlock(self.block_top_x, self.block_left_y)
             self.block = tetris_block.create_block()
-            self.newblock = {}
+            self.new_block = {}
             self.show_block()
 
         def get_block_top_left(self):
@@ -104,11 +104,11 @@ Falling blocks
             k01 = self.block[(self.block_top_x + 1, self.block_left_y)]
             k11 = self.block[(self.block_top_x + 1, self.block_left_y + 1)]
             k10 = self.block[(self.block_top_x, self.block_left_y + 1)]
-            self.newblock = {}
-            self.newblock[(self.block_top_x, self.block_left_y)] = k10
-            self.newblock[(self.block_top_x + 1, self.block_left_y)] = k00
-            self.newblock[(self.block_top_x + 1, self.block_left_y + 1)] = k01
-            self.newblock[(self.block_top_x, self.block_left_y + 1)] = k11
+            self.new_block = {}
+            self.new_block[(self.block_top_x, self.block_left_y)] = k10
+            self.new_block[(self.block_top_x + 1, self.block_left_y)] = k00
+            self.new_block[(self.block_top_x + 1, self.block_left_y + 1)] = k01
+            self.new_block[(self.block_top_x, self.block_left_y + 1)] = k11
 
         def rotate_block(self):
             self.get_rotate_block()
@@ -116,9 +116,9 @@ Falling blocks
                 self.do_block_move()
 
         def get_move_block(self, delta_x, delta_y):
-            self.newblock = {}
+            self.new_block = {}
             for (x, y) in self.block.keys():
-                self.newblock[(x + delta_x, y + delta_y)] = self.block[(x, y)]
+                self.new_block[(x + delta_x, y + delta_y)] = self.block[(x, y)]
 
         def move_block(self, delta_x=0, delta_y=0):
             self.get_move_block(delta_x, delta_y)
@@ -127,13 +127,13 @@ Falling blocks
 
         def do_block_move(self):
             self.hide_block()
-            self.block = {k: v for k, v in self.newblock.items()}
+            self.block = {k: v for k, v in self.new_block.items()}
             self.show_block()
             self.get_block_top_left()
 
         def can_move_block(self):
-            for k, v in self.newblock.items():
-                if self.newblock[k] > 0 and self.grid[k] > 0:
+            for k, v in self.new_block.items():
+                if self.new_block[k] > 0 and self.grid[k] > 0:
                     return False
             return True
 

@@ -19,7 +19,7 @@ Maqueen info
 .. image:: images/Maqueen.png
     :scale: 50 %
     :align: center
-    :alt: macqueen
+    :alt: maqueen
 
 | Dimensions 81mm x 85 mm x 44mm
 

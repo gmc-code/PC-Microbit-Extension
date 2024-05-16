@@ -8,7 +8,7 @@ User Class
 | Write a greeting method, **greet_user()**.
 | Write a method to **reset** the number of logins and a method to **increment** them.
 
-| Write code to ouput:
+| Write code to output:
 | Welcome, Tim!
 | Tim Lang is a Subscriber.
 | Tim Lum has logged in 2 times.

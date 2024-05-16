@@ -2,7 +2,7 @@
 Bot radio v2
 ====================================================
 
-| This uses more settings for the motor control by titlting to different degrees.
+| This uses more settings for the motor control by tilting to different degrees.
 | Three speed settings are used below.
 
 ----
@@ -200,7 +200,7 @@ Radio for microbit on MOVEMotor
 
 | The code below moves the MOVEMotor at medium speed, since its top speed is relatively fast.
 | The radius of 5 gives a tight turn.
-| Low urning speed settings are used below for best control based on testing.
+| Low turning speed settings are used below for best control based on testing.
 
 
 .. code-block:: python

@@ -112,7 +112,7 @@ html_logo = "_static/logo_navyblue.png"
 
 latex_engine = 'xelatex'  # xelatex is better than pdflatex for unicode
 latex_elements = {
-    # to use latex dvipsnames and svgcolour names if so desired
+    # to use latex dvipsnames and svgcolor names if so desired
     'passoptionstopackages': r'\PassOptionsToPackage{dvipsnames*,svgnames}{xcolor}',
     #
     # The paper size ('letterpaper' or 'a4paper').
@@ -181,7 +181,7 @@ latex_elements['preamble'] = r'''
     % \addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
     % \addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
 
-    %%% mycode chapter heading colour \fontsize{48}{50}
+    %%% mycode chapter heading color \fontsize{48}{50}
     \makeatletter
         \ChTitleVar{\centering \color{NavyBlue} \Huge\py@HeaderFamily}
         \ChNameVar{\centering \color{NavyBlue} \Huge\py@HeaderFamily}
@@ -232,7 +232,7 @@ latex_elements['maketitle'] = r'''
     '''
 
 # latex_elements['sphinxsetup'] expt codes
-# Latex colours named see: https://www.latextemplates.com/svgnames-colors
+# Latex colors named see: https://www.latextemplates.com/svgnames-colors
 # sphinx latex see https://www.sphinx-doc.org/en/master/latex.html
 # InnerLinkColor default {rgb}{0.208, 0.374, 0.486}. linkcolor and citecolor.
 # OuterLinkColor default {rgb}{0.216, 0.439, 0.388}. filecolor, menucolor, and urlcolor.

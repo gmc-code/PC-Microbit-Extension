@@ -25,7 +25,7 @@ Fill the grid
     ]
 
 
-    def nleds(value):
+    def n_leds(value):
         img = Image("00000:" * 5)
         sp = img.set_pixel
         counter = 0
@@ -66,10 +66,10 @@ Fill the grid
                 else:
                     # go to end and come back
                     counter = 50 - (counter + roll)
-            display.show(nleds(counter))
+            display.show(n_leds(counter))
             sleep(10)
         for i in range(0, 10):
-            display.show(nleds(25))
+            display.show(n_leds(25))
             sleep(200)
             display.clear()
             sleep(200)

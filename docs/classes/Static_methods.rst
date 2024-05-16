@@ -55,7 +55,7 @@ Static methods
 
 .. admonition:: Note
 
-    | If a static method needs to call another static method, since self is not avalailable to the method, a reference to the class is needed.
+    | If a static method needs to call another static method, since self is not available to the method, a reference to the class is needed.
     | The class itself can be used or the special method, __class__, can be used.
     | e.g return MyClass.staticmethod2()
     | e.g return __class__.staticmethod2()

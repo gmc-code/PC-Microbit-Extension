@@ -122,13 +122,13 @@ Snake
 
             if self.checkCollision(newSegment[0], newSegment[1]):
                 # game over
-                snakehead = self.tail[0]
+                snake_head = self.tail[0]
                 for flashHead in range(0, 5):
                     microbit.display.set_pixel(
-                        snakehead[0], snakehead[1], self.SNAKEBRIGHTNESS
+                        snake_head[0], snake_head[1], self.SNAKEBRIGHTNESS
                     )
                     microbit.sleep(200)
-                    microbit.display.set_pixel(snakehead[0], snakehead[1], 0)
+                    microbit.display.set_pixel(snake_head[0], snake_head[1], 0)
                     microbit.sleep(200)
 
                 return False

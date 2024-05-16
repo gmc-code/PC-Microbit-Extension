@@ -2,13 +2,13 @@
 LED progressions
 ====================================================
 
-Colour lists
+color lists
 -------------------
 
-| A list of colours can be used to create a colourful display.
+| A list of colors can be used to create a colorful display.
 | Two for-loops are used, one nested inside the other.
-| ``for c in colour_list:`` loops through the colours.
-| ``for i in range(4):`` loops through each LED to set the colour for it.
+| ``for c in color_list:`` loops through the colors.
+| ``for i in range(4):`` loops through each LED to set the color for it.
 | This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
@@ -25,10 +25,10 @@ Colour lists
     blue = (0, 0, 255)
     magenta = (255, 0, 255)
 
-    colour_list = [white, red, yellow, green, cyan, blue, magenta, ]
+    color_list = [white, red, yellow, green, cyan, blue, magenta, ]
 
     lights = neopixel.NeoPixel(pin8, 4)
-    for c in colour_list:
+    for c in color_list:
         for i in range(4):
             lights[i]=c
         lights.show()
@@ -42,8 +42,8 @@ Colour lists
 
     See https://www.indezine.com/products/powerpoint/learn/color/color-rgb.html
 
-    #. Modify the code to use a shorter list of colours, with just the primary colours.
-    #. Modify the code to use a shorter list of colours, with just the secondary colours.
+    #. Modify the code to use a shorter list of colors, with just the primary colors.
+    #. Modify the code to use a shorter list of colors, with just the secondary colors.
 
 
 ----
@@ -51,7 +51,7 @@ Colour lists
 Random brightness
 -----------------
 
-| Repeatedly display random colours on the LED strip.
+| Repeatedly display random colors on the LED strip.
 | This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
@@ -80,10 +80,10 @@ Random brightness
 
 ----
 
-Random colours
+Random colors
 -----------------
 
-| Repeatedly display random colours on the 4 LEDs connected to pin8.
+| Repeatedly display random colors on the 4 LEDs connected to pin8.
 | This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
@@ -153,7 +153,7 @@ Front and rear lights
 Button control
 ------------------------------
 
-| Use def blocks with button pressing to display random light colours.
+| Use def blocks with button pressing to display random light colors.
 | This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
@@ -203,9 +203,9 @@ Button control
         lights.show()
 
     while True:
-        if button_a.is_presssed():
+        if button_a.is_pressed():
             diff_random_pixels()
-        elif button_b.is_presssed():
+        elif button_b.is_pressed():
             same_random_pixels()
         else:
             front_lights()
@@ -214,7 +214,7 @@ Button control
 
 ----
 
-Colour wheel
+color wheel
 ----------------
 
 | This code is used to create a rainbow color effect on a Neopixel strip. 
@@ -242,7 +242,7 @@ Colour wheel
         tuple: Returns a color value as a tuple (R, G, B).
         """
         # Input a value 0 to 255 to get a color value.
-        # The colours are a transition r - g - b - back to r.
+        # The colors are a transition r - g - b - back to r.
         if pos < 0 or pos > 255:
             return (255,255,255)
         if pos < 85:
@@ -277,7 +277,7 @@ Colour wheel
 
 ----
 
-Colour wheel with brightness control
+color wheel with brightness control
 ---------------------------------------
 
 | This code is used to create a rainbow color effect on a Neopixel strip. 
@@ -305,7 +305,7 @@ Colour wheel with brightness control
         tuple: Returns a color value as a tuple (r, g, b).
         """
         # Input a value 0 to 255 to get a color value.
-        # The colours are a transition r - g - b - back to r.
+        # The colors are a transition r - g - b - back to r.
         if pos < 0 or pos > 255:
             return (0, 0, 0)
         if pos < 85:
@@ -368,7 +368,7 @@ Rainbow cycle
         tuple: Returns a color value as a tuple (r, g, b).
         """
         # Input a value 0 to 255 to get a color value.
-        # The colours are a transition r - g - b - back to r.
+        # The colors are a transition r - g - b - back to r.
         if pos < 0 or pos > 255:
             return (0, 0, 0)
         if pos < 85:

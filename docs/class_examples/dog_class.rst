@@ -12,7 +12,7 @@ Dog Class
 | **sit()**, e.g Milo is sitting.
 | **chase_ball()** e.g. Daisy ran after the ball.
 
-| Write code to ouput:
+| Write code to output:
 | Milo is 2 years old.
 | Milo rolled over!
 | Milo is sitting.

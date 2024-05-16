@@ -5,13 +5,13 @@ LEDs
 | THe examples below assume a device, such as a buggy, has 4 RGB LEDs (WS2812) on pin8.
 | The neopixel module is used to drive these RGB LEDs.
 | In RGB, R stands for red, G stands for green, and B stands for blue.
-| Each RGB LED can produce a full spectrum of colours independent to all of the other RGB LEDs. 
+| Each RGB LED can produce a full spectrum of colors independent to all of the other RGB LEDs. 
 | Each ZIP LED has a Red, Green and Blue element within the LED, and each of these can have brightness set from 0 to 255.
 
 NeoPixel module
 -----------------
 
-| The neopixel module allows use of multiple RGB LEDs connected to one pin so that each can have their own colour and brightness set.
+| The neopixel module allows use of multiple RGB LEDs connected to one pin so that each can have their own color and brightness set.
 | First, import the neopixel library with ``import neopixel``.
 
 .. code-block:: python
@@ -43,7 +43,7 @@ Set up LEDs
 
 ----
 
-Set LED colour and brightness
+Set LED color and brightness
 ------------------------------
 
 .. py:method:: np[n] = (red, green, blue)
@@ -54,7 +54,7 @@ Set LED colour and brightness
 | e.g the LED in position 0 is ``np[0]``. 
 | Neopixels are given RGB (red, green, blue) values between 0-255 as a tuple.
 | A value of 0 is off, while 255 is full brightness. 
-| When red, green and blue are all full brightness, ``(255, 255, 255)``, the colour is white.
+| When red, green and blue are all full brightness, ``(255, 255, 255)``, the color is white.
 
 
 | The code below sets the RGB values to (255, 255, 255) for the LED in position 0.
@@ -68,7 +68,7 @@ Set LED colour and brightness
     np = neopixel.NeoPixel(pin8, 4)
     np[0] = (255, 255, 255)
 
-| The code below sets the colours of the 4 LEDs: np[0] is white, np[1] is red, np[2] is green and np[3] is blue, with all at full brightness.
+| The code below sets the colors of the 4 LEDs: np[0] is white, np[1] is red, np[2] is green and np[3] is blue, with all at full brightness.
 
 .. code-block:: python
 
@@ -86,7 +86,7 @@ Set LED colour and brightness
 
 .. admonition:: Tasks
 
-    | For quick RGB values for common colours, see https://www.rapidtables.com/web/color/RGB_Color.html
+    | For quick RGB values for common colors, see https://www.rapidtables.com/web/color/RGB_Color.html
 
     #. Write code to set the last LEDS at position 1, 2 and 3 to yellow, cyan and magenta.
 
@@ -95,13 +95,13 @@ Set LED colour and brightness
 Show LEDs 
 ----------
 
-| Setting the colours for LEDs doesn't change the displayed colour of the LEDs until ``show()`` is used on the neopixel object that was set up. e.g. ``np.show()``
+| Setting the colors for LEDs doesn't change the displayed color of the LEDs until ``show()`` is used on the neopixel object that was set up. e.g. ``np.show()``
 
 .. py:method:: show()
 
-        Show the LEDs using their colour settings. This must be called for any updates to the LEDs to become visible.
+        Show the LEDs using their color settings. This must be called for any updates to the LEDs to become visible.
 
-| The code below displays the set colours for the neopixel LEDS using ``np.show()``
+| The code below displays the set colors for the neopixel LEDS using ``np.show()``
 
 .. code-block:: python
 
@@ -119,7 +119,7 @@ Clear LEDs
 
 .. py:method:: clear()
 
-        Clear all the LEDs so that they have no colours set and turns off the LEDs.
+        Clear all the LEDs so that they have no colors set and turns off the LEDs.
 
 | The code below uses the variable ``buggy_lights`` for the neopixel settings.
 | The front lights are at position 0 and 1. They are set to dull blue.
@@ -147,23 +147,23 @@ Clear LEDs
 
 .. admonition:: Tasks
 
-    | For quick RGB values for common colours, see https://www.rapidtables.com/web/color/RGB_Color.html
+    | For quick RGB values for common colors, see https://www.rapidtables.com/web/color/RGB_Color.html
 
-    #. | Modify the colours used in the code by changing the variable names and their values. | Use yellow and purple instead of red and blue.
+    #. | Modify the colors used in the code by changing the variable names and their values. | Use yellow and purple instead of red and blue.
 
 ----
 
 LED values
 -------------------
 
-To read the colour of a specific pixel just reference it.
+To read the color of a specific pixel just reference it.
 
 
 .. py:method:: np[n]
 
     Return the red, green and blue value for the RGB LED at position n.
 
-| The code below sets the LED to a sandy brown colour. The ``for`` loop displays each value in the tuple ``(255, 0, 0)``.
+| The code below sets the LED to a sandy brown color. The ``for`` loop displays each value in the tuple ``(255, 0, 0)``.
 
 .. code-block:: python
 
@@ -178,13 +178,13 @@ To read the colour of a specific pixel just reference it.
 
 ----
 
-Colour lists
+color lists
 -------------------
 
-| A list of colours can be used to create a colourful display.
+| A list of colors can be used to create a colorful display.
 | 2 for-loops are used, one nested inside the other.
-| ``for c in colour_list:`` loops through the colours.
-| ``for i in range(4):`` loops through each LED to set the colour for it.
+| ``for c in color_list:`` loops through the colors.
+| ``for i in range(4):`` loops through each LED to set the color for it.
 
 .. code-block:: python
 
@@ -200,10 +200,10 @@ Colour lists
     blue = (0, 0, 255)
     magenta = (255, 0, 255)
 
-    colour_list = [white, red, yellow, green, cyan, blue, magenta, ]
+    color_list = [white, red, yellow, green, cyan, blue, magenta, ]
 
     buggy_lights = neopixel.NeoPixel(pin8, 4)
-    for c in colour_list:
+    for c in color_list:
         for i in range(4):
             buggy_lights[i]=c
         buggy_lights.show()
@@ -217,8 +217,8 @@ Colour lists
 
     See https://www.indezine.com/products/powerpoint/learn/color/color-rgb.html
 
-    #. Modify the code to use a shorter list of colours, with just the primary colours.
-    #. Modify the code to use a shorter list of colours, with just the secondary colours.
+    #. Modify the code to use a shorter list of colors, with just the primary colors.
+    #. Modify the code to use a shorter list of colors, with just the secondary colors.
 
 
 ----
@@ -226,7 +226,7 @@ Colour lists
 Random brightness
 -----------------
 
-| Repeatedly displays random colours onto the LED strip.
+| Repeatedly displays random colors onto the LED strip.
 | This example requires a strip of 4 Neopixels (WS2812) connected to pin8.
 
 .. code-block:: python
@@ -255,7 +255,7 @@ Random brightness
 
 ----
 
-| Repeatedly display random colours on the 4 LEDs connected to pin8.
+| Repeatedly display random colors on the 4 LEDs connected to pin8.
 
 .. code-block:: python
 

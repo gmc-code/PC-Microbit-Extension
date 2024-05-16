@@ -13,7 +13,7 @@ French numbers
 
     from microbit import *
 
-    def nleds(value):
+    def n_leds(value):
         """ function to create an image consisting of value LEDs """
         img = Image("00000:" * 5)
         sp = img.set_pixel
@@ -60,7 +60,7 @@ French numbers
 
     # Set and show the starting value for the display
     counter = 1
-    display.show(nleds(counter))
+    display.show(n_leds(counter))
 
     while True:
         # Press A to change the number
@@ -68,12 +68,12 @@ French numbers
             counter += 1
             if counter == 26:
                 counter = 1
-            display.show(nleds(counter))
+            display.show(n_leds(counter))
             sleep(50)
         # Press B to show the French word
         if button_b.was_pressed():
             display.scroll(french[counter])
-            display.show(nleds(counter))
+            display.show(n_leds(counter))
         sleep(100)
 
 

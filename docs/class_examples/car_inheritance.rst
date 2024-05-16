@@ -3,7 +3,7 @@ Car Class Inheritance
 ====================================================
 
 | Write a child class of the **Car** class, **ElectricCar**.     
-| Set the car's **make**, **model**, **year**, **colour**. 
+| Set the car's **make**, **model**, **year**, **color**. 
 | The child class, ElectricCar, has a unique attribute, **battery_size**, and unique method, **get_battery_info**.
 | The child class, ElectricCar, has a method, **fill_tank**, which overrides the method of the same name in its parent's class.
 
@@ -20,15 +20,15 @@ Car Class Inheritance
 
             class Car:
                 
-                def __init__(self, make, model, year, colour):
+                def __init__(self, make, model, year, color):
                     self.make = make
                     self.model = model
                     self.year = year
-                    self.colour = colour
+                    self.color = color
                     self.odometer_reading = 0
 
                 def get_info(self):
-                    return f"{self.year} {self.colour} {self.make} {self.model}".title()
+                    return f"{self.year} {self.color} {self.make} {self.model}".title()
 
                 def get_odometer(self):
                     print(f"{self.get_info()} has done {self.odometer_reading} km.")
@@ -52,12 +52,12 @@ Car Class Inheritance
             class ElectricCar(     ):
                 """ElectricCar child of Car class."""
                 
-                def __init__(       , make, model, year, colour,          ):
+                def __init__(       , make, model, year, color,          ):
                     """
                     Initialize attributes of the parent class.
                     Then initialize attributes specific to an electric car.
                     """
-                           .__init__(make, model, year, colour)
+                           .__init__(make, model, year, color)
                     self.battery_size
 
                 def get_battery_info(      ):
@@ -88,15 +88,15 @@ Car Class Inheritance
 
                     class Car:
                         
-                        def __init__(self, make, model, year, colour):
+                        def __init__(self, make, model, year, color):
                             self.make = make
                             self.model = model
                             self.year = year
-                            self.colour = colour
+                            self.color = color
                             self.odometer_reading = 0
 
                         def get_info(self):
-                            return f"{self.year} {self.colour} {self.make} {self.model}".title()
+                            return f"{self.year} {self.color} {self.make} {self.model}".title()
 
                         def get_odometer(self):
                             print(f"{self.get_info()} has done {self.odometer_reading} km.")
@@ -120,12 +120,12 @@ Car Class Inheritance
                     class ElectricCar(Car):
                         """ElectricCar child of Car class."""
                         
-                        def __init__(self, make, model, year, colour, battery_size):
+                        def __init__(self, make, model, year, color, battery_size):
                             """
                             Initialize attributes of the parent class.
                             Then initialize attributes specific to an electric car.
                             """
-                            super().__init__(make, model, year, colour)
+                            super().__init__(make, model, year, color)
                             self.battery_size = battery_size
 
                         def get_battery_info(self):

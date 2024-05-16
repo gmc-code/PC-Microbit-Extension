@@ -65,10 +65,10 @@ Customary variable names
 
 ----
 
-Default paramaters
+Default parameters
 ---------------------------------------------------
 
-| A default value for a pareter can be set.
+| A default value for a parameter can be set.
 | e.g. the ``level`` parameter can be set to a value of 1 by default in ``__init__(self, level=1)``.
 | When game is instantiated using ``game = LevelGame()``, ``level`` = 1 by default.
 

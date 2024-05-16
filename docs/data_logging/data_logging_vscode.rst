@@ -52,8 +52,8 @@ VScode
 
 | The code below collects data from the microbit, saves it to a csv file and plots it.
 | Adjust **data_count = 20** to the number of data points desired.
-| Adjust **sleep_ms = 100** to the time in millisec between readings. Make sure that it is not shorter than teh sleep between sends on hte microbit.
-| Adjust **ser.port = 'COM3'** to match the seerial port that is used when the micorbit is attached. It is usually 'COM3'.
+| Adjust **sleep_ms = 100** to the time in milli-sec between readings. Make sure that it is not shorter than the sleep between sends on the microbit.
+| Adjust **ser.port = 'COM3'** to match the serial port that is used when the microbit is attached. It is usually 'COM3'.
 
 | Adjust ``filename = 'microbit_data.csv'`` to suit.
 
@@ -98,11 +98,11 @@ VScode
 
     # save to csv
 
-    myheaders = ['time','x','y', 'z']
+    my_headers = ['time','x','y', 'z']
     filename = 'microbit_data.csv'
-    with open(filename, 'w', newline='') as myfile:
-        writer = csv.writer(myfile)
-        writer.writerow(myheaders)
+    with open(filename, 'w', newline='') as my_file:
+        writer = csv.writer(my_file)
+        writer.writerow(my_headers)
         writer.writerows(data_list)
 
     # convert data to 4 lists

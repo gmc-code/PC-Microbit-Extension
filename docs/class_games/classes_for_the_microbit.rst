@@ -39,10 +39,10 @@ Pixel Classes
 
     def acc_x_change():
         sensitivity = 100
-        accx = accelerometer.get_x()
-        if accx < -sensitivity:
+        acc_x = accelerometer.get_x()
+        if acc_x < -sensitivity:
             xd = -1
-        elif accx > sensitivity:
+        elif acc_x > sensitivity:
             xd = 1
         else:
             xd = 0
@@ -50,10 +50,10 @@ Pixel Classes
 
     def acc_y_change():
         sensitivity = 300
-        accy = accelerometer.get_y()
-        if accy < sensitivity:
+        acc_y = accelerometer.get_y()
+        if acc_y < sensitivity:
             yd = -1
-        elif accy > sensitivity:
+        elif acc_y > sensitivity:
             yd = 1
         else:
             yd = 0
@@ -120,26 +120,26 @@ Pixel animation using classes
 
     while True:
         for i in range(1, 10, 2):
-            for pixelxy in pixel_list:
-                pixelxy.intensity(i)
+            for pixel_xy in pixel_list:
+                pixel_xy.intensity(i)
                 sleep(40)
-                pixelxy.off()
+                pixel_xy.off()
                 sleep(10)
-            for pixelxy in pixel_list_rev:
-                pixelxy.intensity(i)
+            for pixel_xy in pixel_list_rev:
+                pixel_xy.intensity(i)
                 sleep(40)
-                pixelxy.off()
+                pixel_xy.off()
                 sleep(10)
         for i in range(7, 0, -2):
-            for pixelxy in pixel_list:
-                pixelxy.intensity(i)
+            for pixel_xy in pixel_list:
+                pixel_xy.intensity(i)
                 sleep(40)
-                pixelxy.off()
+                pixel_xy.off()
                 sleep(10)
-            for pixelxy in pixel_list_rev:
-                pixelxy.intensity(i)
+            for pixel_xy in pixel_list_rev:
+                pixel_xy.intensity(i)
                 sleep(40)
-                pixelxy.off()
+                pixel_xy.off()
                 sleep(10)
 
 ----
@@ -196,7 +196,7 @@ Potentiometer Classes
             return int(scaled)
 
     # this defaults to pin0
-    # to use pinl1 instead use pot = Potentiometer(pin1)
+    # to use pin1 instead use pot = Potentiometer(pin1)
     pot = Potentiometer()
     while True:
         if pot.was_changed():

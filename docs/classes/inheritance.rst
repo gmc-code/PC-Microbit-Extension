@@ -68,7 +68,7 @@ super
                 self.length = length
                 self.width = length
 
-| In the code below, the ColouredRectangle class has its own ``__init__`` method that uses the super() function to reuse the ``__init__`` method from the Rectangle class and to allow other attributes to be set separately.
+| In the code below, the coloredRectangle class has its own ``__init__`` method that uses the super() function to reuse the ``__init__`` method from the Rectangle class and to allow other attributes to be set separately.
 
 .. code-block:: python
 
@@ -80,13 +80,13 @@ super
         def area(self):
             return self.length * self.width
 
-    class ColouredRectangle(Rectangle):
-        def __init__(self, length, width, colour):
+    class coloredRectangle(Rectangle):
+        def __init__(self, length, width, color):
             super().__init__(length, width)
-            self.colour = colour
+            self.color = color
 
-    col_rect = ColouredRectangle(2, 3, 'red')
-    print(col_rect.length, col_rect.width, col_rect.area(), col_rect.colour)
+    col_rect = coloredRectangle(2, 3, 'red')
+    print(col_rect.length, col_rect.width, col_rect.area(), col_rect.color)
 
 ----
 

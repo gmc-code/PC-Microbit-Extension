@@ -10,7 +10,7 @@ Python Game design
 .. image:: images/RPS_combos.png
     :scale: 100 %
 
-| Firstly, work out all the if and elif stements for the 9 possible move combinations.
+| Firstly, work out all the if and elif statements for the 9 possible move combinations.
 | The first two are below:
 | ``if human_move == 'rock' and computer_move == 'rock':``
 | ``elif human_move == 'rock' and computer_move == 'paper:'
@@ -163,7 +163,7 @@ Microbit version
         elif human_move == 'S' and microbit_move == 'P':
             display.show(Image.YES)
         elif human_move == 'S' and microbit_move == 'S':
-            display.scrshowoll(Image.MEH)
+            display.show(Image.MEH)
 
         sleep(500)
         display.clear()

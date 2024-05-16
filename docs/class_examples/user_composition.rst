@@ -7,7 +7,7 @@ User Class
 | In the code below, ``self.privileges = Privileges(user_privileges)``, the composite class, ``Privileges``, is assigned to an instance variable, ``self.privileges``.
 
 
-| Write code to ouput:
+| Write code to output:
 | Welcome, Tim!
 | Tim Lang is a Contributor.
 

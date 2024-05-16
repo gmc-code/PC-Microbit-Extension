@@ -20,7 +20,7 @@ Vertical scroller
         return img
 
 
-    def PlayGame():
+    def play_game():
         # lines of track
         track_bits = ["50005:", "53005:", "50305:", "50035:"]
         # starting track
@@ -72,7 +72,7 @@ Vertical scroller
     def main():
         while True:
             if button_a.was_pressed():
-                PlayGame()
+                play_game()
                 sleep(3000)
             sleep(50)
 

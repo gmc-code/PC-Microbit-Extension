@@ -15,11 +15,11 @@ class Grid:
         # put 0 in grid to start with
         grid = {(x, y): 0 for x in range(width) for y in range(height)}
         # put 1 in sides
-        gridedge = {(x, y): 1 for x in (0, width - 1) for y in range(height)}
-        grid.update(gridedge)
+        grid_edge = {(x, y): 1 for x in (0, width - 1) for y in range(height)}
+        grid.update(grid_edge)
         # put 1 in bottom
-        gridedge = {(x, height-1): 1 for x in range(width)}
-        grid.update(gridedge)
+        grid_edge = {(x, height-1): 1 for x in range(width)}
+        grid.update(grid_edge)
         return grid
 
 
@@ -28,39 +28,39 @@ dict_items = game.grid
 
 
 def getx(dict_items):
-    xvals = [k[0] for k in dict_items.keys()]
-    return xvals
+    x_vals = [k[0] for k in dict_items.keys()]
+    return x_vals
 
 
-xvals = getx(dict_items)
+x_vals = getx(dict_items)
 
 
 def gety(dict_items):
-    yvals = [k[1] for k in dict_items.keys()]
-    return yvals
+    y_vals = [k[1] for k in dict_items.keys()]
+    return y_vals
 
 
-yvals = gety(dict_items)
+y_vals = gety(dict_items)
 
 
 def getpoints(dict_items):
-    pvals = [k for k in dict_items.keys()]
-    return pvals
+    p_vals = [k for k in dict_items.keys()]
+    return p_vals
 
 
-pvals = getpoints(dict_items)
+p_vals = getpoints(dict_items)
 
 
 def getc(dict_items):
-    cvals = [[1, 0, 0] if k == 0 else [0, 0, 1] for k in dict_items.values()]
-    return cvals
+    c_vals = [[1, 0, 0] if k == 0 else [0, 0, 1] for k in dict_items.values()]
+    return c_vals
 
 
-cvals = getc(dict_items)
+c_vals = getc(dict_items)
 
-xa = np.array(xvals)
-ya = np.array(yvals)
-ca = np.array(cvals)
+xa = np.array(x_vals)
+ya = np.array(y_vals)
+ca = np.array(c_vals)
 
 plt.gca().invert_yaxis()
 plt.gca().xaxis.tick_top()

@@ -1,14 +1,14 @@
 class Car:
 
-    def __init__(self, make, model, year, colour):
+    def __init__(self, make, model, year, color):
         self.make = make
         self.model = model
         self.year = year
-        self.colour = colour
+        self.color = color
         self.odometer_reading = 0
 
     def get_info(self):
-        return f"{self.year} {self.colour} {self.make} {self.model}".title()
+        return f"{self.year} {self.color} {self.make} {self.model}".title()
 
     def get_odometer(self):
         print(f"{self.get_info()} has done {self.odometer_reading} km.")
@@ -52,8 +52,8 @@ class Battery:
 class ElectricCar(Car):
     """ElectricCar child of Car class."""
 
-    def __init__(self, make, model, year, colour, battery_size):
-        super().__init__(make, model, year, colour)
+    def __init__(self, make, model, year, color, battery_size):
+        super().__init__(make, model, year, color)
         self.battery = Battery(battery_size)
 
     def fill_tank(self):

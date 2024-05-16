@@ -41,7 +41,7 @@ To log data to the microbit for later viewing:
         :align: center
         :alt: online_serial
 
-#. When finished the activity that is being recorded, read your data. Connect the microbit to a computer. The microbit will appear like a USB drive called MICROBIT. Double-click on MY_DATA file to open it in a web browser. Your data will be diaplayed in a table. Only do this once finished since no more data can be written to the file MY_DATA unless the microbit is unplugged and reconnected or reset.
+#. When finished the activity that is being recorded, read your data. Connect the microbit to a computer. The microbit will appear like a USB drive called MICROBIT. Double-click on MY_DATA file to open it in a web browser. Your data will be displayed in a table. Only do this once finished since no more data can be written to the file MY_DATA unless the microbit is unplugged and reconnected or reset.
 
     .. image:: images/microbit_drive.png
         :scale: 100 %
@@ -126,10 +126,10 @@ Data log
 | ``log.set_labels('brightness', 'x', 'y', 'z', timestamp=log.SECONDS)`` sets the column headings for the data, which automatically includes a time stamp in the first column.  
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/log.html#log.set_labels
 
-| ``log.set_mirroring(True)`` sends the data to the srial port for monitoring the data. 
+| ``log.set_mirroring(True)`` sends the data to the serial port for monitoring the data. 
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/log.html#log.set_mirroring
 
-| ``run_every(log_data, ms=100)`` runs the function **log_data** every 100 millisecs. 
+| ``run_every(log_data, ms=100)`` runs the function **log_data** every 100 milli-secs. 
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/microbit.html#microbit.run_every.
 
 | The log_data function records the readings via ``log.add(brightness=brightness, x=x, y=y, z=z)``. 

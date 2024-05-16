@@ -3,9 +3,9 @@ Car Class Composition
 ====================================================
     
 | Write a child class of the **Car** class, **ElectricCar**.     
-| Set the car's **make**, **model**, **year**, **colour**. 
+| Set the car's **make**, **model**, **year**, **color**. 
 
-| Set the car's make, model, year, colour. 
+| Set the car's make, model, year, color. 
 | The child class, ElectricCar, assigns an instance of the Battery class to the battery attribute.
 
 | Complete the code to output:
@@ -21,15 +21,15 @@ Car Class Composition
 
             class Car:
                 
-                def __init__(self, make, model, year, colour):
+                def __init__(self, make, model, year, color):
                     self.make = make
                     self.model = model
                     self.year = year
-                    self.colour = colour
+                    self.color = color
                     self.odometer_reading = 0
 
                 def get_info(self):
-                    return f"{self.year} {self.colour} {self.make} {self.model}".title()
+                    return f"{self.year} {self.color} {self.make} {self.model}".title()
 
                 def get_odometer(self):
                     print(f"{self.get_info()} has done {self.odometer_reading} km.")
@@ -73,15 +73,15 @@ Car Class Composition
             class ElectricCar(Car):
                 """ElectricCar child of Car class."""
                 
-                def __init__(self, make, model, year, colour,          ):
-                    super().__init__(make, model, year, colour)
+                def __init__(self, make, model, year, color,          ):
+                    super().__init__(make, model, year, color)
                     self.battery =             
 
                 def fill_tank(self):
                     """Override parent method"""
                     print("No tank in this electric car.")
                     
-            my_tesla = ElectricCar(make='tesla', model='model S', year=2019, c=olour"grey", battery_size=90)
+            my_tesla = ElectricCar(make='tesla', model='model S', year=2019, color="grey", battery_size=90)
             print(my_tesla.get_info())
             my_tesla.battery.get_battery_info()
             my_tesla.battery.get_range()
@@ -102,15 +102,15 @@ Car Class Composition
 
                     class Car:
                         
-                        def __init__(self, make, model, year, colour):
+                        def __init__(self, make, model, year, color):
                             self.make = make
                             self.model = model
                             self.year = year
-                            self.colour = colour
+                            self.color = color
                             self.odometer_reading = 0
 
                         def get_info(self):
-                            return f"{self.year} {self.colour} {self.make} {self.model}".title()
+                            return f"{self.year} {self.color} {self.make} {self.model}".title()
 
                         def get_odometer(self):
                             print(f"{self.get_info()} has done {self.odometer_reading} km.")
@@ -154,15 +154,15 @@ Car Class Composition
                     class ElectricCar(Car):
                         """ElectricCar child of Car class."""
                         
-                        def __init__(self, make, model, year, colour, battery_size):
-                            super().__init__(make, model, year, colour)
+                        def __init__(self, make, model, year, color, battery_size):
+                            super().__init__(make, model, year, color)
                             self.battery = Battery(battery_size)
 
                         def fill_tank(self):
                             """Override parent method"""
                             print("No tank in this electric car.")
                             
-                    my_tesla = ElectricCar(make='tesla', model='model S', year=2019, c=olour"grey", battery_size=90)
+                    my_tesla = ElectricCar(make='tesla', model='model S', year=2019, color="grey", battery_size=90)
                     print(my_tesla.get_info())
                     my_tesla.battery.get_battery_info()
                     my_tesla.battery.get_range()

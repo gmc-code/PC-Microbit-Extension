@@ -5,7 +5,7 @@ Maqueen summary
 
 | A summary of the Maqueen methods is below.
 | Speeds values are 0,1,2,3,4,5
-| Turn tightness from tighest 5,4,3,2,1 to least tight.
+| Turn tightness from tightest 5,4,3,2,1 to least tight.
 | The line sensor value: over white is 1, while over black is 0.
 | Headlights use 1 for on and 0 for off.
 

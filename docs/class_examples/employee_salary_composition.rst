@@ -29,13 +29,13 @@ Employee Salary
         .. code-block:: python
                     
             class Employee:
-                def __init__(self, firstname, lastname, monthly_income, bonus_rate):
-                    self.firstname = firstname
-                    self.lastname = lastname
+                def __init__(self, first_name, last_name, monthly_income, bonus_rate):
+                    self.first_name = first_name
+                    self.last_name = last_name
                     self.salary =         (monthly_income=              , bonus_rate=         )
 
                 def get_employee(self):
-                    print(f"Name: {self.firstname + self.lastname}.")
+                    print(f"Name: {self.first_name + self.last_name}.")
                     print(f"Salary: ${self.salary.get_total_salary()}")
 
 
@@ -54,7 +54,7 @@ Employee Salary
                     return f'{self.                  () + self.get_bonus():.2f}'
 
 
-            emp1 = Employee(firstname="Tim", lastname="Lang", monthly_income=8000, bonus_rate=5)
+            emp1 = Employee(first_name="Tim", last_name="Lang", monthly_income=8000, bonus_rate=5)
             emp1.get_employee()
 
     .. dropdown::
@@ -71,13 +71,13 @@ Employee Salary
                 .. code-block:: python
                             
                     class Employee:
-                        def __init__(self, firstname, lastname, monthly_income, bonus_rate):
-                            self.firstname = firstname
-                            self.lastname = lastname
+                        def __init__(self, first_name, last_name, monthly_income, bonus_rate):
+                            self.first_name = first_name
+                            self.last_name = last_name
                             self.salary = Salary(monthly_income=monthly_income, bonus_rate=bonus_rate)
 
                         def get_employee(self):
-                            print(f"Name: {self.firstname + self.lastname}.")
+                            print(f"Name: {self.first_name + self.last_name}.")
                             print(f"Salary: ${self.salary.get_total_salary()}")
 
 
@@ -96,5 +96,5 @@ Employee Salary
                             return f'{self.get_annual_salary() + self.get_bonus():.2f}'
 
 
-                    emp1 = Employee(firstname="Tim", lastname="Lang", monthly_income=8000, bonus_rate=5)
+                    emp1 = Employee(first_name="Tim", last_name="Lang", monthly_income=8000, bonus_rate=5)
                     emp1.get_employee()

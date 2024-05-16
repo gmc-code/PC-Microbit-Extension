@@ -27,7 +27,7 @@ Adding lights and sound: set up lights
 | Set up the Neopixels on pin8 with a length of 4 pixels using the neopixel syntax.
 | The constants, LED_PIN and NUM_PIXELS, are used to help remember the neopixel syntax. 
 | It would be just as easy to use ``buggy_lights = leds(pin8, 4)``.
-| Add constants for the LED colours to use. These have the RGB values for the colours. The ones chosen are subtle. They avoid using the full brightness values that can go as high 255.
+| Add constants for the LED colors to use. These have the RGB values for the colors. The ones chosen are subtle. They avoid using the full brightness values that can go as high 255.
 
 .. code-block:: python
 
@@ -45,7 +45,7 @@ Adding lights and sound: lights functions
 -------------------------------------------------------
 
 | Define ``rear_lights()`` so that it sets the rear lights (index 2 and 3) to red.
-| Define ``front_lights(left, right)`` so that it keeps reuses the rear lights and sets the front left and front right lights (index 0 and 1) to the colours passed in place of the ``left`` and ``right`` parameters.
+| Define ``front_lights(left, right)`` so that it keeps reuses the rear lights and sets the front left and front right lights (index 0 and 1) to the colors passed in place of the ``left`` and ``right`` parameters.
 
 | Define ``head_lights()``, ``left_indicator()``, ``right_indicator()``, ``both_indicators()``, so that they use ``front_lights(left, right)`` and specify the front lights to use for each.
 
@@ -293,4 +293,4 @@ Version 3 Code for thin line following with lights and sound
 
     #. Add siren sounds when the buggy spins to avoid an obstacle.
     #. Add a beep sound when the buggy turns left or right.
-    #. Add constants for different LED colours and use them when the buggy spins around.
+    #. Add constants for different LED colors and use them when the buggy spins around.

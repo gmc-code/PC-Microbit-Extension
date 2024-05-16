@@ -25,7 +25,7 @@ Set speed constants
 ----------------------------------------
 
 | Create some constants so that the values can be changed in one place when testing the performance of the buggy.
-| Set a ``CHANGETHRESHOLD`` constant to be the minimum change in the line sensor reading when the colour below it is no longer fully white. A value of 40 works seems to work well.
+| Set a ``CHANGETHRESHOLD`` constant to be the minimum change in the line sensor reading when the color below it is no longer fully white. A value of 40 works seems to work well.
 | The buggy should only move slowly so that it doesn't go too far over the black line. Hence the speed settings must be very low. Speeds of 1 work best for the tracks provided.
 | Set a ``MAXSPEED`` constant to be the speed for the motors when going straight forward.
 | Set a ``MAXTURN`` constant to be the speed for the outside motor on a turn which needs to be greater than the speed of the inside motor.
