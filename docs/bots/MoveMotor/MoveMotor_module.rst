@@ -3,7 +3,7 @@ MOVEMotor module
 ====================================================
 
 | The MOVEMotor module is required to control the MOVEmotor buggy.
-| THere are 2 major versions of the MOVEMotor: v2 and v3.1
+| There are 2 major versions of the MOVEMotor: v2 and v3.1
 
 
 | Download the v2 module file :download:`MOVEMotor_v2.py module <files/MOVEMotor_v2.py>`.
@@ -11,7 +11,7 @@ MOVEMotor module
 
 | Download the v3.1 module file :download:`MOVEMotor_v31.py module <files/MOVEMotor_v31.py>`.
 
-After downloading, rename the file to MOVEMotor.py so that importing the module works using the code below.
+After downloading, **rename the file to MOVEMotor.py** so that importing the module works using the code below.
 
 ----
 
