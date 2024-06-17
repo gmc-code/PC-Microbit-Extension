@@ -10,8 +10,8 @@ MoveMotor radio v1 files:
 -------------------------
 
 | Files for download to use via the open button at : https://python.microbit.org/v/3
-| Hex file for the bot :download:`MoveMotor bot hex file <files/MM bot.hex>`.
-| Hex file for the hand held controller  :download:`MoveMotor controller hex file <files/MM radio controller.hex>`.
+| Hex file for the bot :download:`MoveMotor bot hex file <files/MM_bot.hex>`.
+| Hex file for the hand held controller  :download:`MoveMotor controller hex file <files/MM_radio_controller.hex>`.
 
 ----
 
@@ -42,6 +42,7 @@ Radio for controller
     radio.config(group=8)  # 0-255
     radio.on()
 
+    msg=""
     while True:
         y_reading = accelerometer.get_y()
         x_reading = accelerometer.get_x()
@@ -67,6 +68,56 @@ Radio for controller
                 msg = "X"      
         radio.send(msg)
         display.show(msg)
+
+----
+
+Radio for microbit on MOVEMotor
+--------------------------------
+
+| The code below moves the MOVEMotor at medium speed, since its top speed is relatively fast.
+| The radius of 5 gives a tight turn.
+
+
+.. code-block:: python
+
+    from microbit import *
+    import radio
+    import MOVEMotor
+
+
+    radio.config(group=8)  # 0-255
+    radio.on()
+
+    buggy = MOVEMotor.MOVEMotorMotors()
+
+
+    while True:
+        sleep(100)
+        msg = radio.receive()
+        if msg is not None:
+            display.show(msg)
+            if msg == "X":
+                buggy.stop()
+            elif msg == "B":
+                buggy.backwards(speed=5)
+            elif msg == "F":
+                buggy.forwards(speed=5)
+            elif msg == "R":
+                buggy.right(speed=2, radius=5)
+            elif msg == "L":
+                buggy.left(speed=2, radius=5)
+
+----
+
+Radio Racing
+----------------------------
+
+.. admonition:: Tasks
+
+    #. Create an obstacle course and race another bot using radio controls.
+    #. Modify the speed settings to suit the obstacle course.
+    #. Add a variable to keep track of the last msg sent and only send a new msg if it is different to the last msg.
+
 
 ----
 
@@ -139,53 +190,8 @@ Radio for microbit on BitBotXL
             elif msg == "L":
                 buggy.left(speed=10, tightness=5)
 
-----
-
-Radio for microbit on MOVEMotor
---------------------------------
-
-| The code below moves the MOVEMotor at medium speed, since its top speed is relatively fast.
-| The radius of 5 gives a tight turn.
 
 
-.. code-block:: python
 
-    from microbit import *
-    import radio
-    import MOVEMotor
-
-
-    radio.config(group=8)  # 0-255
-    radio.on()
-
-    buggy = MOVEMotor.MOVEMotorMotors()
-
-
-    while True:
-        sleep(100)
-        msg = radio.receive()
-        if msg is not None:
-            display.show(msg)
-            if msg == "X":
-                buggy.stop()
-            elif msg == "B":
-                buggy.backwards(speed=5)
-            elif msg == "F":
-                buggy.forwards(speed=5)
-            elif msg == "R":
-                buggy.right(speed=2, radius=5)
-            elif msg == "L":
-                buggy.left(speed=2, radius=5)
-
-----
-
-Radio Racing
-----------------------------
-
-.. admonition:: Tasks
-
-    #. Create an obstacle course and race another bot using radio controls.
-    #. Modify the speed settings to suit the obstacle course.
-    #. Add a variable to keep track of the last msg sent and only send a new msg if it is different to the last msg.
 
 

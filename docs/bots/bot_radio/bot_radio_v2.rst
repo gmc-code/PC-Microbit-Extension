@@ -7,6 +7,16 @@ Bot radio v2
 
 ----
 
+MoveMotor radio v2 files:
+-------------------------
+
+| Files for download to use via the open button at : https://python.microbit.org/v/3
+| Hex file for the bot :download:`MoveMotor bot_v2 hex file <files/MM_bot_v2.hex>`.
+| Hex file for the hand held controller  :download:`MoveMotor controller_v2 hex file <files/MM_radio_controller_v2.hex>`.
+
+
+----
+
 Unique groups
 ----------------------
 
@@ -49,7 +59,7 @@ Radio for controller
     radio.config(group=8)  # 0-255
     radio.on()
 
-
+    msg=""
     while True:
         sleep(50)
         y_reading = accelerometer.get_y()

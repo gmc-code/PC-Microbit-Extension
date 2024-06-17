@@ -45,7 +45,7 @@ Microbit software using micropython:
 ------------------------------------------
 
 | The standard online **micropython** editor: https://python.microbit.org/v/3.
-| THis is the most up to date editor.
+| This is the most up to date editor.
 
 | Comparison of microbit programming options:
 | The **Mu** editor for laptops, https://codewith.mu/en/tutorials/1.1/microbit, is the first choice for coding on the microbit.
@@ -112,8 +112,8 @@ Python references:
 
 For an introduction to python see:
 
-* https://docs.python.org/3.11/tutorial/introduction.html
-* https://docs.python.org/3.11/tutorial/index.html
+* https://docs.python.org/3.12/tutorial/introduction.html
+* https://docs.python.org/3.12/tutorial/index.html
 * https://www.w3schools.com/python/default.asp
 * https://www.programiz.com/python-programming
 * https://www.geeksforgeeks.org/python-programming-language/?ref=shm
