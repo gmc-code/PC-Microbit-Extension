@@ -18,7 +18,7 @@ MoveMotor radio v1 files:
 Unique groups
 ----------------------
 
-| Use ``radio.config(group=8)`` to set unique groups in the room.
+| Change the group number in ``radio.config(group=8)`` to set unique groups in the room.
 | Make sure all microbits using a bot have the same group number (0-255).
 | Edit the code below to set the group.
 | The buggy **speeds** and **durations** can also be edited for different responses.
