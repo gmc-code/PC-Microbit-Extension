@@ -16,13 +16,31 @@ PC-microbit-extension
 
 .. toctree::
     :maxdepth: 2
-    :caption: Data Logging
+    :caption: Bots/Radio
     :numbered:
 
-    data_logging/data_logging_csv.rst
-    data_logging/data_logging_MY_DATA.rst
-    data_logging/data_logging_Excel.rst
-    data_logging/data_logging_vscode.rst
+    bots/bot_radio/bot_radio_v1.rst
+    bots/bot_radio/bot_radio_v2.rst
+    bots/bot_radio/bot_radio_v3_game_controller.rst
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Bots/MoveMotor
+    :numbered:
+
+    bots/MoveMotor/MoveMotor_info.rst
+    bots/MoveMotor/MoveMotor_module.rst
+    bots/MoveMotor/MoveMotor_motors.rst
+    bots/MoveMotor/MoveMotor_motor_tests.rst
+    bots/MoveMotor/MoveMotor_LEDs.rst
+    bots/MoveMotor/MoveMotor_distance_sensors.rst
+    bots/MoveMotor/MoveMotor_line_sensors.rst
+    bots/MoveMotor/MoveMotor_line_follower_1.rst
+    bots/MoveMotor/MoveMotor_line_follower_2.rst
+    bots/MoveMotor/MoveMotor_line_follower_3.rst
+    bots/MoveMotor/MoveMotor_line_follower_4.rst
+    bots/MoveMotor/MoveMotor_summary.rst
 
 
 .. toctree::
@@ -51,35 +69,6 @@ PC-microbit-extension
     bots/BitBotXL/BitBotXL_distance_sensor.rst
     bots/BitBotXL/BitBotXL_LEDs.rst
     bots/BitBotXL/BitBotXL_summary.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Bots/MoveMotor
-    :numbered:
-
-    bots/MoveMotor/MoveMotor_info.rst
-    bots/MoveMotor/MoveMotor_module.rst
-    bots/MoveMotor/MoveMotor_motors.rst
-    bots/MoveMotor/MoveMotor_motor_tests.rst
-    bots/MoveMotor/MoveMotor_LEDs.rst
-    bots/MoveMotor/MoveMotor_distance_sensors.rst
-    bots/MoveMotor/MoveMotor_line_sensors.rst
-    bots/MoveMotor/MoveMotor_line_follower_1.rst
-    bots/MoveMotor/MoveMotor_line_follower_2.rst
-    bots/MoveMotor/MoveMotor_line_follower_3.rst
-    bots/MoveMotor/MoveMotor_line_follower_4.rst
-    bots/MoveMotor/MoveMotor_summary.rst
-
-
-.. toctree::
-    :maxdepth: 2
-    :caption: Bots/Radio
-    :numbered:
-
-    bots/bot_radio/bot_radio_v1.rst
-    bots/bot_radio/bot_radio_v2.rst
-    bots/bot_radio/bot_radio_v3_game_controller.rst
 
 
 .. toctree::
@@ -196,6 +185,16 @@ PC-microbit-extension
     games/french_numbers.rst
     games/french_numbers_quiz.rst
 
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Data Logging
+    :numbered:
+
+    data_logging/data_logging_csv.rst
+    data_logging/data_logging_MY_DATA.rst
+    data_logging/data_logging_Excel.rst
+    data_logging/data_logging_vscode.rst
 
 
 
