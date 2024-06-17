@@ -11,7 +11,7 @@ MoveMotor radio v1 files:
 
 | Files for download to use via the open button at : https://python.microbit.org/v/3
 | Hex file for the bot :download:`MoveMotor bot hex file <files/MM bot.hex>`.
-| Hex file for the hand held controller  :download:`MoveNotor controller hex file <files/MM radio controller.hex>`.
+| Hex file for the hand held controller  :download:`MoveMotor controller hex file <files/MM radio controller.hex>`.
 
 ----
 
