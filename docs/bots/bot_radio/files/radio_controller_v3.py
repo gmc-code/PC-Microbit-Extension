@@ -28,6 +28,7 @@ class KitronikGameController:
             return False
 
 controller = KitronikGameController()
+msg=""
 while True:
     msg=""
     if button_a.is_pressed():

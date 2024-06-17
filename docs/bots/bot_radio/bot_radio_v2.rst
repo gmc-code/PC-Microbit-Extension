@@ -167,10 +167,10 @@ Radio Racing
 
 ----
 
-Radio for microbit on MiniBit
+Radio for microbit on BitBotXL
 --------------------------------------
 
-| The code below moves the MiniBit at maximum speed, since its top speed is relatively slow.
+| The code below moves the BitBotXL at maximum speed, since its top speed is relatively slow.
 | The tightness of 5 gives a tight turn.
 | High turning speed settings are used below for best control based on testing.
 
@@ -178,12 +178,14 @@ Radio for microbit on MiniBit
 
     from microbit import *
     import radio
-    import MiniBit
+    import BitBotXL
+
 
     radio.config(group=8)  # 0-255
     radio.on()
 
-    buggy = MiniBit.MiniBitMotors()
+    buggy = BitBotXL.BitBotXLMotors()
+
 
     while True:
         sleep(50)
@@ -217,13 +219,12 @@ Radio for microbit on MiniBit
             elif msg == "T":
                 buggy.right(speed=10, tightness=5)
 
-
 ----
 
-Radio for microbit on BitBotXL
+Radio for microbit on MiniBit
 --------------------------------------
 
-| The code below moves the BitBotXL at maximum speed, since its top speed is relatively slow.
+| The code below moves the MiniBit at maximum speed, since its top speed is relatively slow.
 | The tightness of 5 gives a tight turn.
 | High turning speed settings are used below for best control based on testing.
 
@@ -231,14 +232,12 @@ Radio for microbit on BitBotXL
 
     from microbit import *
     import radio
-    import BitBotXL
-
+    import MiniBit
 
     radio.config(group=8)  # 0-255
     radio.on()
 
-    buggy = BitBotXL.BitBotXLMotors()
-
+    buggy = MiniBit.MiniBitMotors()
 
     while True:
         sleep(50)
