@@ -5,7 +5,7 @@ Bot radio v3 - KitronikGameController
 Unique groups
 ----------------------
 
-| Use ``radio.config(group=8)`` to set unique groups in the room.
+| Change the group number in ``radio.config(group=8)`` to set unique groups in the room.
 | Make sure all microbits using a bot have the same group number (0-255).
 | Edit the code below to set the group.
 

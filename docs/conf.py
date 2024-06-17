@@ -19,7 +19,7 @@
 
 import sphinx_rtd_theme
 project = 'PC-microbit-extension'
-copyright = '2021-2, GMC'
+copyright = '2021-4, GMC'
 author = 'GMC'
 
 
