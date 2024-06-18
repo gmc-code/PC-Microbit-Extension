@@ -13,6 +13,13 @@ MOVEMotor module
 
 After downloading, **rename the file to MOVEMotor.py** so that importing the module works using the code below.
 
+| To use the MOVEMotor module, import it via: ``import MOVEMotor``.
+
+.. code-block:: python
+
+    from microbit import *
+    import MOVEMotor
+
 ----
 
 Uploading modules to the microbit
@@ -33,15 +40,4 @@ Uploading modules to the microbit
 .. image:: images/online_editor_open_file.png
     :scale: 50 %
 
-----
-
-Use MOVEMotor library
-----------------------------------------
-
-| To use the MOVEMotor module, import it via: ``import MOVEMotor``.
-
-.. code-block:: python
-
-    from microbit import *
-    import MOVEMotor
 
