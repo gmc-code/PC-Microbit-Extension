@@ -10,7 +10,7 @@ Bot radio v2
 MoveMotor v3.1 radio v2 files:
 -----------------------------------
 
-| Hex Files for the MOVEMotor v3.1 can be loaded via the project:open button at : https://python.microbit.org/v/3
+| Hex Files for the MOVEMotor v3.1 can be loaded via the project:open button at: https://python.microbit.org/v/3
 | Hex file for the bot :download:`MoveMotor bot_v2 hex file <files/MM_bot_v2.hex>`.
 | Hex file for the hand held controller  :download:`MoveMotor controller_v2 hex file <files/MM_radio_controller_v2.hex>`.
 
