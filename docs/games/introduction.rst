@@ -17,7 +17,7 @@ All time records
         - **High score**  
         - **Player**
     *   - Asteroids- super hacked
-        - 118000    
+        - 202000    
         - Addison
     *   - Asteroids
         - 4207    
