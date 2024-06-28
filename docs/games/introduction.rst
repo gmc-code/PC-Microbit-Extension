@@ -16,6 +16,9 @@ All time records
     *   - **Game** 
         - **High score**  
         - **Player**
+    *   - Asteroids- super hacked
+        - 118000    
+        - Addison
     *   - Asteroids
         - 4207    
         - Lachlan
@@ -23,8 +26,8 @@ All time records
         - 154    
         - Sai
     *   - Space Invaders    
-        - 365    
-        - Snehath
+        - 423    
+        - Angus
     *   - Snake    
         - 140 
         - Jaskirat
