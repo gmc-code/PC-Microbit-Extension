@@ -15,6 +15,15 @@ Unique groups
 
 ----
 
+MOVEMotor v3.1 radio v4 files:
+-----------------------------------
+
+| Hex Files for the MOVEMotor v3.1 can be loaded via the project:open button at: https://python.microbit.org/v/3
+| Hex file for the bot :download:`MOVEMotor bot_v3 hex file <files/MM_bot_v3.hex>`.
+| Hex file for the hand held controller  :download:`MOVEMotor controller_v4 hex file <files/MM_radio_controller_v4.hex>`.
+
+----
+
 Using Kitronik Game Controller for variable speeds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -22,10 +31,11 @@ Radio for controller
 ----------------------
 
 
-| The code below requires A button pressing for motor control.
+| The code below requires button pressing for motor control.
 | No durations are set, so the motors will continue running with the last instruction they receive.
 
-| To stop, press the microbit A or B button, send: X.
+| To spin, press the microbit A or B button.
+| Use this instead of stopping, since there is no code to send an "X".
 
 | For increasing speed forward, send: F, G, H. 
 | Press the joypad UP button, F is sent, and a slow speed results.
@@ -44,11 +54,15 @@ Radio for controller
 
 .. code-block:: python
 
+    # MoverMotor bot code, change radio group to match bot number in 200s
+    # MOVEMotor_v31  200 + number
+    # MM v2 150 + number
+
     from microbit import *
     import music
     import radio
 
-    radio.config(group=8)  # 0-255
+    radio.config(group=151)  # 0-255
     radio.on()
 
 
@@ -64,7 +78,7 @@ Radio for controller
             self.Right = pin13
             self.Fire_1 = pin15
             self.Fire_2 = pin16
-        
+
         # Determines whether a particular button has been pressed
         #  (returns True or False)
         def onButtonPress(self, button):
@@ -74,12 +88,17 @@ Radio for controller
                 return False
 
     controller = KitronikGameController()
+    msg=""
+
     while True:
         msg=""
+
         if button_a.is_pressed():
-            msg = "X"
+            # spin
+            msg = "sL"
         elif button_b.is_pressed():
-            msg = "X"
+            # spin
+            msg = "sR"
         elif controller.onButtonPress(controller.Fire_2) is True:
             if controller.onButtonPress(controller.Up) is True:
                 msg = "H"
@@ -109,6 +128,7 @@ Radio for controller
                 msg = "R"
         radio.send(msg)
         display.show(msg)
+
 
 
 ----

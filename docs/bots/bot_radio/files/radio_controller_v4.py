@@ -1,8 +1,12 @@
+# MoverMotor bot code, change radio group to match bot number in 200s
+# MOVEMotor_v31  200 + number
+# MM v2 150 + number
+
 from microbit import *
 import music
 import radio
 
-radio.config(group=8)  # 0-255
+radio.config(group=151)  # 0-255
 radio.on()
 
 
@@ -29,12 +33,16 @@ class KitronikGameController:
 
 controller = KitronikGameController()
 msg=""
+
 while True:
     msg=""
+
     if button_a.is_pressed():
-        msg = "X"
+        # spin
+        msg = "sL"
     elif button_b.is_pressed():
-        msg = "X"
+        # spin
+        msg = "sR"
     elif controller.onButtonPress(controller.Fire_2) is True:
         if controller.onButtonPress(controller.Up) is True:
             msg = "H"
