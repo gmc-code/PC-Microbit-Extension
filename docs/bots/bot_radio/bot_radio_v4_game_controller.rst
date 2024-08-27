@@ -133,57 +133,10 @@ Radio for controller
 
 ----
 
-Radio for microbit on MOVEMotor
+Code for microbit on MOVEMotor
 ---------------------------------
 
-| There are 3 speed settings.
-| When turning, the slowest speed has a tighter turn; the fastest speed has a less tight turning circle.
-
-
-.. code-block:: python
-
-    from microbit import *
-    import radio
-    import MOVEMotor
-
-
-    radio.config(group=8)  # 0-255
-    radio.on()
-
-    # setup buggy
-    buggy = MOVEMotor.MOVEMotorMotors()
-
-            
-    while True:
-        msg = radio.receive()
-        if msg is not None:
-            if msg == "B":
-                buggy.backwards(speed=2)
-            elif msg == "C":
-                buggy.forwards(speed=5)
-            elif msg == "D":
-                buggy.forwards(speed=10)
-            elif msg == "F":
-                buggy.forwards(speed=2)
-            elif msg == "G":
-                buggy.forwards(speed=5)
-            elif msg == "H":
-                buggy.forwards(speed=10)
-            elif msg == "X":
-                buggy.stop()
-            elif msg == "L":
-                buggy.left(speed=2, radius=25)
-            elif msg == "M":
-                buggy.left(speed=3, radius=15)
-            elif msg == "N":
-                buggy.left(speed=4, radius=5)
-            elif msg == "R":
-                buggy.right(speed=2, radius=25)
-            elif msg == "S":
-                buggy.right(speed=3, radius=15)
-            elif msg == "T":
-                buggy.right(speed=4, radius=5)
-
+| See v3 code.
 
 ----
 
