@@ -11,8 +11,8 @@ MoveMotor v3.1 radio v2 files:
 -----------------------------------
 
 | Hex Files for the MOVEMotor v3.1 can be loaded via the project:open button at: https://python.microbit.org/v/3
-| Hex file for the bot :download:`MoveMotor bot_v2 hex file <files/MM_bot_v2.hex>`.
-| Hex file for the hand held controller  :download:`MoveMotor controller_v2 hex file <files/MM_radio_controller_v2.hex>`.
+| Hex file for the bot :download:`MOVEMotor bot_v2 hex file <files/MM_bot_v2.hex>`.
+| Hex file for the hand held controller  :download:`MOVEMotor controller_v2 hex file <files/MM_radio_controller_v2.hex>`.
 
 
 ----
@@ -23,7 +23,10 @@ Unique groups
 | Change the group number in ``radio.config(group=8)`` to set unique groups in the room.
 | Make sure all microbits using a bot have the same group number (0-255).
 | Edit the code below to set the group.
-| The buggy **speeds** and **durations** can also be edited for different responses.
+|   
+| # MOVEMotor bot code, change radio group to match bot number
+| # MOVEMotor_v31 200 + bot number
+| # MOVEMotor v2 150 + bot number
 
 ----
 
@@ -149,9 +152,7 @@ Radio for microbit on MOVEMotor
                 buggy.right(speed=3, radius=15)
             elif msg == "T":
                 buggy.right(speed=4, radius=5)
-            
-
-
+        
 ----
 
 Radio Racing
