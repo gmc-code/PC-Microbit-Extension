@@ -286,7 +286,7 @@ Radio Mods
 
 .. admonition:: Tasks
 
-    #. Adjust the colours for the 4 leds on he MOVEMotor.
-    #. Modify the speed settings to suit the obstacle course.
+    #. Adjust the colours for the 4 leds on the MOVEMotor.
+    #. Modify the speed settings to suit an obstacle course.
 
 
