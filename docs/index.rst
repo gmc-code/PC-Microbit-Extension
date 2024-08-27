@@ -21,7 +21,8 @@ PC-microbit-extension
 
     bots/bot_radio/bot_radio_v1.rst
     bots/bot_radio/bot_radio_v2.rst
-    bots/bot_radio/bot_radio_v3_game_controller.rst
+    bots/bot_radio/bot_radio_v3.rst
+    bots/bot_radio/bot_radio_v4_game_controller.rst
 
 
 .. toctree::
