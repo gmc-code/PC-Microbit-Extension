@@ -85,7 +85,7 @@ PC-microbit-extension
     bots/Maqueen/Maqueen_distance_sensors.rst
     bots/Maqueen/Maqueen_line_sensors.rst
     bots/Maqueen/
-    
+
 
 .. toctree::
     :maxdepth: 2
@@ -166,7 +166,7 @@ PC-microbit-extension
     class_games/asteroids.rst
     class_games/lights_out.rst
     class_games/snake.rst
-
+    class_games/red_rain.rst
 
 
 .. toctree::
