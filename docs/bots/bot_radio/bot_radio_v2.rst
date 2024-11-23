@@ -23,10 +23,10 @@ Unique groups
 | Change the group number in ``radio.config(group=8)`` to set unique groups in the room.
 | Make sure all microbits using a bot have the same group number (0-255).
 | Edit the code below to set the group.
-|   
-| # MOVEMotor bot code, change radio group to match bot number
-| # MOVEMotor_v31 200 + bot number
-| # MOVEMotor v2 150 + bot number
+
+- MOVEMotor bot code, change radio group to match bot number
+- MOVEMotor_v31 200 + bot number
+- MOVEMotor v2 150 + bot number
 
 ----
 
@@ -39,7 +39,7 @@ Radio for controller
 
 | If the microbit is level, ``-200 <= y_reading <= 200 and -200 <= x_reading <= 200``, send an "X", to stop.
 
-| For increasing speed forward, send: F, G, H. 
+| For increasing speed forward, send: F, G, H.
 | Tilt forwards a bit, F is sent, and a slow speed results.
 | Tilt forwards a bit more, G is sent, and a medium speed results.
 | Tilt forwards a lot, H is sent, and a fast speed results.
@@ -152,7 +152,7 @@ Radio for microbit on MOVEMotor
                 buggy.right(speed=3, radius=15)
             elif msg == "T":
                 buggy.right(speed=4, radius=5)
-        
+
 ----
 
 Radio Racing

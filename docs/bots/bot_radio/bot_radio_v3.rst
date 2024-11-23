@@ -31,10 +31,10 @@ Unique groups
 | Change the group number in ``radio.config(group=8)`` to set unique groups in the room.
 | Make sure all microbits using a bot have the same group number (0-255).
 | Edit the code below to set the group.
-|  
-| # MOVEMotor bot code, change radio group to match bot number
-| # MOVEMotor_v31 200 + bot number
-| # MOVEMotor v2 150 + bot number
+
+- MOVEMotor bot code, change radio group to match bot number
+- MOVEMotor_v31 200 + bot number
+- MOVEMotor v2 150 + bot number
 
 ----
 
@@ -73,7 +73,7 @@ Radio for controller
             msg = "resetbias"
         elif pin2.is_touched():
             #dec_right +=20
-            msg = "decright"  
+            msg = "decright"
         elif button_a.is_pressed() and button_b.is_pressed():
             # stop
             msg = "X"
@@ -184,7 +184,7 @@ Code for microbit on MOVEMotor
         for led_num in range(4):
             np[led_num] = adjust_brightness(magenta, lvl)
         np.show()
-        
+
     def np_right(lvl=1.0):
         for led_num in [rf, rb]:
             np[led_num] = adjust_brightness(yellow, lvl)
@@ -194,7 +194,7 @@ Code for microbit on MOVEMotor
         for led_num in [rf, rb]:
             np[led_num] = adjust_brightness(orange, lvl)
         np.show()
-        
+
     def np_left(lvl=1.0):
         for led_num in [lf, lb]:
             np[led_num] = adjust_brightness(cyan, lvl)
@@ -204,7 +204,7 @@ Code for microbit on MOVEMotor
         for led_num in [lf, lb]:
             np[led_num] = adjust_brightness(blue, lvl)
         np.show()
-        
+
     def leds0ff():
         np.clear()
 
@@ -223,14 +223,14 @@ Code for microbit on MOVEMotor
                 display.show(biaslist.index(msg))
             else:
                 display.show(msg)
-                
+
             if msg == "decleft":
                 dec_left +=20
             elif msg == "decright":
                 dec_right +=20
             elif msg == "resetbias":
                 dec_left = 0
-                dec_right = 0        
+                dec_right = 0
             elif msg == "B":
                 buggy.backwards(speed=slow, decrease_left=dec_left, decrease_right=dec_right)
                 np_backwards(0.2)
@@ -276,9 +276,9 @@ Code for microbit on MOVEMotor
             elif msg == "sR":
                 buggy.spin_right(speed=slow)
                 np_spinright()
-            
 
-            
+
+
 ----
 
 Radio Mods

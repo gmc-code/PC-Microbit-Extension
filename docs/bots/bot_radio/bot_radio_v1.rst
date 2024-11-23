@@ -21,10 +21,10 @@ Unique groups
 | Change the group number in ``radio.config(group=8)`` to set unique groups in the room.
 | Make sure all microbits using a bot have the same group number (0-255).
 | Edit the code below to set the group.
-| 
-| # MOVEMotor bot code, change radio group to match bot number
-| # MOVEMotor_v31 200 + bot number
-| # MOVEMotor v2 150 + bot number
+
+- MOVEMotor bot code, change radio group to match bot number
+- MOVEMotor_v31 200 + bot number
+- MOVEMotor v2 150 + bot number
 
 ----
 
@@ -68,7 +68,7 @@ Radio for controller
             elif x_reading < -200:
                 msg = "L"
             else:
-                msg = "X"      
+                msg = "X"
         radio.send(msg)
         display.show(msg)
 
@@ -140,9 +140,9 @@ Radio for microbit on BitBotXL
 
     radio.config(group=8)  # 0-255
     radio.on()
-    
+
     buggy = BitBotXL.BitBotXLMotors()
-    
+
 
     while True:
         msg = radio.receive()
@@ -158,7 +158,7 @@ Radio for microbit on BitBotXL
                 buggy.right(speed=10, tightness=5)
             elif msg == "L":
                 buggy.left(speed=10, tightness=5)
-                
+
 ----
 
 Radio for microbit on MiniBit

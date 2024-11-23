@@ -17,7 +17,7 @@ HC-SR04 Distance sensor
 Set up the distance sensors
 ----------------------------------------
 
-.. py:class:: MOVEMotorDistanceSensors() 
+.. py:class:: MOVEMotorDistanceSensors()
 
 | Set up the Distance Sensors for use.
 | Import the MOVEMotor module first.
@@ -72,14 +72,14 @@ Distance to an object
 
     # setup buggy
     buggy = MOVEMotor.MOVEMotorMotors()
-    
+
     # setup distance_sensor
     distance_sensor = MOVEMotor.MOVEMotorDistanceSensors()
-    
+
     while True:
         buggy.forwards()
         if distance_sensor.distance() < 10:
-            buggy.spin(speed=1, direction='left', duration=1000)
+            buggy.spin_left(speed=1)
         sleep(200)
 
 ----
