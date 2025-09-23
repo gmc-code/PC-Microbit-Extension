@@ -2,11 +2,11 @@
 Data logging csv
 ====================================================
 
-| For the microbit utime module 
+| For the microbit utime module
 | see: https://microbit-micropython.readthedocs.io/en/v2-docs/utime.html
-| For opening a file on the microbit  
+| For opening a file on the microbit
 | see: https://microbit-micropython.readthedocs.io/en/v2-docs/filesystem.html
-| For reading the light level via display  
+| For reading the light level via display
 | see: https://microbit-micropython.readthedocs.io/en/v2-docs/display.html
 
 ----
@@ -78,15 +78,8 @@ Write to microbit
 File transfer from microbit to computer
 ----------------------------------------
 
-| To transfer the "light_readings.csv" file to the computer click on the Files button in Mu editor.
-| Click and drag the file on the left, "light_readings.csv", across to the right to "files on your computer" which is the mu_code folder on the computer.
-| The mu_code folder will be located at: C:\\Users\\username\\mu_code, depending on the username.
-
-.. image:: images/light_readings_file_transfer.png
-    :scale: 50 %
-    :align: center
-    :alt: light_readings_file_transfer
-
+| Plug the microbit into a computer and drag the files as a copy form the MICROBIT drive to your computer.
+| Transfer the "light_readings.csv" file to the computer.
 | The file can then be used to display a chart in excel or in python using plotly or matplotlib.
 
 ----
@@ -97,8 +90,8 @@ Display elapsed seconds
 | It can be useful to give user feedback by displaying the elapsed seconds on the microbit.
 | ``count_seconds`` is used to display the elapsed seconds on the microbit as the readings occur.
 | **count_seconds** takes 2 parameters: **time_from_start**, **time_displayed**.
-| ``sec_from_start = int(time_from_start)`` rounds down the **time_from_start**. 
-| ``if sec_from_start > time_displayed`` will be true once **time_from_start** has increased by at least 1 second above **time_displayed**. 
+| ``sec_from_start = int(time_from_start)`` rounds down the **time_from_start**.
+| ``if sec_from_start > time_displayed`` will be true once **time_from_start** has increased by at least 1 second above **time_displayed**.
 | **time_displayed** is then updated and used for display.
 
 
@@ -107,12 +100,12 @@ Display elapsed seconds
     #. Complete the count_seconds function, by replacing the XXX stings.
 
         .. code-block:: python
-                    
+
             def count_seconds(XXX, XXX):
                 sec_from_start = int(time_from_start)
                 if XXX > time_displayed:
                     XXX = sec_from_start
-                return time_displayed     
+                return time_displayed
 
     .. dropdown::
         :icon: codescan
@@ -124,7 +117,7 @@ Display elapsed seconds
             .. tab-item:: Q1
 
                 Complete the count_seconds function.
-                 
+
                 .. code-block:: python
 
                     def count_seconds(time_from_start, time_displayed):
@@ -142,7 +135,7 @@ Display elapsed seconds
 .. admonition:: Tasks
 
     #.  Complete the code to display the elapsed seconds on the microbit.
-       
+
     .. dropdown::
         :icon: codescan
         :color: primary

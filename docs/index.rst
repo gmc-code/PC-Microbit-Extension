@@ -11,7 +11,6 @@ PC-microbit-extension
 
     introduction/introduction.rst
     introduction/Micropython_editor.rst
-    introduction/Mu_editor.rst
 
 
 .. toctree::

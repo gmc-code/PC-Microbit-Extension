@@ -47,28 +47,25 @@ Microbit software using micropython:
 | The standard online **micropython** editor: https://python.microbit.org/v/3.
 | This is the most up to date editor.
 
-| Comparison of microbit programming options:
-| The **Mu** editor for laptops, https://codewith.mu/en/tutorials/1.1/microbit, is the first choice for coding on the microbit.
-
 | **Thonny** for laptops, can be downloaded from https://thonny.org/.
 See: https://core-electronics.com.au/tutorials/how-to-program-a-microbit-using-thonny.html for setting up the microbit to use Thonny.
 
-| **Edublocks**, https://app.edublocks.org/#MicroBit, is an online editor with both blocky code and micropython consistent with Mu editor, and can display the block code and micropython code side by side.
+| **Edublocks**, https://app.edublocks.org/#MicroBit, is an online editor with both blocky code and micropython, and can display the block code and micropython code side by side.
 
 ----
 
 Micropython simulator:
 ----------------------------------------
 
-| Create with code UK, https://create.withcode.uk/, works with standard python or micropython. 
-| Starting the code with "from microbit import \*" will pop up the simulator when the code is run.
+| Create with code UK, https://create.withcode.uk/, works with standard python or micropython.
+| Starting the code with ``from microbit import *`` will pop up the simulator when the code is run.
 
 ----
 
 Blocky code simulator:
 ----------------------------------------
 
-The Makecode website https://makecode.microbit.org/ allows blocky code use, but it has its own unique version of micropython based on its own translation of the typescript code that it uses, and so it will not work with Mu editor or the standard online micropython editor. It has an excellent simulator and vast extensions library for exploring other devices that can be connected to the microbit.
+The Makecode website https://makecode.microbit.org/ allows blocky code use, but it has its own unique version of micropython based on its own translation of the typescript code that it uses, and so it will not work with the standard online micropython editor. It has an excellent simulator and vast extensions library for exploring other devices that can be connected to the microbit.
 
 ----
 
@@ -125,7 +122,7 @@ For an introduction to python see:
 ----
 
 .. admonition:: Tip
-    
+
     If you are using a track-pad, navigate to various sections and pages by clicking on the same heading in the left sidebar twice, then use the arrow keys to move up and down.
 
 

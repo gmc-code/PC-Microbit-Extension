@@ -56,26 +56,19 @@ Install python **pyrebase** library
 
 | This installs pyrebase. Pyrebase4 is a wrapper to install the recent libraries that pyrebase requires.
 
-.. admonition:: Tip
-    
-    #. If using Mu editor:
-    #. Click on the **Mu Administrator** gear icon in bottom right corner of the Mu editor window.
-    #. Click on the **Third Party packages** tab.
-    #. Paste in **Pyrebase4** at bottom of the list.
-    #. Click OK
 
 ----
 
 Register Web App to get config details
 ----------------------------------------
 
-#. Continue on the firebase website. 
+#. Continue on the firebase website.
 #. In the left sidebar, click **Project Overview**.
 #. Click the Web icon **</>**
 #. Enter the project name to register: e.g. **microbit-acc**.
 #. Click **Register app**.
 #. Copy the code in the **const firebaseConfig** dictionary. and paste that into the python code. Add quotes to the keys to make them work in python.
-#. 
+#.
 
 
 

@@ -20,7 +20,6 @@ Microbit log module
     import log
 
 | This module lets you log data to a MY_DATA file saved on a microbit V2 MICROBIT USB drive.
-| As of Jan 2023 Mu editor doesn't have the log module.
 | Use the online editor at https://python.microbit.org/v/3.
 | See online info for data logging: https://python.microbit.org/v/3/reference/data-logging
 
@@ -65,14 +64,14 @@ To log data to the microbit for later viewing:
         :align: center
         :alt: data_graph
 
-#. Click **the legend keys** to isolate individual lines of data in the graph. 
+#. Click **the legend keys** to isolate individual lines of data in the graph.
 
     .. image:: images/data_graph_brightness.png
         :scale: 35 %
         :align: center
         :alt: data_graph_brightness
 
-#. Use the **Copy** button to copy the data so you can paste it straight into a spreadsheet. 
+#. Use the **Copy** button to copy the data so you can paste it straight into a spreadsheet.
 #. Use the **Download** button to download the data as a CSV (comma separated values) file which you can also import into a spreadsheet.
 
 ----
@@ -123,16 +122,16 @@ Data log
         sleep(10000) #10 seconds
 
 
-| ``log.set_labels('brightness', 'x', 'y', 'z', timestamp=log.SECONDS)`` sets the column headings for the data, which automatically includes a time stamp in the first column.  
+| ``log.set_labels('brightness', 'x', 'y', 'z', timestamp=log.SECONDS)`` sets the column headings for the data, which automatically includes a time stamp in the first column.
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/log.html#log.set_labels
 
-| ``log.set_mirroring(True)`` sends the data to the serial port for monitoring the data. 
+| ``log.set_mirroring(True)`` sends the data to the serial port for monitoring the data.
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/log.html#log.set_mirroring
 
-| ``run_every(log_data, ms=100)`` runs the function **log_data** every 100 milli-secs. 
+| ``run_every(log_data, ms=100)`` runs the function **log_data** every 100 milli-secs.
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/microbit.html#microbit.run_every.
 
-| The log_data function records the readings via ``log.add(brightness=brightness, x=x, y=y, z=z)``. 
+| The log_data function records the readings via ``log.add(brightness=brightness, x=x, y=y, z=z)``.
 | See: https://microbit-micropython.readthedocs.io/en/v2-docs/log.html#log.add
 
 | Pressing the A button deletes the log in full. It may take a few seconds. A no image is shown at the start of the deletion and a happy image is shown when done, and recording data starts again.

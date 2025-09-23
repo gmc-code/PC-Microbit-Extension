@@ -69,22 +69,14 @@ Install python library: firebase-admin
 
 pip install firebase-admin
 
-.. admonition:: Tip
-    
-    #. If using Mu editor:
-    #. Click on the **Mu Administrator** gear icon in bottom right corner of the Mu editor window.
-    #. Click on the **Third Part packages** tab.
-    #. Paste in **firebase-admin** at bottom of the list.
-    #. Click OK
-    #. 
 ----
 
 Authenticate the Google Service Account
 ----------------------------------------
 
-#. Firebase will allow access to Firebase server APIs from Google Service Accounts. 
+#. Firebase will allow access to Firebase server APIs from Google Service Accounts.
 #. To authenticate the Google Service Account, a private key in JSON format is required.
 #. To generate the key, in the left sidebar, go to **Project Overview**, click **Project settings**, click **Service Accounts**, click **Generate new private key**, click **Generate key** to download the file, and move it from the downloads folder to the folder with the python files for using it.
-#. The path to this JSON file must be provided to create the credentials object. 
+#. The path to this JSON file must be provided to create the credentials object.
 
 
