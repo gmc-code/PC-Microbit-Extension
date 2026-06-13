@@ -6,35 +6,6 @@ Games introduction
 
 ----
 
-All time records
-----------------
-
-.. list-table::
-    :widths: 60 20 60
-    :header-rows: 1
-
-    *   - **Game** 
-        - **High score**  
-        - **Player**
-    *   - Asteroids- super hacked
-        - 202000    
-        - Addison
-    *   - Asteroids
-        - 4207    
-        - Lachlan
-    *   - Falling Blocks
-        - 154    
-        - Sai
-    *   - Space Invaders    
-        - 423    
-        - Angus
-    *   - Snake    
-        - 140 
-        - Jaskirat
-
-
-----
-
 Modifying the game code for official records
 ----------------------------------------------
 
