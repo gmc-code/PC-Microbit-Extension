@@ -98,7 +98,7 @@ html_theme_options = {
     'sticky_navigation': False,  # True so the nav scrolls with main page
     'navigation_depth': 2,  # -1 for no limit, slow to build
     'includehidden': False,  # displays toctree that are hidden
-    'titles_only': True  # False so page subheadings are in the nav.
+    'titles_only': False  # False so page subheadings are in the nav.
 }
 
 # -- RTDs logos -------------------------------
